@@ -22,7 +22,7 @@ START:
 
 ; =============================================
 ; TASK: Complete this program to make it
-;       1) spin clockwise
+;       1) spin clockwise (DONE)
 ;       2) spin anticlockwise
 ;       3) spin clockwise in half steps
 ; =============================================

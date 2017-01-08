@@ -42,18 +42,18 @@ SORE:
 ; == TIMING FUNCTION == ;
 INITPRETMR:
 	MOVWR   0XE1 		; store value from note lenght
-    MOVW    0X1     	; activate the prescaler
-    MOVWR   PRE     	; to make TMR work
-    MOVRW   0XE1   		; get the delay length value back
-    MOVWR   TMR     	; put it into the timer
+	MOVW    0X1     	; activate the prescaler
+	MOVWR   PRE     	; to make TMR work
+	MOVRW   0XE1   		; get the delay length value back
+	MOVWR   TMR     	; put it into the timer
 
 SRPOLL:
-    MOVRW   SR      	; get SR value
-    ANDW    0x02    	; bit mask
-    JPZ     SRPOLL    	; if timer hasn't ended, loop
-    MOVW    0X00 		; move 0 into W to ...
-    MOVWR 	PRE 		; turn off the prescaler
-    JMP		ROTLOOP 	; else goto main
+	MOVRW   SR      	; get SR value
+	ANDW    0x02    	; bit mask
+	JPZ     SRPOLL    	; if timer hasn't ended, loop
+	MOVW    0X00 		; move 0 into W to ...
+	MOVWR 	PRE 		; turn off the prescaler
+	JMP		ROTLOOP 	; else goto main
 ;=======================;
 
 ; ==== NOTE LENGTH ==== ;
@@ -72,15 +72,15 @@ SIXTEEN: ; 0.395 sec.
 
 ; == STEPPER CONTROL == ;
 ROTLOOP:
-    MOVRW   ROTAMOUNT 	; rotate 14 times, T = 360/step angle(1.8) = 13.3 (var)
-    MOVWR   0XE0		; move rotamount into memory location
+	MOVRW   ROTAMOUNT 	; rotate 14 times, T = 360/step angle(1.8) = 13.3 (var)
+	MOVWR   0XE0		; move rotamount into memory location
 REP:
-    MOVRW   0XE0 	   	; store delay value in memory location
-    SUBW    0X01 	   	; sub one from 14
-    MOVWR   0XE0       	; move new value back into memory location
-    JPZ     DONE       	; if delay == 0 then poll
-    CALL    ROTATE     	; rotate once
-    JMP     REP        	; repeat loop until 0xE0 == 0
+	MOVRW   0XE0 	   	; store delay value in memory location
+	SUBW    0X01 	   	; sub one from 14
+	MOVWR   0XE0       	; move new value back into memory location
+	JPZ     DONE       	; if delay == 0 then poll
+	CALL    ROTATE     	; rotate once
+	JMP     REP        	; repeat loop until 0xE0 == 0
 DONE:
 	JMP 	POLL 		; check new BCD value
 

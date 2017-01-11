@@ -1,77 +1,91 @@
-; == interrupt == ;
+; ==== SETINTER ==== ;
 setint %10000000,%10000000
 ; activate interrupt when pinC.7 only goes high
+;====================;
 
-; = SONG VALUES = ;
-C: db 0x00
-D: db 0x01
-E: db 0x02
-F: db 0x03
-G: db 0x04
-A: db 0x05
-B: db 0x06
+; === SONG DAC V === ;
+C: db 0x00			 ; value calculated to give
+D: db 0x01			 ; voltage needed from DAC
+E: db 0x02			 ; that corresponds to the
+F: db 0x03			 ; frequency output of that
+G: db 0x04			 ; voltage from the 331N IC
+A: db 0x05			 ;
+B: db 0x06			 ; MC --> DAC --> 331N --> output
+;====================;
 
 INIT:
-	MOVW 0X0F 	; set c0, c1, c2, c3 ...
-	MOVWR TRISC ; as inputs
+	MOVW 0X0F 	     ; set c0, c1, c2, c3 ...
+	MOVWR TRISC      ; as inputs
 
+; == NOTE CHECKER == ;
 POLL:
-	MOVRW PORTC ; get BCD value
-	ANDW 0X00 	; is it n?
-	JPZ POLL1	; if not, goto next note
-	JMP CN 		; else goto note
+	MOVRW PORTC      ; get BCD value
+	ANDW 0X00 	     ; is it n?
+	JPZ POLL1	     ; if not, goto next note
+	JMP CN 		     ; else goto note
 
 POLL1:
-	MOVRW PORTC ; get BCD value
-	ANDW 0X01 	; is it n?
-	JPZ POLL2	; if not, goto next note
-	JMP DN 		; else goto note
+	MOVRW PORTC      ; get BCD value
+	ANDW 0X01 	     ; is it n?
+	JPZ POLL2	     ; if not, goto next note
+	JMP DN 		     ; else goto note
 
 POLL2:
-	MOVRW PORTC ; get BCD value
-	ANDW 0X03 	; is it n?
-	JPZ POLL3	; if not, goto next note
-	JMP EN 		; else goto note
+	MOVRW PORTC      ; get BCD value
+	ANDW 0X02 	     ; is it n?
+	JPZ POLL3	     ; if not, goto next note
+	JMP EN 		     ; else goto note
 
 POLL3:
-	MOVRW PORTC ; get BCD value
-	ANDW 0X04 	; is it n?
-	JPZ POLL4	; if not, goto next note
-	JMP FN 		; else goto note
+	MOVRW PORTC      ; get BCD value
+	ANDW 0X04 	     ; is it n?
+	JPZ POLL4	     ; if not, goto next note
+	JMP FN 		     ; else goto note
 
 POLL4:
-	MOVRW PORTC ; get BCD value
-	ANDW 0X05 	; is it n?
-	JPZ POLL5	; if not, goto next note
-	JMP GN 		; else goto note
+	MOVRW PORTC      ; get BCD value
+	ANDW 0X05 	     ; is it n?
+	JPZ POLL5	     ; if not, goto next note
+	JMP GN 		     ; else goto note
 
 POLL5:
-	MOVRW PORTC ; get BCD value
-	ANDW 0X05 	; is it n?
-	JPZ BN 		; must be bflat
-	JMP AN 		; goto note
+	MOVRW PORTC      ; get BCD value
+	ANDW 0X05 	     ; is it n?
+	JPZ BN 		     ; must be bflat
+	JMP AN 		     ; goto note
+;====================;
 
-
+; == NOTE DACVout == ;
 CN:
-	NOP
+	MOVRW C			 ; get value from from db
+	MOVWR PORTB 	 ; move it to output
 
 DN:
-	NOP
+	MOVRW D			 ; get value from from db
+	MOVWR PORTB 	 ; move it to output
 
 EN:
-	NOP
+	MOVRW E			 ; get value from from db
+	MOVWR PORTB 	 ; move it to output
 
 FN:
-	NOP
+	MOVRW F			 ; get value from from db
+	MOVWR PORTB 	 ; move it to output
 
 GN:
-	NOP
+	MOVRW G			 ; get value from from db
+	MOVWR PORTB 	 ; move it to output
 
 AN:
-	NOP
+	MOVRW A			 ; get value from from db
+	MOVWR PORTB 	 ; move it to output
 
 BN:
-	NOP
+	MOVRW B			 ; get value from from db
+	MOVWR PORTB 	 ; move it to output
+;====================;
 
-INTERRUPT:
-	JMP POLL ; poll for new value
+; = INTERRUPT LOOP = ;
+INTERRUPT: 			 ; polling is done automatically
+	JMP POLL      	 ; poll for new value
+;====================;

@@ -4,13 +4,13 @@ setint %10000000,%10000000
 ;====================;
 
 ; === SONG DAC V === ;
-C: db 0x00           ; value calculated to give
-D: db 0x01           ; voltage needed from DAC
-E: db 0x02           ; that corresponds to the
-F: db 0x03           ; frequency output of that
-G: db 0x04           ; voltage from the 331N IC
-A: db 0x05           ;
-B: db 0x06           ; MC --> DAC --> 331N --> output
+#DEFINE C       0x00 ; value calculated to give
+#DEFINE D       0x01 ; voltage needed from DAC
+#DEFINE E       0x02 ; that corresponds to the
+#DEFINE F       0x03 ; frequency output of that
+#DEFINE G       0x04 ; voltage from the 331N IC
+#DEFINE A       0x05 ;
+#DEFINE B       0x06 ; MC --> DAC --> 331N --> output
 ;====================;
 
 INIT:
@@ -57,31 +57,31 @@ POLL5:
 
 ; == NOTE DACVout == ;
 CN:
-    MOVRW C          ; get value from from db
+    MOVRW C          ; get value from from #DEFINE
     MOVWR PORTB      ; move it to output
 
 DN:
-    MOVRW D          ; get value from from db
+    MOVRW D          ; get value from from #DEFINE
     MOVWR PORTB      ; move it to output
 
 EN:
-    MOVRW E          ; get value from from db
+    MOVRW E          ; get value from from #DEFINE
     MOVWR PORTB      ; move it to output
 
 FN:
-    MOVRW F          ; get value from from db
+    MOVRW F          ; get value from from #DEFINE
     MOVWR PORTB      ; move it to output
 
 GN:
-    MOVRW G          ; get value from from db
+    MOVRW G          ; get value from from #DEFINE
     MOVWR PORTB      ; move it to output
 
 AN:
-    MOVRW A          ; get value from from db
+    MOVRW A          ; get value from from #DEFINE
     MOVWR PORTB      ; move it to output
 
 BN:
-    MOVRW B          ; get value from from db
+    MOVRW B          ; get value from from #DEFINE
     MOVWR PORTB      ; move it to output
 ;====================;
 

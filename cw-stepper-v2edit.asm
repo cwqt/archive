@@ -15,9 +15,12 @@ SYMBOL N_LENGTH    = B0 ; note duration delay value
 SYMBOL R_COUNT     = B1 ; rotation call count
 ;=======================;
 
-INIT:
-    MOVW    0X03        ; C0 and C1 as inputs
-    MOVWR   TRISC       ; set PORTC as input
+MOVW    0X03            ; C0 and C1 as inputs
+MOVWR   TRISC           ; set PORTC as input
+MOVW    0x00
+MOVWR   PORTB
+MOVWR   TRISB
+DEBUG                   ; comment on production
 
 ; == SPEED ALGORITHM == ;
 POLL:
@@ -67,6 +70,7 @@ DELAY:
    MOVWR    PRE         ; turn on the prescaler
    MOVW     0X64        ; move 100 into W to ...
    MOVWR    TMR         ; set delay time for TMR
+   ; (loading TMR automatically clears the timer overflow bit in status SR)
    ; since prescaler is running at 100us / clock
    ; 100 x ck speed will give a total of 10ms delay.
    ; n * 10ms = delay (s)
@@ -125,6 +129,6 @@ EOF:
    CALL wait100ms       ; wait 0.1s
    MOVRW PORTC          ; get portc input
    ANDW 0X03            ; can start again?
-   JPZ EOF              ; if not, loop
+   JPZ EOF              ; if not, poll again
    JMP POLL             ; else, start song again.
 ;=======================;

@@ -8,82 +8,96 @@
 #DEFINE Bn 0XEC         ; 1038Hz
 ;=======================;
 
+setfreq m8
+
 INIT:
     MOVW    0X07        ; C0 and C1 as inputs
     MOVWR   TRISC       ; set PORTC as input
+    MOVW    0X00
+    MOVWR   PORTB
 
 POLL: ; return routine at EOF
-; ==== C  - 519HZ ===== ;
-CV: ; poll for 000 input
-    MOVRW PORTC         ; get current input value
-    ANDW 0X00           ; if actually 0, invert = 1
-    JPZ  DV             ; if actually 0 goto D
-    JPNZ  COUT           ; if actually 1, output note value
-COUT: ; upon 000
-    MOVW Cn             ; get defined value in variables
-    MOVWR PORTB         ; move value to portb, the DAC
-;=======================;
 
-; ==== D -  617HZ ===== ;
-DV: ; poll for 001 input
-    MOVRW PORTC
-    ANDW 0X01        
-    JPZ  EV              
-    JPNZ  DOUT           
-DOUT: ; upon 001
-    MOVW Dn             
-    MOVWR PORTB         
-;=======================;
+CNOTE:
+    MOVRW   PORTC
+    ANDW    0X07
+    XORW    0x01
+    JPZ     CFREQ
+    JMP     DNOTE
 
-; ===== E - 692Hz ===== ;
-EV: ; 010
-    MOVRW PORTC
-    ANDW 0X02
-    JPZ  FV              
-    JPNZ  EOUT           
-EOUT: ; upon 010
-    MOVW En             
-    MOVWR PORTB         
-;=======================;
+CFREQ:
+    MOVW    Cn
+    MOVWR   PORTB
+    JMP     POLL
 
-; ===== F - 777HZ ===== ;
-FV: ; 011
-    MOVRW PORTC
-    ANDW 0X03
-    JPZ  GV              
-    JPNZ  FOUT           
-FOUT: ; upon 001
-    MOVW Fn             
-    MOVWR PORTB         
-;=======================;
+DNOTE:
+    MOVRW   PORTC
+    ANDW    0X07
+    XORW    0X02
+    JPZ     DFREQ
+    JMP     ENOTE
 
-; ===== G - 824HZ ===== ;
-GV: ; 100
-    MOVRW PORTC
-    ANDW 0X04
-    JPZ  AV              
-    JPNZ  GOUT           
-GOUT: ; upon 001
-    MOVW Gn             
-    MOVWR PORTB         
-;=======================;
+DFREQ:
+    MOVW    Dn
+    MOVWR   PORTB
+    JMP     POLL
 
-; ===== A - 925HZ ===== ;
-AV: ; 101
-    MOVRW PORTC
-    ANDW 0X05
-    JPZ  BOUT              
-    JPNZ  DOUT           
-AOUT: ; upon 001
-    MOVW An             
-    MOVWR PORTB         
-;=======================;
+ENOTE:
+    MOVRW   PORTC
+    ANDW    0X07
+    XORW    0X03
+    JPZ     EFREQ
+    JMP     FNOTE
 
-;=======================;
-BOUT: ; upon 001
-    MOVW Bn             
-    MOVWR PORTB         
-;=======================;
+EFREQ:
+    MOVW    En
+    MOVWR   PORTB
+    JMP     POLL
 
-JMP POLL
+FNOTE:
+    MOVRW   PORTC
+    ANDW    0X07
+    XORW    0X04
+    JPZ     FFREQ
+    JMP     GNOTE
 
+FFREQ:
+    MOVW    Fn
+    MOVWR   PORTB
+    JMP     POLL
+
+GNOTE:
+    MOVRW   PORTC
+    ANDW    0X07
+    XORW    0X05
+    JPZ     GFREQ
+    JMP     ANOTE
+
+GFREQ:
+    MOVW    Gn
+    MOVWR   PORTB
+    JMP     POLL
+
+ANOTE:
+    MOVRW   PORTC
+    ANDW    0X07
+    XORW    0X06
+    JPZ     AFREQ
+    JMP     BNOTE
+
+AFREQ:
+    MOVW    An
+    MOVWR   PORTB
+    JMP     POLL
+
+BNOTE:
+    MOVRW   PORTC
+    ANDW    0X07
+    XORW    0X07
+    JPZ     BFREQ
+    JMP     POLL
+
+BFREQ:
+    MOVW    Bn
+    MOVWR   PORTB
+    JMP     POLL

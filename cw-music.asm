@@ -1,3 +1,4 @@
+
 ; ==== SETINTER ==== ;
 setint %10000000,%10000000
 ; activate interrupt when pinC.7 only goes high

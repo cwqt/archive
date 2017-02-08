@@ -1,4 +1,12 @@
+;=======================;
+; decode binary values into values that
+; create a voltage output from the DAC
+; that is relative to its desired frequency
+;=======================;
+
 ; ==== NOTE VALUES ==== ;
+; defining custom values allows code to be easily
+; modified later on
 #DEFINE Cn 0X8C         ; 519Hz
 #DEFINE Dn 0XAC         ; 617Hz
 #DEFINE En 0XB7         ; 692Hz
@@ -8,28 +16,33 @@
 #DEFINE Bn 0XEC         ; 1038Hz
 ;=======================;
 
-setfreq m8
+setfreq m8              ; change clock speed of chip
+                        ; faster frequency equals
+                        ; less latency in changing note values
 
 INIT:
     MOVW    0X07        ; C0 and C1 as inputs
     MOVWR   TRISC       ; set PORTC as input
-    MOVW    0X00
-    MOVWR   PORTB
-
-POLL: ; return routine at EOF
-
-CNOTE:
-    MOVRW   PORTC
-    ANDW    0X07
-    XORW    0x01
-    JPZ     CFREQ
-    JMP     DNOTE
+    MOVW    0X00        ; reset outputs
+    MOVWR   PORTB       ; move to ouput
+;=======================;
+POLL:                   ; return routine at EOF
+CNOTE:                  ; 001
+    MOVRW   PORTC       ; get the current inputs
+    ANDW    0X07        ; limit values to 3-bits
+    XORW    0x01        ; set all to 0
+    JPZ     CFREQ       ; if this value, then
+                        ; output voltage that gives
+                        ; this frequency
+    JMP     DNOTE       ; else check if next value
 
 CFREQ:
-    MOVW    Cn
-    MOVWR   PORTB
-    JMP     POLL
-
+    MOVW    Cn          ; get the binary input from the
+                        ; variables that corresponds to the
+                        ; voltage that creates this note
+    MOVWR   PORTB       ; move it to output
+    JMP     POLL        ; check if new input
+;=======================;
 DNOTE:
     MOVRW   PORTC
     ANDW    0X07
@@ -41,7 +54,7 @@ DFREQ:
     MOVW    Dn
     MOVWR   PORTB
     JMP     POLL
-
+;=======================;
 ENOTE:
     MOVRW   PORTC
     ANDW    0X07
@@ -53,6 +66,7 @@ EFREQ:
     MOVW    En
     MOVWR   PORTB
     JMP     POLL
+;=======================;
 
 FNOTE:
     MOVRW   PORTC
@@ -65,7 +79,7 @@ FFREQ:
     MOVW    Fn
     MOVWR   PORTB
     JMP     POLL
-
+;=======================;
 GNOTE:
     MOVRW   PORTC
     ANDW    0X07
@@ -77,7 +91,7 @@ GFREQ:
     MOVW    Gn
     MOVWR   PORTB
     JMP     POLL
-
+;=======================;
 ANOTE:
     MOVRW   PORTC
     ANDW    0X07
@@ -89,7 +103,7 @@ AFREQ:
     MOVW    An
     MOVWR   PORTB
     JMP     POLL
-
+;=======================;
 BNOTE:
     MOVRW   PORTC
     ANDW    0X07
@@ -101,3 +115,4 @@ BFREQ:
     MOVW    Bn
     MOVWR   PORTB
     JMP     POLL
+;=======================;

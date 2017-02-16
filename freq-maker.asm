@@ -27,6 +27,9 @@ INIT:
     MOVWR   PORTB       ; move to ouput
 ;=======================;
 POLL:                   ; return routine at EOF
+MOVRW       PORTC
+ANDW        0X07
+JPZ         POLL
 CNOTE:                  ; 001
     MOVRW   PORTC       ; get the current inputs
     ANDW    0X07        ; limit values to 3-bits

@@ -7,13 +7,13 @@
 ; ==== NOTE VALUES ==== ;
 ; defining custom values allows code to be easily
 ; modified later on
-#DEFINE Cn 0X8C         ; 519Hz
-#DEFINE Dn 0XAC         ; 617Hz
-#DEFINE En 0XB7         ; 692Hz
-#DEFINE Fn 0XC3         ; 777Hz
-#DEFINE Gn 0XCB         ; 824Hz
-#DEFINE An 0XDA         ; 925Hz
-#DEFINE Bn 0XEC         ; 1038Hz
+#DEFINE Cn 0X91         ; 519Hz
+#DEFINE Dn 0X9A         ; 617Hz
+#DEFINE En 0XA2         ; 692Hz
+#DEFINE Fn 0XA9         ; 777Hz
+#DEFINE Gn 0XAD         ; 824Hz
+#DEFINE An 0XB8         ; 925Hz
+#DEFINE Bn 0XC5         ; 1038Hz
 ;=======================;
 
 setfreq m8              ; change clock speed of chip

@@ -9,7 +9,7 @@ setfreq m8
 #DEFINE FOURd      0X30 ; 1.527s / 0.01 = 157.9 = 158 0x30
 #DEFINE EIGHTd     0X15 ; 0.789s / 0.01 = 78.9 = 79
 #DEFINE SIXTEENd   0X0B ; 0.395s / 0.01 = 39.5 = 40
-#DEFINE ROTAMOUNT  0X02 ; (rotate n times) 0x0e = 15-1=14
+#DEFINE ROTAMOUNT  0X07 ; (rotate n times) 0x0e = 15-1=14
 ; == MEM.  LOCATIONS == ;
 SYMBOL N_LENGTH    = B0 ; note duration delay value
 SYMBOL R_COUNT     = B1 ; rotation call count
@@ -106,16 +106,16 @@ DONE:
 ROTATE:
     MOVW    0X01        ; 1a
     MOVWR   PORTB       ; move to output
-    CALL    wait10ms     ; delay
+    CALL    wait100ms   ; delay  
     MOVW    0X02        ; 2a
     MOVWR   PORTB       ; move to output
-    CALL    wait10ms     ; delay
+    CALL    wait100ms   ; delay
     MOVW    0X04        ; 1b
     MOVWR   PORTB       ; move to output
-    CALL    wait10ms     ; delay
+    CALL    wait100ms   ; delay
     MOVW    0X08        ; 2b
     MOVWR   PORTB       ; move to output
-    CALL    wait10ms     ; delay
+    CALL    wait100ms   ; delay
 RET
 ;=======================;
 

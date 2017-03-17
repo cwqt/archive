@@ -9,7 +9,7 @@ setfreq m8
 #DEFINE FOURd      0X30 ; 1.527s / 0.01 = 157.9 = 158 0x30
 #DEFINE EIGHTd     0X15 ; 0.789s / 0.01 = 78.9 = 79
 #DEFINE SIXTEENd   0X0B ; 0.395s / 0.01 = 39.5 = 40
-#DEFINE ROTAMOUNT  0X07 ; (rotate n times) 0x0e = 15-1=14
+#DEFINE ROTAMOUNT  0X02 ; (rotate n times) 0x02 = 2 * 1.8 deg
 ; == MEM.  LOCATIONS == ;
 SYMBOL N_LENGTH    = B0 ; note duration delay value
 SYMBOL R_COUNT     = B1 ; rotation call count
@@ -23,24 +23,32 @@ MOVWR   TRISB
 
 ; == SPEED ALGORITHM == ;
 POLL:
-    MOVRW   PORTC       ; get current BCD value
-    JPZ     FOREOF      ; if 00 then maybe 1/4 or EOF
-    XORW    0X03        ; input sanitizing
-    ANDW    0X03        ; is it 1/4 or EOF?
-    JPZ     FOREOF      ; if not, then 1/4 or EOF
-    JMP     SORE        ; else 1/16 OR 1/8 delay
+FOURPOLL:
+    MOVRW   PORTC
+    ANDW    0X03
+    XORW    0X01
+    JPZ     EIGHTPOLL
+    JMP     FOUR
 
-FOREOF:
-    MOVRW   PORTC       ; get current BCD value
-    ANDW    0X03        ; is it EOF?
-    JPZ     FOUR        ; if not, then 1/4 delay
-    JMP     EOF         ; else goto EOF loop
+EIGHTPOLL:
+    MOVRW   PORTC
+    ANDW    0X03
+    XORW    0X02
+    JPZ     SIXTEENPOLL
+    JMP     EIGHT
 
-SORE:
-    MOVRW   PORTC       ; get current BCD value
-    ANDW    0X02        ; is it a 1/6 note?
-    JPZ     EIGHT       ; if not, then 1/8 delay
-    JMP     SIXTEEN     ; else 1/16 delay
+SIXTEENPOLL:
+    MOVRW   PORTC
+    ANDW    0X03
+    XORW    0X03
+    JPZ     EOFPOLL
+    JMP     SIXTEEN
+
+EOFPOLL:
+    MOVRW   PORTC
+    ANDW    0X03
+    JPZ     EOF
+    JMP     POLL
 ;=======================;
 
 ; ==== NOTE LENGTH ==== ;
@@ -106,22 +114,26 @@ DONE:
 ROTATE:
     MOVW    0X01        ; 1a
     MOVWR   PORTB       ; move to output
-    CALL    wait100ms   ; delay  
+    CALL    wait10ms     ; delay
+    CALL    wait10ms     
     MOVW    0X02        ; 2a
     MOVWR   PORTB       ; move to output
-    CALL    wait100ms   ; delay
+    CALL    wait10ms    ; delay
+    CALL    wait10ms    
     MOVW    0X04        ; 1b
     MOVWR   PORTB       ; move to output
-    CALL    wait100ms   ; delay
+    CALL    wait10ms    ; delay
+    CALL    wait10ms    
     MOVW    0X08        ; 2b
     MOVWR   PORTB       ; move to output
-    CALL    wait100ms   ; delay
+    CALL    wait10ms    ; delay
+    CALL    wait10ms    
 RET
 ;=======================;
 
 ; ==== END OF FILE ==== ;
 EOF:
-   MOVW 0X01      	    ; move 1 into w
+   MOVW 0X01      	; move 1 into w
    MOVWR PORTB          ; turn on led
    CALL wait100ms       ; keep it on for 0.1s
    MOVW 0X00            ; move 0 into w
@@ -129,6 +141,6 @@ EOF:
    CALL wait100ms       ; wait 0.1s
    MOVRW PORTC          ; get portc input
    ANDW 0X03            ; can start again?
-   JPZ EOF              ; if not, poll again
-   JMP POLL             ; else, start song again.
+   JPZ POLL             ; if YES, start reading inputs
+   JMP EOF              ; else, poll again.
 ;=======================;

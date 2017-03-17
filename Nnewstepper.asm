@@ -27,26 +27,27 @@ FOURPOLL:
     MOVRW   PORTC
     ANDW    0X03
     XORW    0X01
-    JPZ     EIGHTPOLL
-    JMP     FOUR
+    JPZ     FOUR
+    JMP     EIGHTPOLL ; not actually needed
 
 EIGHTPOLL:
     MOVRW   PORTC
     ANDW    0X03
     XORW    0X02
-    JPZ     SIXTEENPOLL
-    JMP     EIGHT
+    JPZ     EIGHT
+    JMP     SIXTEENPOLL
 
 SIXTEENPOLL:
     MOVRW   PORTC
     ANDW    0X03
     XORW    0X03
-    JPZ     EOFPOLL
-    JMP     SIXTEEN
+    JPZ     SIXTEEN
+    JMP     EOFPOLL
 
 EOFPOLL:
     MOVRW   PORTC
     ANDW    0X03
+    XORW    0X00
     JPZ     EOF
     JMP     POLL
 ;=======================;
@@ -89,7 +90,7 @@ SRPOLL:
    ; is equal to TMR * note length
    ; e.g., FOURd = 158 (9E) * 10ms = 1.58 seconds
    ANDW     0X02        ; check TMR flag in status register
-   ;DEBUG                ; comment on production
+   ;DEBUG               ; comment on production
    JPZ      SRPOLL      ; if TMR still low, keep polling for TMR high
                         ; when TMR goes high, don't loop but ...
    DEC      N_LENGTH    ; decrement the note length register
@@ -114,20 +115,25 @@ DONE:
 ROTATE:
     MOVW    0X01        ; 1a
     MOVWR   PORTB       ; move to output
-    CALL    wait10ms     ; delay
-    CALL    wait10ms     
+    CALL    WAIT50      ; delay 
     MOVW    0X02        ; 2a
     MOVWR   PORTB       ; move to output
-    CALL    wait10ms    ; delay
-    CALL    wait10ms    
+    CALL    WAIT50      ; delay
     MOVW    0X04        ; 1b
     MOVWR   PORTB       ; move to output
-    CALL    wait10ms    ; delay
-    CALL    wait10ms    
+    CALL    WAIT50      ; delay
     MOVW    0X08        ; 2b
     MOVWR   PORTB       ; move to output
-    CALL    wait10ms    ; delay
-    CALL    wait10ms    
+    CALL    WAIT50      ; delay
+RET
+
+WAIT50:
+    CALL    wait100ms
+    CALL    wait10ms
+    CALL    wait10ms
+    CALL    wait10ms
+    CALL    wait10ms
+    CALL    wait10ms
 RET
 ;=======================;
 
@@ -139,8 +145,6 @@ EOF:
    MOVW 0X00            ; move 0 into w
    MOVWR PORTB          ; turn off led
    CALL wait100ms       ; wait 0.1s
-   MOVRW PORTC          ; get portc input
-   ANDW 0X03            ; can start again?
-   JPZ POLL             ; if YES, start reading inputs
-   JMP EOF              ; else, poll again.
+   MOVRW PORTB
+   JMP POLL             ; else, poll again.
 ;=======================;

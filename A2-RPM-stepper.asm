@@ -6,12 +6,12 @@
 ;=======================+
 setfreq m8
 ; ===== VARIABLES ===== ;
-#DEFINE FOURd      0X30 ; 1.527s / 0.01 = 157.9 = 158 0x30
-#DEFINE EIGHTd     0X15 ; 0.789s / 0.01 = 78.9 = 79
-#DEFINE SIXTEENd   0X0B ; 0.395s / 0.01 = 39.5 = 40
+#DEFINE FOURd      0X01 ; 1.527s / 0.01 = 157.9 = 158 0x30
+#DEFINE EIGHTd     0X01 ; 0.789s / 0.01 = 78.9 = 79
+#DEFINE SIXTEENd   0X01 ; 0.395s / 0.01 = 39.5 = 40
 #DEFINE ROTAMOUNT  0X02 ; (rotate n times) 0x02 = 2 * 1.8 deg
 ; == MEM.  LOCATIONS == ;
-SYMBOL N_LENGTH    = B0 ; note duration delay value
+SYMBOL N_LENGTH    = B0 ; note rpm value
 SYMBOL R_COUNT     = B1 ; rotation call count
 ;=======================;
 
@@ -55,15 +55,15 @@ EOFPOLL:
 ; ==== NOTE LENGTH ==== ;
 FOUR: ; 1.579 sec.
     MOVW    FOURd       ; put four delay length into W for TMR
-    JMP     INITDELAY   ; move value into W, to then be stored in N_LENGTH
+    JMP     ROTLOOP   ; move value into W, to then be stored in N_LENGTH
 
 EIGHT: ; 0.789 sec.
     MOVW    EIGHTd      ; put eight delay length into W for TMR
-    JMP     INITDELAY   ; move value into W, to then be stored in N_LENGTH
+    JMP     ROTLOOP   ; move value into W, to then be stored in N_LENGTH
 
 SIXTEEN: ; 0.395 sec.
     MOVW    SIXTEENd    ; put sixteen delay length into W for TMR
-    JMP     INITDELAY   ; move value into W, to then be stored in N_LENGTH
+    JMP     ROTLOOP   ; move value into W, to then be stored in N_LENGTH
 ;=======================;
 
 ; == TIMING FUNCTION == ;
@@ -94,8 +94,11 @@ SRPOLL:
    JPZ      SRPOLL      ; if TMR still low, keep polling for TMR high
                         ; when TMR goes high, don't loop but ...
    DEC      N_LENGTH    ; decrement the note length register
-   JPZ      ROTLOOP     ; if looped SRPOLL time/s (Z=1), goto stepper routine
+   JPZ      EOL         ; if looped SRPOLL time/s (Z=1), goto stepper routine
    JMP      DELAY       ; Z=0, therefore timer loop not over, go back to delay
+
+EOL:
+   RET
 ;=======================;
 
 ; == STEPPER CONTROL == ;
@@ -115,26 +118,18 @@ DONE:
 ROTATE:
     MOVW    0X01        ; 1a
     MOVWR   PORTB       ; move to output
-    CALL    WAIT50      ; delay 
+    CALL    INITDELAY   ; delay 
     MOVW    0X02        ; 2a
     MOVWR   PORTB       ; move to output
-    CALL    WAIT50      ; delay
+    CALL    INITDELAY   ; delay
     MOVW    0X04        ; 1b
     MOVWR   PORTB       ; move to output
-    CALL    WAIT50      ; delay
+    CALL    INITDELAY   ; delay
     MOVW    0X08        ; 2b
     MOVWR   PORTB       ; move to output
-    CALL    WAIT50      ; delay
+    CALL    INITDELAY   ; delay
 RET
 
-WAIT50:
-    CALL    wait100ms
-    CALL    wait10ms
-    CALL    wait10ms
-    CALL    wait10ms
-    CALL    wait10ms
-    CALL    wait10ms
-RET
 ;=======================;
 
 ; ==== END OF FILE ==== ;

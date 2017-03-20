@@ -49,7 +49,7 @@ EOFPOLL:
     MOVRW   PORTC
     ANDW    0X03
     XORW    0X00
-    JPZ     EOF
+    JPZ     POLL ;EOF
     JMP     POLL
 ;=======================;
 ; ==== NOTE LENGTH ==== ;

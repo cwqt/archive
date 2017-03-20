@@ -6,10 +6,10 @@
 ;=======================+
 setfreq m8
 ; ===== VARIABLES ===== ;
-#DEFINE FOURd      0X10 ; 1.527s / 0.01 = 157.9 = 158 0x30
-#DEFINE EIGHTd     0X05 ; 0.789s / 0.01 = 78.9 = 79
-#DEFINE SIXTEENd   0X02 ; 0.395s / 0.01 = 39.5 = 40
-#DEFINE ROTAMOUNT  0X02 ; (rotate n times) 0x02 = 2 * 1.8 deg
+#DEFINE FOURd      0X08 ; 1.527s / 0.01 = 157.9 = 158 0x30
+#DEFINE EIGHTd     0X06 ; 0.789s / 0.01 = 78.9 = 79
+#DEFINE SIXTEENd   0X03 ; 0.395s / 0.01 = 39.5 = 40
+#DEFINE ROTAMOUNT  0X01 ; (rotate n times) 0x02 = 2 * 1.8 deg
 ; == MEM.  LOCATIONS == ;
 SYMBOL N_LENGTH    = B0 ; note rpm value
 SYMBOL R_COUNT     = B1 ; rotation call count
@@ -74,8 +74,6 @@ DELAY:
    CALL     wait10ms   ; wait 0.1s
    CALL     wait10ms   ; wait 0.1s
    CALL     wait10ms   ; wait 0.1s
-   CALL     wait10ms   ; wait 0.1s
-   CALL     wait10ms   ; wait 0.1s
    JPZ      ENDOFDELAY  ; if N_LENGTH == 0, end of loop
    ; put this here to prevent arithmetic underflow looping back
    ; and putting 255 into N_LENGTH
@@ -96,9 +94,10 @@ ROTLOOP:
     MOVW    ROTAMOUNT   ; rotate 14 times, T = 360/no. sectors(27) = 13.3^.
     MOVWR   R_COUNT     ; move rotamount into memory location
 REP:
+    CALL    ROTATE      ; rotate once
     DEC     R_COUNT     ; decrement the current rotation count
     JPZ     DONE        ; if delay == 0 then poll
-    CALL    ROTATE      ; rotate once
+
     JMP     REP         ; repeat loop until 0xE0 == 0
 DONE:
     JMP     POLL        ; check new BCD value

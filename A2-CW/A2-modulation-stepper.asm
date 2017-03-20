@@ -8,7 +8,7 @@ setfreq m8
 ; ===== VARIABLES ===== ;
 #DEFINE FOURd      0X10 ; 1.527s / 0.01 = 157.9 = 158 0x30
 #DEFINE EIGHTd     0X05 ; 0.789s / 0.01 = 78.9 = 79
-#DEFINE SIXTEENd   0X01 ; 0.395s / 0.01 = 39.5 = 40
+#DEFINE SIXTEENd   0X02 ; 0.395s / 0.01 = 39.5 = 40
 #DEFINE ROTAMOUNT  0X02 ; (rotate n times) 0x02 = 2 * 1.8 deg
 ; == MEM.  LOCATIONS == ;
 SYMBOL N_LENGTH    = B0 ; note rpm value
@@ -71,7 +71,11 @@ RPMDEL:
    MOVWR SWP            ; and save it in the SWP memory location
 
 DELAY:
-   CALL     wait100ms   ; wait 0.1s
+   CALL     wait10ms   ; wait 0.1s
+   CALL     wait10ms   ; wait 0.1s
+   CALL     wait10ms   ; wait 0.1s
+   CALL     wait10ms   ; wait 0.1s
+   CALL     wait10ms   ; wait 0.1s
    JPZ      ENDOFDELAY  ; if N_LENGTH == 0, end of loop
    ; put this here to prevent arithmetic underflow looping back
    ; and putting 255 into N_LENGTH
@@ -99,17 +103,17 @@ REP:
 DONE:
     JMP     POLL        ; check new BCD value
 
-ROTATE:
-    MOVW    0X01        ; 1a
+ROTATE: ; cw rotate
+    MOVW    0X08        ; 1a
     MOVWR   PORTB       ; move to output
     CALL    RPMDEL      ; delay 
-    MOVW    0X02        ; 2a
+    MOVW    0X04        ; 2a
     MOVWR   PORTB       ; move to output
     CALL    RPMDEL      ; delay
-    MOVW    0X04        ; 1b
+    MOVW    0X02      ; 1b
     MOVWR   PORTB       ; move to output
     CALL    RPMDEL      ; delay
-    MOVW    0X08        ; 2b
+    MOVW    0X01       ; 2b
     MOVWR   PORTB       ; move to output
     CALL    RPMDEL      ; delay
 RET

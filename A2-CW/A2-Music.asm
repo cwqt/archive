@@ -27,9 +27,13 @@ INIT:
     MOVWR   PORTB       ; move to ouput
 ;=======================;
 POLL:                   ; return routine at EOF
-MOVRW       PORTC
-ANDW        0X07
-JPZ         POLL
+MOVW        0X01        ; turn on the PLL
+MOVWR       PORTA       ; move to output
+MOVRW       PORTC       ; get input values
+ANDW        0X07        ; select only 1, 2, 4 = 7
+JPZ         REST        ; 000, therefore rest until next note
+JMP         CNOTE       ; iterate through possible notes
+
 CNOTE:                  ; 001
     MOVRW   PORTC       ; get the current inputs
     ANDW    0X07        ; limit values to 3-bits
@@ -119,3 +123,12 @@ BFREQ:
     MOVWR   PORTB
     JMP     POLL
 ;=======================;
+REST:             
+   MOVW     0X00        ; turn off the PLL
+   MOVWR    PORTA
+   MOVRW    PORTC
+   JPZ      POLL
+   JMP      REST
+;=======================;
+
+

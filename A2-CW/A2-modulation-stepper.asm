@@ -6,9 +6,9 @@
 ;=======================+
 setfreq m8
 ; ===== VARIABLES ===== ;
-#DEFINE FOURd      0X08 ; 1.527s / 0.01 = 157.9 = 158 0x30
-#DEFINE EIGHTd     0X06 ; 0.789s / 0.01 = 78.9 = 79
-#DEFINE SIXTEENd   0X03 ; 0.395s / 0.01 = 39.5 = 40
+#DEFINE FOURd      0X06 ; 1.527s / 0.01 = 157.9 = 158 0x30
+#DEFINE EIGHTd     0X03 ; 0.789s / 0.01 = 78.9 = 79
+#DEFINE SIXTEENd   0X01 ; 0.395s / 0.01 = 39.5 = 40
 #DEFINE ROTAMOUNT  0X01 ; (rotate n times) 0x02 = 2 * 1.8 deg
 ; == MEM.  LOCATIONS == ;
 SYMBOL N_LENGTH    = B0 ; note rpm value

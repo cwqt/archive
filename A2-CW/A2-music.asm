@@ -19,21 +19,23 @@
 setfreq m8              ; change clock speed of chip
                         ; faster frequency equals
                         ; less latency in changing note values
-
 INIT:
     MOVW    0X07        ; C0 and C1 as inputs
     MOVWR   TRISC       ; set PORTC as input
     MOVW    0X00        ; reset outputs
-    MOVWR   PORTB       ; move to ouput
+    MOVWR   PORTB       ; move to output
+    MOVW    0X00        ; turn on PLL, NOT CE   
+    MOVWR   PORTC       ; thus creating sound
+
 ;=======================;
 POLL:                   ; return routine at EOF
-MOVW        0X01        ; turn on the PLL
-MOVWR       PORTA       ; move to output
-MOVRW       PORTC       ; get input values
-ANDW        0X07        ; select only 1, 2, 4 = 7
-JPZ         REST        ; 000, therefore rest until next note
-JMP         CNOTE       ; iterate through possible notes
-
+    MOVRW       PORTC   ; get input values
+    ANDW        0X07    ; select only 1, 2, 4 = 7
+    JPZ         REST    ; 000, therefore rest until next note
+    MOVW        0X00    ; if not 0, turn on the PLL (NOT CE)
+                        ; thus starting sound output
+    MOVWR       PORTC   ; move to output
+;=======================;
 CNOTE:                  ; 001
     MOVRW   PORTC       ; get the current inputs
     ANDW    0X07        ; limit values to 3-bits
@@ -74,7 +76,6 @@ EFREQ:
     MOVWR   PORTB
     JMP     POLL
 ;=======================;
-
 FNOTE:
     MOVRW   PORTC
     ANDW    0X07
@@ -123,12 +124,13 @@ BFREQ:
     MOVWR   PORTB
     JMP     POLL
 ;=======================;
-REST:             
-   MOVW     0X00        ; turn off the PLL
-   MOVWR    PORTA
-   MOVRW    PORTC
-   JPZ      POLL
-   JMP      REST
+REST:                  
+   MOVW     0X08        ; turn off PLL, NOT CE   
+                        ; thus, stopping sound output       
+   MOVWR    PORTC       ; move to PORTC
+   MOVRW    PORTC       ; get inputs
+   ANDW     0X07        ; bitmask
+   JPZ      REST        ; if still 000, then keep off
+   JMP      POLL        ; else goto poll loop
 ;=======================;
-
 

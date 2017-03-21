@@ -24,6 +24,12 @@ MOVWR   TRISB
 
 ; == SPEED ALGORITHM == ;
 POLL:
+	MOVRW PORTC
+      ANDW  0X10
+      XORW  0X10
+      JPZ   SIXTEEN     ; force play by jumping to
+                        ; "sixteen" on button press 
+     
 FOURPOLL:
     MOVRW   PORTC
     ANDW    0X03
@@ -116,7 +122,6 @@ ROTATE: ; cw rotate
     MOVWR   PORTB       ; move to output
     CALL    RPMDEL      ; delay
 RET
-
 ;=======================;
 ; ==== END OF FILE ==== ;
 EOF:

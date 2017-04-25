@@ -19,6 +19,8 @@
 setfreq m8              ; change clock speed of chip
                         ; faster frequency equals
                         ; less latency in changing note values
+let dirsc = %00001000   ; make pin C.3 and output (0x08)
+                        ; for use with rests later on
 INIT:
     MOVW    0X07        ; C0 and C1 as inputs
     MOVWR   TRISC       ; set PORTC as input

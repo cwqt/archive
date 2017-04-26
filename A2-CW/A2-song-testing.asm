@@ -1,166 +1,199 @@
 setfreq m8
-#DEFINE Cn 0X91         ; 519Hz 91
-#DEFINE En 0XA2         ; 692Hz A0
-#DEFINE Fn 0XA9         ; 777Hz AB
-#DEFINE Gn 0XAD         ; 824Hz AD
-#DEFINE An 0XB8         ; 925Hz B8
-#DEFINE Bn 0XC5         ; 1038Hz C4
-#DEFINE Cn5 0XCB       ; C5
+#DEFINE LOWFREQ 0X80
+#DEFINE Cn 0X95;6       ; 519Hz 91
+#DEFINE En 0X9C         ; 692Hz A0
+#DEFINE Fn 0XA0;BE      ; 777Hz AB
+#DEFINE Gn 0XA5         ; 824Hz AD
+#DEFINE An 0XA8         ; 925Hz B8
+#DEFINE Bn 0XAD         ; 1038Hz C4
+#DEFINE C5n 0XB6;B6     ; C5
 
-JMP START ; skip the functions
+let dirsc = %00001000   ; let pin4 on portc become output
+				; for note rests
+INIT:
+	MOVW  0X00
+	MOVWR PORTC
+	JMP START ; skip the functions
 
-; DEFINE SOME FUNCTIONS
-; DEFINE NOTE LENGTHS
-SIXTEEN:
-	call 	wait1000ms ; 1 second
-	call 	wait100ms
-	call 	wait100ms
-	call 	wait100ms
-	call 	wait100ms
-	call 	wait100ms  ; 1.5 seconds
-	call 	wait10ms
-	call 	wait10ms
-	call 	wait10ms
-	call 	wait10ms
-	call 	wait10ms
-	call 	wait10ms
-	call 	wait10ms
-	call 	wait10ms
-	call 	wait10ms ; 1.59 seconds
+SIXTEEN: ; 375
+	CALL wait100ms
+	CALL wait100ms
+	CALL wait100ms
+	CALL wait100ms
+	CALL wait10ms
+	CALL wait10ms
+	CALL wait10ms
+	CALL wait10ms
+RET
+EIGHT: ;500
+	call wait100ms
+	call wait100ms
+	call wait100ms
+	call wait100ms
+	call wait100ms
+	CALL wait100ms
+RET
+EIGHTDOT: ;750
+	call wait100ms
+	call wait100ms
+	call wait100ms
+	call wait100ms
+	CALL wait100ms
+	call wait100ms
+	call wait100ms
+	call wait100ms
+	call wait10ms
+	call wait10ms
+	call wait10ms
+	call wait10ms
+	call wait10ms
+RET
+FOUR: ;1500 
+	call wait1000ms
+	CALL wait100ms
 RET
 
-EIGHT:
-	call 	wait100ms
-	call 	wait100ms
-	call 	wait100ms
-	call 	wait100ms
-	call 	wait100ms
-	call 	wait100ms
-	call 	wait100ms ; 0.7 seconds
-	call 	wait10ms
-	call 	wait10ms
-	call 	wait10ms
-	call 	wait10ms
-	call 	wait10ms
-	call 	wait10ms
-	call 	wait10ms
-	call 	wait10ms ; 0.78 seconds
-RET
-
-FOUR:
-	call 	wait100ms
-	call 	wait100ms
-	call 	wait100ms ; 0.3 seconds
-	call 	wait10ms
-	call 	wait10ms
-	call 	wait10ms
-	call 	wait10ms
-	call 	wait10ms
-	call 	wait10ms
-	call 	wait10ms
-	call 	wait10ms
-	call 	wait10ms ; 0.39 seconds
-RET
-
-;DEFINE NOTE VALUES
+; DEFINE NOTE VALUES
 CNOTE:
 	MOVW   Cn
 	MOVWR  PORTB
 RET
-
-ENOTE:
+EbNOTE:
 	MOVW   En
 	MOVWR  PORTB
 RET
 FNOTE:
-	MOVW   Cn
+	MOVW   Fn
 	MOVWR  PORTB
 RET
 GNOTE:
-	MOVW   Cn
+	MOVW   Gn
 	MOVWR  PORTB
 RET
-ANOTE:
-	MOVW   Cn
+AbNOTE:
+	MOVW   An
 	MOVWR  PORTB
 RET
-BNOTE:
-	MOVW   Cn
+BbNOTE:
+	MOVW   Bn
 	MOVWR  PORTB
 RET
 C5NOTE:
-	MOVW   Cn
+	MOVW   C5n
 	MOVWR  PORTB
 RET
 BREAK:
-   MOVW     0X08        ; turn off PLL, NOT CE
-                        ; thus, stopping sound output
-   MOVWR    PORTC       ; move to PORTC
-   CALL     WAIT100MS
+	MOVW LOWFREQ
+	MOVWR PORTB
+	CALL WAIT100MS
+RET
+REST:
+	MOVW 0X08
+	MOVWR PORTC
+	CALL WAIT1000MS
+	MOVW 0X00
+	MOVWR PORTC
 RET
 
-; START THE SONG
+; syntax
 ; CALL NOTE
-; CALL NOTE LENGTH
-START:
+; CALL LENGTH
+; CALL BREAK/ REST (op)
+START: ; Get in the fucking IC Shinji
 	CALL CNOTE
 	CALL FOUR
+
 	CALL EbNOTE
 	CALL FOUR
-	CALL BREAK
+
 	CALL FNOTE
-	CALL EIGHT
+	CALL EIGHTDOT
+
 	CALL EbNOTE
-	CALL SIXTEEN
-	CALL BREAK
+	CALL EIGHT ;SIXTEEN ;CALL BREAK
+
 	CALL EbNOTE
 	CALL EIGHT
+
 	CALL FNOTE
 	CALL EIGHT
+	CALL BREAK ; EOF BAR 1
+
+	CALL FNOTE
+	CALL EIGHT ; JOINED
+	CALL BREAK ; CONT NOTE
+
 	CALL FNOTE
 	CALL EIGHT
-	CALL FNOTE
-	CALL EIGHT
+	CALL BREAK 
+
 	CALL BbNOTE
 	CALL EIGHT
+
 	CALL AbNOTE
 	CALL EIGHT
-	CALL BREAK
+
 	CALL GNOTE
 	CALL SIXTEEN
+
 	CALL FNOTE
 	CALL EIGHT
+
 	CALL GNOTE
 	CALL SIXTEEN
-	CALL BREAK
-	CALL GNOTE
-	CALL FOUR
+
 	CALL GNOTE
 	CALL FOUR
 	CALL BREAK
+	CALL REST ; EOF BAR 2
+
+	CALL GNOTE
+	CALL FOUR
+
 	CALL BbNOTE
 	CALL FOUR
+
 	CALL C5NOTE
-	CALL EIGHT
+	CALL EIGHTDOT
+
 	CALL FNOTE
 	CALL SIXTEEN
-	CALL BREAK
+
 	CALL FNOTE
 	CALL EIGHT
+
 	CALL EbNOTE
 	CALL EIGHT
+	CALL BREAK ; EOF BAR 3
+
 	CALL BbNOTE
 	CALL EIGHT
+	CALL BREAK ; JOINED
+
 	CALL BbNOTE
 	CALL EIGHT
+	CALL BREAK ; JOINED
+
 	CALL GNOTE
 	CALL EIGHT
+
 	CALL BbNOTE
 	CALL EIGHT
-	CALL BREAK
+	
 	CALL BbNOTE
-	CALL EIGHT
+	CALL EIGHTDOT
+
 	CALL C5NOTE
-	CALL SIXTEEN
+	CALL FOUR	
+
+	CALL C5NOTE
+	CALL FOUR
+	CALL FOUR
+	MOVW 0XFF
+	MOVWR PORTC
+	CALL WAIT1000MS
+	CALL WAIT1000MS
+	CALL WAIT1000MS
+	CALL WAIT1000MS
 	CALL BREAK
-JMP START ; RESTART
+JMP INIT ; RESTART

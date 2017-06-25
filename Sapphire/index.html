@@ -7,6 +7,10 @@
 		<link href="https://fonts.googleapis.com/earlyaccess/mplus1p.css" rel="stylesheet" />
 		<style type="text/css">
 			/* no bullying allowed */
+			@font-face {
+			    font-family: GTPressura;
+			    src: url(GT-Pressura-Mono-Regular.ttf);
+			}
 			body { background-color: #111; margin-top: 9%; }
 			h1 { display: inline; }
 			.shadow { box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22); border-bottom: thick solid #f093fb }
@@ -15,7 +19,7 @@
 			.row * { padding: 0; margin: 0 !important;}
 			.internal * { color: !important; }
 			ul { list-style: none; transition: 0.2s; padding: 10px !important}
-			.col-3 { padding: 0 !important; background-size: cover; height: 55vh; transition: 0.2s; overflow: hidden; }
+			.col-3 { font-family: "GTPressura";  padding: 0 !important; background-size: cover; height: 55vh; transition: 0.2s; overflow: hidden; }
 			.col-3 h5 { margin: 0 !important; padding: 5px 5px 5px 15px; width: 100%; background-color: #111; color: #fff;}
 			.col-3:hover { width: 90% !important; }
 			.col-3:not(:hover) .hidden { opacity: 0; }
@@ -26,7 +30,9 @@
 			a { text-decoration: none; }
 			a:hover:before { content: "— "}
 			.links { margin-left: 15px !important; background-color: #fff; width: 40%; opacity: 100% }
-			.wf-mplus1p { font-family: "Mplus 1p"; }
+			.wf-mplus1p { font-family: "Mplus 1p"; }                                       /* goddamn placeholder colour */
+			input { height: 100% !important; background-color: transparent; border: none; filter: brightness(0.4);}
+			input[type="text"] { font-family: "Mplus 1p" !important; font-weight: bold !important; font-size: calc(1rem + 1vmin); color: #fff !important };
 		</style>
 	</head>
 <body>
@@ -112,8 +118,18 @@
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-6"><h5 class="wf-mplus1p">あなたはどうですか？</h5></div>
+			<div class="col-6">
+				<form method="get" action="https://www.google.co.uk/search?q=">
+					<input class="wf-mplus1p" name="q" id="search" type="text" placeholder="あなたは本当に生きている？" />
+				</form>
+			</div>
+			<!--<div class="col-6"><h5 class="wf-mplus1p">あなたは本当に生きている？</h5></div>-->
 			<div class="col-6 tar"><h5 class="wf-mplus1p">0001 0110</h5></div>
 		</div>
+		<script type="text/javascript">
+			window.onload = function() {
+			  document.getElementById("search").focus();
+			}
+		</script>
 </body>
 </html>

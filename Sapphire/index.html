@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<meta charset="UTF-8">
 		<title>~</title>
 		<link rel="stylesheet" type="text/css" href="../elk.css">
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -11,7 +12,8 @@
 			    font-family: GTPressura;
 			    src: url(GT-Pressura-Mono-Regular.ttf);
 			}
-			body { background-color: #111; margin-top: 9%; }
+			.container { height: 100% !important; }
+			body { background-color: #111; padding-top: 9%; }
 			h1 { display: inline; }
 			.shadow { box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22); border-bottom: thick solid #f093fb }
 			.vcenter { height: 100%;}
@@ -29,9 +31,10 @@
 			ul li { padding: 2px !important }
 			a { text-decoration: none; }
 			a:hover:before { content: "— "}
-			.links { margin-left: 15px !important; background-color: #fff; width: 40%; opacity: 100% }
+			.links { margin-left: 15px !important; background-color: #fff; width: 40%; opacity: 100%; overflow: scroll; max-height: 70% !important }
+			.hidden:not(.links) { z-index: 9999 !important; }
 			.wf-mplus1p { font-family: "Mplus 1p"; }                                       /* goddamn placeholder colour */
-			input { height: 100% !important; background-color: transparent; border: none; filter: brightness(0.4);}
+			input { height: 100% !important; background-color: transparent; border: none; filter: brightness(0.45);}
 			input[type="text"] { font-family: "Mplus 1p" !important; font-weight: bold !important; font-size: calc(1rem + 1vmin); color: #fff !important };
 		</style>
 	</head>

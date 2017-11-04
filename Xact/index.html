@@ -70,7 +70,7 @@
         background-image: url("");
         background-size: cover;
         z-index: -1;
-        transform: scale(1.2);
+        transform: scale(1.25);
       }
       .links {
         display: flex;
@@ -91,9 +91,15 @@
         color: black;
         border-radius: 2px;
         text-decoration: none;
+        border-bottom: thick solid transparent;
+        transition: 0.2s;
+        padding-bottom: 6px
       }
       .links a:hover {
         box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+        border-bottom-color: lightgrey;
+        z-index: 5;
+        transform: scale(1.5);
       }
       .header a:last-of-type {
         background-color: none;
@@ -189,28 +195,28 @@
     <script>
       //https://stackoverflow.com/questions/43265033/what-is-text-and-how-to-remove-it
       function clean(node) {
-          for (var n = 0; n < node.childNodes.length; n ++) {
-              var child = node.childNodes[n];
-              if (child.nodeType === 8 || (child.nodeType === 3 && !/\S/.test(child.nodeValue))) {
-                  node.removeChild(child);
-                  n --;
-              } else if(child.nodeType === 1) {
-                  clean(child);
-              }
+        for (var n = 0; n < node.childNodes.length; n++) {
+          var child = node.childNodes[n];
+          if (child.nodeType === 8 || (child.nodeType === 3 && !/\S/.test(child.nodeValue))) {
+            node.removeChild(child);
+            n--;
+          } else if (child.nodeType === 1) {
+            clean(child);
           }
+        }
       }
       clean(document);
 
       document.addEventListener('DOMContentLoaded', function() {
         var papes = [
-            "https://i.imgur.com/wfXIHzK.jpg",
-            "https://i.imgur.com/xETbBJP.jpg",
-            "https://i.imgur.com/lTFnAQC.png",
-            "https://i.imgur.com/Eq7RPQ7.jpg"
+          "https://i.imgur.com/wfXIHzK.jpg",
+          "https://i.imgur.com/xETbBJP.jpg",
+          "https://i.imgur.com/lTFnAQC.png",
+          "https://i.imgur.com/Eq7RPQ7.jpg"
         ];
         var rand = Math.floor(Math.random() * papes.length);
         var background = document.getElementsByClassName("wallpaper");
-        for(var i = 0; i < background.length; i++) {//apply wallpaper to all divs
+        for (var i = 0; i < background.length; i++) { //apply wallpaper to all divs
           background.item(i).style.backgroundImage = "url(" + papes[rand] + ")";
         }
 
@@ -220,18 +226,20 @@
         tabs[0].classList.add("selected");
       });
 
-      function sleep(ms) { return new Promise(resolve => setTimeout(resolve, ms)); }
+      function sleep(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+      }
       async function setSelfActive(tab) {
         var tabs = document.getElementsByClassName("header")[0].querySelectorAll("a");
-        for(var i=0; i < tabs.length; i++) {
+        for (var i = 0; i < tabs.length; i++) {
           tabs[i].classList.remove("selected");
         };
         tabs[tab].classList.add("selected");
         var links = document.getElementsByClassName("links")
-        for(var i = 0; i < links.length; i++) {
+        for (var i = 0; i < links.length; i++) {
           //danger zone
           links.item(i).style.animation = "fade-rev 0.6s"
-          await sleep(500/links.length);
+          await sleep(500 / links.length);
           links.item(i).style.display = "none";
         };
         links.item(tab).style.display = "inline-flex";

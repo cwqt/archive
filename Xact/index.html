@@ -51,12 +51,14 @@
       }
       .header a i { margin-right: 5px; font-size: 120%;}
       .header a:hover {
+        background: none !important;
         border-bottom: medium solid white;
-        background-color: rgba(10,10,10,0.4);
+        background-color: rgba(10,10,10,0.4) !important;
         cursor: pointer;
       }
       .selected {
         border-bottom: medium solid white !important;
+        background: none !important;
         background-color: rgba(10,10,10,0.4) !important;
       }
       .header i#new-bookmark { color: white; margin-left: 10px; margin-left: auto; margin-right: 20px; }
@@ -92,6 +94,10 @@
       }
       .links a:hover {
         box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+      }
+      .header a:last-of-type {
+        background-color: none;
+        background: linear-gradient(to right, rgba(100,100,100,0.3), rgba(100,100,100,0))
       }
       .line {
         display: flex;

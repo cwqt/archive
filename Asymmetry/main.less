@@ -97,21 +97,24 @@ body {
   clip-path: polygon(48% 100%, 100% 0, 62% 100%, 51% 0, 33% 100%, 0 0);
   width: 70%;
   height: auto;
-  animation: polygons 4s alternate infinite, mover 1s alternate infinite;
+  animation: polygons 5s alternate infinite, mover 1s alternate infinite;
   // force hardware acceleration
   transform: translate3d(0, 0, 0);
   animation-timing-function: expo-in-out;
-  transition: clip-path 15s;
+  transition: all 0.5s;
+  &:hover {
+    // do something
+  }
 }
 
 @-webkit-keyframes polygons {
-  15% {clip-path: polygon(50% 100%, 75% 13%, 100% 100%, 50% 0, 0 100%, 19% 13%); filter: blur(5px)}
-  30% {clip-path: polygon(47% 100%, 82% 24%, 78% 95%, 50% 0, 19% 99%, 18% 19%);}
-  45% {clip-path: polygon(47% 100%, 82% 24%, 78% 95%, 50% 0, 19% 99%, 18% 19%);}
-  60% {clip-path: polygon(48% 65%, 78% 26%, 62% 100%, 51% 0, 33% 100%, 21% 24%);}
-  75% {clip-path: polygon(48% 65%, 78% 26%, 62% 100%, 51% 0, 33% 100%, 21% 24%);}
-  90% {clip-path: polygon(50% 100%, 75% 13%, 100% 100%, 50% 0, 0 100%, 19% 13%);}
-  100% {clip-path: polygon(48% 100%, 100% 0, 62% 100%, 51% 0, 33% 100%, 0 0);}
+  15% {clip-path:   polygon(50% 100%, 75% 13%, 100% 100%, 50% 0, 0 100%, 19% 13%); filter: blur(5px)}
+  30% {clip-path:   polygon(47% 100%, 82% 24%, 78% 95%, 50% 0, 19% 99%, 18% 19%);}
+  45% {clip-path:   polygon(47% 100%, 82% 24%, 78% 95%, 50% 0, 19% 99%, 18% 19%);}
+  60% {clip-path:   polygon(48% 65%,  78% 26%, 62% 100%, 51% 0, 33% 100%, 21% 24%);}
+  75% {clip-path:   polygon(48% 65%,  78% 26%, 62% 100%, 51% 0, 33% 100%, 21% 24%);}
+  90% {clip-path:   polygon(50% 100%, 75% 13%, 100% 100%, 50% 0, 0 100%, 19% 13%);}
+  100% {clip-path:  polygon(48% 100%, 100% 0, 62% 100%, 51% 0, 33% 100%, 0 0);}
 }
 @-webkit-keyframes mover {
   from {transform: rotate(2deg)}

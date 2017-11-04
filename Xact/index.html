@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf8">
+    <title>~</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/earlyaccess/mplus1p.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="../elk.css">
+    <style>
+      body { background-color: #111; font-family: "Mplus 1p"; letter-spacing: 1px;}
+      ul { list-style: none; padding: 0; margin: 0; }
+      .content {
+        height: 70vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+        border-radius: 3px;
+        animation: fade-scale 1s;
+      }
+      @keyframes fade-scale {
+        0%   { opacity: 0; transform: scale(0.6); }
+        100% { opacity: 1; transform: scale(1); }
+      }
+      .line {
+        background-color: #222;
+        padding: 10px;
+        font-family: "Mplus 1p" !important;
+        font-size: 20px;
+        font-weight: bold;
+        color: white;
+      }
+      .header {
+        display: flex;
+        align-items: center;
+        position: relative;
+        z-index: 3;
+        overflow: hidden;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+      }
+      .header a {
+        display: inline-flex;
+        align-items: center;
+        padding: 15px;
+        border-bottom: medium solid transparent;
+        transition: 0.2s;
+        color: white;
+        font-weight: bold;
+        background-color: rgba(100,100,100,0.3);
+        margin-right: 0;
+      }
+      .header a i { margin-right: 5px; font-size: 120%;}
+      .header a:hover {
+        border-bottom: medium solid white;
+        background-color: rgba(10,10,10,0.4);
+        cursor: pointer;
+      }
+      .selected {
+        border-bottom: medium solid white !important;
+        background-color: rgba(10,10,10,0.4) !important;
+      }
+      .header i#new-bookmark { color: white; margin-left: 10px; margin-left: auto; margin-right: 20px; }
+      .fake-blur {
+        filter: blur(4px);
+        position: absolute;
+        top:0; right:0;
+        width: 100%; height: 100%;
+        background-image: url("");
+        background-size: cover;
+        z-index: -1;
+        transform: scale(1.2);
+      }
+      .links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin-top: 20px;
+        position: relative;
+      }
+      @keyframes fade { 0% { top: -500px; } 100% { top: 0px;}}
+      @keyframes fade-rev { 0% { top: 0px; } 100% { top: -500px;}}
+      .links:not(.selected) { animation: fade 1s backwards; }
+      /*better .links:not(:first-child) */
+      .links + .links { display: none; }
+      .links a {
+        margin: 10px;
+        padding: 10px;
+        background-color: white;
+        color: black;
+        border-radius: 2px;
+        text-decoration: none;
+      }
+      .links a:hover {
+        box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+      }
+      .line {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        filter: brightness(0.8);
+      }
+    input { height: 80% !important; background-color: transparent; border: none;  margin-bottom: 0; padding: 0;}
+    input[type="text"] { font-family: "Mplus 1p" !important; font-weight: bold !important; font-size: 20px; color: #555 !important; }
+    h5 { margin: 0 !important; color: #3b3b3b; margin-left: auto; font-size: 20px; }
+    </style>
+  </head>
+  <body>
+    <div class="container vcenter hcenter">
+      <div class="content col-10 relative">
+        <div class="fake-blur wallpaper" style="filter: none;"></div>
+        <div class="header stretch">
+          <a onclick="setSelfActive(0)"><i class="material-icons">favorite</i> General</a>
+          <a onclick="setSelfActive(1)"><i class="material-icons">group</i> Social</a>
+          <a onclick="setSelfActive(2)"><i class="material-icons">book</i> College</a>
+          <a onclick="setSelfActive(3)"><i class="material-icons">code</i> Code</a>
+          <a onclick="setSelfActive(4)"><i class="material-icons">filter_list</i> Other</a>
+          <i class="material-icons" id="new-bookmark">add</i>
+          <div class="fake-blur wallpaper"></div>
+        </div>
+
+        <!-- yes the order is hard-coded, fight me -->
+        <!-- GENERAL -->
+        <div class="links col-8">
+          <a href="https://www.youtube.com">YouTube</a>
+          <a href="https://google.co.uk">Google</a>
+          <a href="https://mixtape.moe">mixtape.moe</a>
+          <a href="https://4chan.org/">4chan</a>
+          <a href="https://www.amazon.co.uk/">Amazon</a>
+          <a href="https://www.paypal.com/signin?country.x=GB&locale.x=en_GB">Paypal</a>
+          <a href="https://www.halifax-online.co.uk/personal/logon/login.jsp">Halifax</a>
+          <a href="http://www.ebay.co.uk/">eBay</a>
+        </div>
+
+        <!-- SOCIAL -->
+        <div class="links col-8">
+          <a href="https://store.steampowered.com/login/">Steam</a>
+          <a href="https://discordapp.com/login">Discord</a>
+          <a href="https://mail.protonmail.com/login">Protonmail</a>
+          <a href="https://inbox.google.com/">Inbox</a>
+          <a href="https://app.tutanota.de/#login">Tutanota</a>
+          <a href="https://web.skype.com/en/">Skype</a>
+        </div>
+
+        <!-- COLLEGE -->
+        <div class="links col-8">
+          <a href="http://jlcproportal.leggott.ac.uk/">ProPortal</a>
+          <a href="https://login.microsoftonline.com/">Webmail</a>
+          <a href="http://gv.leggott.ac.uk/">Grapevine</a>
+          <a href="https://vle.leggott.ac.uk/">Moodle</a>
+          <a href="http://www.thestudentroom.co.uk/">TSR</a>
+          <a href="https://drive.google.com/drive/u/0/my-drive">Drive</a>
+          <a href="https://en.wikipedia.org/">Wikipedia</a>
+          <a href="https://www.cymath.com/">cymath</a>
+          <a href="https://www.mymaths.co.uk/">MyMaths</a>
+        </div>
+
+        <!-- CODE -->
+        <div class="links col-8">
+          <a href="https://github.com">Github</a>
+          <a href="http://127.0.0.1:4000">127.0.0.1:4000</a>
+          <a href="http://127.0.0.1:8000">127.0.0.1:8000</a>
+          <a href="https://my.freenom.com/clientarea.php?action=domains">freenom.com</a>
+          <a href="https://app.netlify.com/">Netlify</a>
+          <a href="https://travis-ci.org/">Travis CI</a>
+          <a href="https://love2d.org/">L&#214;VE2D</a>
+          <a href="https://console.developers.google.com/">Google API</a>
+          <a href="https://analytics.google.com/">Google Analytics</a>
+          <a href="https://repl.it/languages/lua">Lua compiler</a>
+        </div>
+
+        <!-- OTHER -->
+        <div class="links col-8">
+
+        </div>
+        <div class="line stretch internal bottom">
+          <form method="get" action="https://www.google.co.uk/search?q=">
+            <input class="wf-mplus1p" name="q" id="search" type="text" placeholder="あなたは本当に生きている？" />
+          </form>
+          <h5>0001 0110</h5>
+        </div>
+      </div>
+    </div>
+    <script>
+      //https://stackoverflow.com/questions/43265033/what-is-text-and-how-to-remove-it
+      function clean(node) {
+          for (var n = 0; n < node.childNodes.length; n ++) {
+              var child = node.childNodes[n];
+              if (child.nodeType === 8 || (child.nodeType === 3 && !/\S/.test(child.nodeValue))) {
+                  node.removeChild(child);
+                  n --;
+              } else if(child.nodeType === 1) {
+                  clean(child);
+              }
+          }
+      }
+      clean(document);
+
+      document.addEventListener('DOMContentLoaded', function() {
+        var papes = [
+            "https://i.imgur.com/wfXIHzK.jpg",
+            "https://i.imgur.com/xETbBJP.jpg",
+            "https://i.imgur.com/lTFnAQC.png",
+            "https://i.imgur.com/Eq7RPQ7.jpg"
+        ];
+        var rand = Math.floor(Math.random() * papes.length);
+        var background = document.getElementsByClassName("wallpaper");
+        for(var i = 0; i < background.length; i++) {//apply wallpaper to all divs
+          background.item(i).style.backgroundImage = "url(" + papes[rand] + ")";
+        }
+
+        //get all tabs within header
+        var tabs = document.getElementsByClassName("header")[0].querySelectorAll("a");
+        //set first tab to active
+        tabs[0].classList.add("selected");
+      });
+
+      function sleep(ms) { return new Promise(resolve => setTimeout(resolve, ms)); }
+      async function setSelfActive(tab) {
+        var tabs = document.getElementsByClassName("header")[0].querySelectorAll("a");
+        for(var i=0; i < tabs.length; i++) {
+          tabs[i].classList.remove("selected");
+        };
+        tabs[tab].classList.add("selected");
+        var links = document.getElementsByClassName("links")
+        for(var i = 0; i < links.length; i++) {
+          //danger zone
+          links.item(i).style.animation = "fade-rev 0.6s"
+          await sleep(500/links.length);
+          links.item(i).style.display = "none";
+        };
+        links.item(tab).style.display = "inline-flex";
+        links.item(tab).style.animation = "fade 0.5s"
+      };
+    </script>
+  </body>
+</html>

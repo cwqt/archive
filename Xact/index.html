@@ -224,26 +224,25 @@
         var tabs = document.getElementsByClassName("header")[0].querySelectorAll("a");
         //set first tab to active
         tabs[0].classList.add("selected");
+
       });
 
-      function sleep(ms) {
-        return new Promise(resolve => setTimeout(resolve, ms));
-      }
+      var previousTab = 0
+      function sleep(ms) { return new Promise(resolve => setTimeout(resolve, ms)); }
       async function setSelfActive(tab) {
         var tabs = document.getElementsByClassName("header")[0].querySelectorAll("a");
-        for (var i = 0; i < tabs.length; i++) {
-          tabs[i].classList.remove("selected");
-        };
+        for (var i = 0; i < tabs.length; i++) { tabs[i].classList.remove("selected"); };
         tabs[tab].classList.add("selected");
+
         var links = document.getElementsByClassName("links")
-        for (var i = 0; i < links.length; i++) {
-          //danger zone
-          links.item(i).style.animation = "fade-rev 0.6s"
-          await sleep(500 / links.length);
-          links.item(i).style.display = "none";
-        };
+        if (previousTab != tab) {
+          links.item(previousTab).style.animation = "fade-rev 0.3s"
+          await sleep(300);
+          links.item(previousTab).style.display = "none";
+        }
         links.item(tab).style.display = "inline-flex";
-        links.item(tab).style.animation = "fade 0.5s"
+        links.item(tab).style.animation = "fade 0.3s"
+        previousTab = tab
       };
     </script>
   </body>

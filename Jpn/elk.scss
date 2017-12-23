@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css?family=Inconsolata');
+
+$container-width: 80vw;
+$spacing-unit: 30px;
+$ttime: 0.2s;
+
+$breakpoint-desktop: "only screen and (min-width : 1200px)";
+$breakpoint-laptop:  "only screen and (max-width : 1200px)";
+$breakpoint-mobile:  "only screen and (max-width : 720px)";
+
+* { box-sizing: border-box; }
+html { font-size: 62.5%; }
+body { font-size: 1.5em; }
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: "Helvetica", "Arial";
+  color: #222;
+}
+
+h1, h2, h3, h4, h5, h6, p, a, textarea, button, input, blockquote {
+  margin: 0;
+  padding: 0;
+}
+
+p, a, ul, li, blockquote {
+  font-size: 1.8rem;
+  line-height: 1.75;
+}
+p, a{ display: inline; }
+
+a {
+  color: #222;
+  transition: $ttime;
+  &:hover {
+    color: darken(lightblue, 40%);
+    text-decoration: underline;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+blockquote {
+  border-left: thick solid #f4f4f7;
+  @extend .m_vs;
+  @extend .m_p;
+}
+
+h1 { font-size: 5.0rem; }
+h2 { font-size: 4.2rem; }
+h3 { font-size: 3.6rem; }
+h4 { font-size: 3.0rem; }
+h5 { font-size: 2.4rem; }
+h6 { font-size: 1.5rem; }
+h4, h5, h6 { color: grey; }
+
+code, pre {
+  font-family: "Inconsolata"
+}
+
+p + code { display: inline; }
+code {
+  display: inline;
+  max-width: 100%;
+  border: 1px solid lighten(grey, 25%);
+  background-color: #f4f4f7;
+  padding: 3px;
+  //this'll bite me on the ass later...
+  opacity: 0.7;
+  width: auto;
+  @extend .m_round;
+}
+
+button {
+  border: 0;
+  padding: $spacing-unit/3;
+  background-color: #f4f4f7;
+  max-width: 100%;
+  transition: $ttime;
+  @extend .s_round;
+  &:hover {
+    background-color: darken(#f4f4f7, 5%);
+    cursor: pointer;
+  }
+}
+
+textarea, input {
+  border: 0;
+  border-bottom: 2px solid #f4f4f7;
+  padding: $spacing-unit/3;
+  &:focus {
+    border-bottom-color: darken(#f4f4f7, 15%);
+  }
+}
+
+textarea {
+  appearance: none;
+}
+
+hr {
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #f4f4f7;
+  @extend .m_vs;
+}
+
+table:not(.highlight) {
+  width: 100%;
+  border-collapse: collapse;
+  thead * {
+    @extend .b;
+  }
+  * {
+    font-size: 1.8rem;
+    line-height: 1.75;
+    @extend .s_p;
+    @extend .tal;
+  }
+  th, td {
+    border-collapse: collapse;
+    @extend .nm;
+    border-bottom: 1px solid darken(#f4f4f7, 10%);
+  }
+}
+
+.container {
+  width: $container-width;
+  padding: $spacing-unit;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  @media #{$breakpoint-mobile} {
+    min-width: 95vw;
+    padding: $spacing-unit/3 !important;
+  }
+}
+
+.row {
+  display: flex;
+  flex-flow: row;
+  div:not(:only-of-type):first-child { margin-left: 0}
+  div:not(:only-of-type):last-child { margin-right: 0}
+}
+
+.column {
+  display: flex;
+  flex-flow: column;
+}
+
+.container:after,
+.row:after,
+.column:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.half { width: 50%; }
+.third { width: 33.33333%; }
+.two-thirds { width: 66.66666%; }
+.full { width: 100%; }
+@for $i from 1 through 12 {
+  .col-#{$i} {
+    width: percentage($i*(1/12));
+  }
+}
+
+@media #{$breakpoint-mobile} {
+  .row { flex-wrap: wrap; }
+  .half:not(.nr),
+  .third:not(.nr),
+  .two-thirds:not(.nr),
+  .half:not(.nr),
+  .full:not(.nr) {
+    min-width: 100%;
+    margin-bottom: $spacing-unit/2;
+    margin-left: 0 !important; margin-right: 0 !important;
+  }
+  @for $i from 1 through 12 {
+    .col-#{$i}:not(.nr) {
+      min-width: 100%;
+      margin: 0 0 $spacing-unit/2 0;
+      margin-bottom: $spacing-unit/2;
+      margin-left: 0 !important; margin-right: 0 !important;
+    }
+  }
+}
+
+.hod { @media #{$breakpoint-desktop} { display: none !important; } }
+.hol { @media #{$breakpoint-laptop}  { display: none !important; } }
+.hom { @media #{$breakpoint-mobile}  { display: none !important; } }
+
+.sod {
+  display: none;
+  @media #{$breakpoint-desktop} { display: initial; }
+}
+.sol {
+  display: none;
+  @media #{$breakpoint-laptop} { display: initial; }
+}
+.som {
+  display: none;
+  @media #{$breakpoint-mobile} { display: initial; }
+}
+
+.vcenter {
+  display: flex;
+  align-items: center;
+}
+.hcenter {
+  display: flex;
+  justify-content: center;
+}
+
+.s_round { border-radius: 2px; }
+.m_round { border-radius: 4px; }
+.l_round { border-radius: 8px; }
+
+.s_shadow { box-shadow: 0 1px 3px rgba(0,0,0,0.02), 0 1px 2px rgba(0,0,0,0.14); }
+.m_shadow { box-shadow: 0 3px 6px rgba(0,0,0,0.06), 0 3px 6px rgba(0,0,0,0.13); }
+.l_shadow { box-shadow: 0 10px 20px rgba(0,0,0,0.09), 0 6px 6px rgba(0,0,0,0.13); }
+
+.s_vs { margin-top: $spacing-unit/3; margin-bottom: $spacing-unit/3 }
+.m_vs { margin-top: $spacing-unit/2; margin-bottom: $spacing-unit/2 }
+.l_vs { margin-top: $spacing-unit;   margin-bottom: $spacing-unit   }
+
+.s_hs { margin-left: $spacing-unit/3; margin-right: $spacing-unit/3 }
+.m_hs { margin-left: $spacing-unit/2; margin-right: $spacing-unit/2 }
+.l_hs { margin-left: $spacing-unit;   margin-right: $spacing-unit   }
+
+.s_p  { padding: $spacing-unit/3 }
+.m_p  { padding: $spacing-unit/2 }
+.l_p  { padding: $spacing-unit }
+
+.nm { margin: 0 }
+.np { padding: 0 }
+
+.fh { flex: 1 }
+.bl { align-items: baseline; }
+.mono { font-family: "Inconsolata"}
+.ib { display: inline-block; }
+.circle { border-radius: 50%; }
+
+.blur_container {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  * { z-index: 1; position: relative; }
+}
+.blur_content {
+  position: absolute;
+  top: 0; bottom: 0;
+  left: 0; right: 0;
+  transform: scale(1.1);
+  filter: blur(4px);
+  * { min-width: 100%; }
+}
+
+.pull-left {
+  align-self: flex-start;
+  margin-right: auto;
+}
+
+.pull-right {
+  align-self: flex-end;
+  margin-left: auto;
+}
+
+.material-icons {
+  &.s { font-size: 100%; }
+  &.m { font-size: 300%; }
+  &.l { font-size: 400%; }
+}
+
+.b { font-weight: 800; }
+.i { font-style: italic; }
+.u { text-decoration: underline; }
+.lt { text-decoration: line-through;}
+
+.tac { text-align: center; }
+.tal { text-align: left; }
+.tar { text-align: right; }
+
+.preview {
+  border-left: thick solid lightblue;
+  @extend .m_vs;
+  @extend .m_p;
+}
+
+.aw { width: auto; }
+.pop-out {
+  margin-left: -$spacing-unit;
+  margin-right: -$spacing-unit;
+  @media #{$breakpoint-mobile} {
+    margin-left: -$spacing-unit/3;
+    margin-right: -$spacing-unit/3;
+  }
+}

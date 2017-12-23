@@ -1,0 +1,83 @@
+
+.row#main
+  .line.col-3.vcenter.hcenter
+    .content
+      h2 総
+  .line.col-3.vcenter.hcenter
+    .content
+      h2 高専
+  .line.col-3.vcenter.hcenter
+    .content
+      h2 社会の
+  .line.col-3.vcenter.hcenter
+    .content
+      h2 暗証
+  .line.col-3.vcenter.hcenter
+    .content
+      h2 他の
+
+script.
+  links = [];
+  links[0] = [
+    ["https://www.youtube.com", "YouTube"],
+    ["https://google.co.uk", "Google"],
+    ["https://mixtape.moe", "mixtape.moe"],
+    ["https://4chan.org/", "4chan"],
+    ["https://www.amazon.co.uk/", "Amazon"],
+    ["https://www.paypal.com/signin?country.x=GB&locale.x=en_GB", "Paypal"],
+    ["https://www.halifax-online.co.uk/personal/logon/login.jsp", "Halifax"],
+    ["http://www.ebay.co.uk/", "eBay"],
+  ];
+  links[1] = [
+    ["https://store.steampowered.com/login/", "Steam"],
+    ["https://discordapp.com/login", "Discord"],
+    ["https://mail.protonmail.com/login", "Protonmail"],
+    ["https://inbox.google.com/", "Inbox"],
+    ["https://app.tutanota.de/#login", "Tutanota"],
+    ["https://web.skype.com/en/", "Skype"],
+  ];
+  links[2] = [
+    ["http://jlcproportal.leggott.ac.uk/", "ProPortal"],
+    ["https://login.microsoftonline.com/", "Webmail"],
+    ["http://gv.leggott.ac.uk/", "Grapevine"],
+    ["https://vle.leggott.ac.uk/", "Moodle"],
+    ["http://www.thestudentroom.co.uk/", "TSR"],
+    ["https://drive.google.com/drive/u/0/my-drive", "Drive"],
+    ["https://en.wikipedia.org/", "Wikipedia"],
+    ["https://www.cymath.com/", "cymath"],
+    ["https://www.mymaths.co.uk/", "MyMaths"],
+  ];
+  links[3] = [
+    ["https://github.com", "Github"],
+    ["http://127.0.0.1:4000", "127.0.0.1:4000"],
+    ["http://127.0.0.1:8000", "127.0.0.1:8000"],
+    ["https://my.freenom.com/clientarea.php?action=domains", "freenom.com"],
+    ["https://app.netlify.com/", "Netlify"],
+    ["https://travis-ci.org/", "Travis CI"],
+    ["https://love2d.org/", "L&#214;VE2D"],
+    ["https://console.developers.google.com/", "Google API"],
+    ["https://analytics.google.com/", "GAnalytics"],
+    ["https://repl.it/languages/lua", "Lua compiler"],
+  ];
+  links[4] = [
+  ];
+
+  function initialise() {
+    lines = document.getElementById("main").children;
+    for (i = 0; i < lines.length; i++) {
+      child = lines[i];
+
+      //Insert images
+      var img = new Image();
+      child.appendChild(img);
+      img.src = i+1 + ".jpg";
+
+      //Insert links
+      for (j = 0; j < links[i].length; j++) {
+        var newA = document.createElement('a');
+        newA.setAttribute('href', links[i][j][0]);
+        newA.innerHTML = links[i][j][1];
+        child.appendChild(newA);
+      }
+    }
+  }

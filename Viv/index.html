@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <style>
+    * { box-sizing: border-box; }
+    html, body {
+      height: 100%;
+      overflow: hidden;
+    }
+    body {
+      background-image: url(tile.png);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      -webkit-animation: fadein 1s;
+      animation-timing-function: ease-out
+    }
+    h1 { color: #fff; }
+    .container {
+      height: 60vh;
+      width: 50vw;
+      overflow: scroll;
+      background-color: #161616;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      border-radius: 4px;
+      box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    }
+    .container a {
+      flex: 1;
+      min-width: 33.3333333%;
+      margin: 0;
+      padding: 20px;
+      color: #777;
+      text-decoration: none;
+      transition: 0.2s;
+      text-align: center;
+      font-size: 110%;
+    }
+    .container a:hover {
+      position: relative;
+      z-index: 999;
+      color: white;
+      background-color: #222; 
+    }
+    .container a:not(:hover) {
+
+    }
+    .container h3 {
+      margin: 0;
+      min-width: 100%;
+      display: block;
+      color: #ddd;
+      background-color: #111;
+      letter-spacing: 2px;
+      padding: 20px;
+    }
+    ::-webkit-scrollbar { 
+        display: none; 
+    }
+    @-webkit-keyframes fadein {
+        from { transform: translateY(-100%); }
+        to   { transform: translateY(0%); }
+    }
+  </style>
+</head>
+<body>
+  <h1>こんにちは仕 (✿◠‿◠)</h1>
+  <div class="container">
+    <h3>General</h3>
+    <a href="https://www.youtube.com">YouTube</a>
+    <a href="https://google.co.uk">Google</a>
+    <a href="http://www.classicfm.com/radio/player/">ClassicFM</a>
+    <a href="https://mixtape.moe">mixtape.moe</a>
+    <a href="https://4chan.org/">4chan</a>
+    <a href="https://www.amazon.co.uk/">Amazon</a>
+    <a href="https://www.paypal.com/signin?country.x=GB&locale.x=en_GB">Paypal</a>
+    <a href="https://www.halifax-online.co.uk/personal/logon/login.jsp">Halifax</a>
+    <a href="http://www.ebay.co.uk/">eBay</a>
+    <a href="https://moonscript.org/reference/">MoonScript Reference</a>
+    <a href="https://love2d.org/wiki/love.physics">love.physics()</a>
+
+    <h3>Social</h3>
+    <a href="https://store.steampowered.com/login/">Steam</a>
+    <a href="https://discordapp.com/login">Discord</a>
+    <a href="https://mail.protonmail.com/login">Protonmail</a>
+    <a href="https://inbox.google.com/">Inbox</a>
+    <a href="https://app.tutanota.de/#login">Tutanota</a>
+    <a href="https://web.skype.com/en/">Skype</a>
+
+    <h3>College</h3>
+    <a href="http://jlcproportal.leggott.ac.uk/">ProPortal</a>
+    <a href="https://login.microsoftonline.com/">Webmail</a>
+    <a href="http://gv.leggott.ac.uk/">Grapevine</a>
+    <a href="https://vle.leggott.ac.uk/">Moodle</a>
+    <a href="http://www.thestudentroom.co.uk/">TSR</a>
+    <a href="https://drive.google.com/drive/u/0/my-drive">Drive</a>
+    <a href="https://en.wikipedia.org/">Wikipedia</a>
+    <a href="https://www.cymath.com/">cymath</a>
+    <a href="https://www.mymaths.co.uk/">MyMaths</a>
+
+    <h3>Code</h3>
+    <a href="https://github.com">Github</a>
+    <a href="http://127.0.0.1:4000">127.0.0.1:4000</a>
+    <a href="http://127.0.0.1:8000">127.0.0.1:8000</a>
+    <a href="https://my.freenom.com/clientarea.php?action=domains">freenom.com</a>
+    <a href="https://app.netlify.com/">Netlify</a>
+    <a href="https://travis-ci.org/">Travis CI</a>
+    <a href="https://love2d.org/">L&#214;VE2D</a>
+    <a href="https://console.developers.google.com/">Google API</a>
+    <a href="https://analytics.google.com/">Google Analytics</a>
+    <a href="https://repl.it/languages/lua">Lua compiler</a>
+  </div>
+</body>
+</html>

@@ -14,6 +14,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      -webkit-animation: fadein 1s;
     }
     h1 { color: #fff; }
     .container {
@@ -71,12 +72,14 @@
     <h3>General</h3>
     <a href="https://www.youtube.com">YouTube</a>
     <a href="https://google.co.uk">Google</a>
+    <a href="http://www.classicfm.com/radio/player/">ClassicFM</a>
     <a href="https://mixtape.moe">mixtape.moe</a>
     <a href="https://4chan.org/">4chan</a>
     <a href="https://www.amazon.co.uk/">Amazon</a>
-    <a href="https://github.com">Github</a>
-    <a href="https://app.netlify.com/">Netlify</a>
-    <a href="https://moonscript.org/reference/">MoonScript</a>
+    <a href="https://www.paypal.com/signin?country.x=GB&locale.x=en_GB">Paypal</a>
+    <a href="https://www.halifax-online.co.uk/personal/logon/login.jsp">Halifax</a>
+    <a href="http://www.ebay.co.uk/">eBay</a>
+    <a href="https://moonscript.org/reference/">MoonScript Reference</a>
     <a href="https://love2d.org/wiki/love.physics">love.physics()</a>
 
     <h3>Social</h3>

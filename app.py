@@ -10,7 +10,14 @@ app = Flask(__name__)
 from flask_httpauth import HTTPBasicAuth
 auth = HTTPBasicAuth()
 
-secrets = json.load(open("secrets.json"))
+is_prod = os.environ.get('IS_HEROKU', None)
+
+secrets = ""
+if is_prod:
+  secrets = {"username":os.environ.get('SECRETS_USERNAME'), "password":os.environ.get('SECRETS_PASSWORD')} 
+  print(secrets)
+else:
+  secrets = json.load(open("secrets.json"))
 
 @auth.get_password
 def get_password(username):

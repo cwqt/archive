@@ -4,14 +4,55 @@ from datetime import date
 import json
 import os
 import requests
+import glob
 
 app = Flask(__name__)
 
 from flask_httpauth import HTTPBasicAuth
 auth = HTTPBasicAuth()
 
-is_prod = os.environ.get('IS_HEROKU', None)
+import csv
 
+#at 12:00am
+#yesterday_set_tracking
+  # update yesterday with tracked values
+  # pull all commits from that day
+
+#create_day
+
+#extract data from "Time Sinks" exported csv file
+#to be placed into the day before json
+def yesterday_set_tracking():
+  t = {}
+  list_of_files = glob.glob('json/*')
+  latest_file = max(list_of_files, key=os.path.getctime)
+  #kind of shitty, remove 'json/''
+  latest_file = latest_file[5:]
+  #remove extension, get filename
+  f = os.path.splitext(latest_file)[0]
+
+  csv_file = open("csv/"+ f +".csv")
+  csv_reader = csv.reader(csv_file, delimiter=',')
+  next(csv_reader, None)  # skip the headers
+  for row in csv_reader:
+    # in seconds
+    starttime = float(row[1].replace(',', ''))
+    endtime = float(row[2].replace(',', ''))
+    hours = (endtime-starttime)/60/60
+    if not row[0] in t:
+      t[row[0]] = 0
+    t[row[0]] += hours
+
+  for key, value in t.items():
+    t[key] = float(format(value, '.2f'))
+
+  print(t)
+
+yesterday_set_tracking()
+
+def yesterday_get_commits():
+
+is_prod = os.environ.get('IS_HEROKU', None)
 secrets = ""
 if is_prod:
   secrets = {"username":os.environ.get('SECRETS_USERNAME'), "password":os.environ.get('SECRETS_PASSWORD')} 
@@ -31,15 +72,22 @@ def unauthorized():
 
 day = {
   "commits": [
-    { "hash": "md5short", "repo": "https://gitlab.com/cass/g"}
+    # { "hash": "md5short", "repo": "https://gitlab.com/cass/g"}
   ],
   "info": {
    "writing": 0,
    "visual": 0,
    "audio": 0
   },
-  "image": "url",
+  "image": "",
 }
+
+@app.route("/")
+def welcome():
+  contents = '\033[1m' + 'api.cass.si' + '\033[0m'
+  contents += " :: https://gitlab.com/cxss/days"
+  print contents
+  return contents 
 
 @app.route('/days', methods=['GET'])
 def get_all_days():

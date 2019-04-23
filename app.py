@@ -7,6 +7,7 @@ import os
 import requests
 import glob
 import csv
+import gitlab
 
 app = Flask(__name__)
 auth = HTTPBasicAuth()
@@ -89,6 +90,8 @@ def yesterday_get_commits():
   return t
 
 #set yesterday json tracking
+# @app.route('/set', methods=['GET'])
+# @auth.login_required
 def yesterday_set():
   yesterday = yesterday_get()
   f = open("json/"+str(yesterday)+".json", "r")
@@ -101,15 +104,63 @@ def yesterday_set():
       d["info"][key] += value
 
   print yesterday_get_commits()
-  # for commit in yesterday_get_commits().items():
-  #   print commit
-    # d["commits"].append(commit)
 
-  yesterday_date = datetime.strftime(datetime.now() - timedelta(1), '%Y%m%d')
-  print d
+  commits = yesterday_get_commits()
+  if len(commits) != 0:
+    for commit in commits:
+      d["commits"].append(commit)
+
+  f = open("json/"+str(yesterday)+".json", "w+")
+  f.write(json.dumps(d))
+  f.close()
+  update_file(yesterday+".json", "json/", "Set data for day: "+yesterday)
+
+def git_init():
+  gl = gitlab.Gitlab('https://gitlab.com/', private_token=secrets["token"])
+  gl.auth()
+  return gl
+
+def git_get_project():
+  gl = git_init()
+  project = gl.projects.get(11960084) #days
+  return project
+
+def git_create_file(filename, directory):
+    data = {
+    'branch': 'master',  # v4
+    'commit_message': 'Created file: '+filename,
+    'actions': [
+      {
+        'action': 'create',
+        'file_path': directory+filename,
+        # 'file_path': 'csv/test.csv',
+        'content': open(directory+filename).read(),
+      },
+    ]
+  }
+  project = git_get_project()
+  commit = project.commits.create(data)
+  print("Created")
+
+def git_update_file(filename, directory):
+  data = {
+    'branch': 'master',  # v4
+    'commit_message': 'Updated file: '+filename,
+    'actions': [
+      {
+        'action': 'update',
+        'file_path': directory+filename,
+        # 'file_path': 'csv/test.csv',
+        'content': open(directory+filename).read(),
+      },
+    ]
+  }
+  project = git_get_project()
+  commit = project.commits.create(data)
+  print("Committed")
 
 
-yesterday_set()
+def pull_files():
 
 
 

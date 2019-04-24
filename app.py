@@ -8,6 +8,7 @@ import requests
 import glob
 import csv
 import gitlab
+import git 
 
 app = Flask(__name__)
 auth = HTTPBasicAuth()
@@ -126,7 +127,7 @@ def git_get_project():
   return project
 
 def git_create_file(filename, directory):
-    data = {
+  data = {
     'branch': 'master',  # v4
     'commit_message': 'Created file: '+filename,
     'actions': [
@@ -158,11 +159,6 @@ def git_update_file(filename, directory):
   project = git_get_project()
   commit = project.commits.create(data)
   print("Committed")
-
-
-def pull_files():
-
-
 
 @auth.get_password
 def get_password(username):

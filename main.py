@@ -131,7 +131,6 @@ else:
         json.dump(day_data, outfile)
 
   #execute push
-  print("\n")
   print(color.BOLD+"Pulling changes..."+color.END)
   os.system('git pull origin master')
   print(color.BOLD+"Pushing data..."+color.END)

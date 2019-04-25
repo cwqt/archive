@@ -20,6 +20,21 @@ if is_prod:
 else:
   secrets = json.load(open("secrets.json"))
 
+
+@app.route('/days/hours', methods=['GET'])
+def get_hours_total():
+  t = []
+  n = 0
+  for filename in os.listdir("json/"):
+    f = open("json/"+filename, "r")
+    v = json.load(f)
+    f.close()
+    for key, value in v["info"].items():
+      n += value
+  print n
+  return make_response(n, 200)
+
+
 @app.route('/days', methods=['GET'])
 def get_all_days():
   t = []

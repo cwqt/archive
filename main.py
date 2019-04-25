@@ -123,7 +123,7 @@ for filename in os.listdir("csv/"):
 #execute push
 print("\n")
 os.system('git pull origin master')
-print("Pushing data...")
+print(color.BOLD+"Pushing data..."+color.END)
 os.system('git add .')
-os.system("git commit -am 'days push'")
+os.system('git commit -am "days::Catch up on '+cnt+'/'+cnt2+' files."')
 os.system("git push origin master")

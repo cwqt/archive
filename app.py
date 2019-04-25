@@ -21,6 +21,15 @@ else:
   secrets = json.load(open("secrets.json"))
 
 
+@app.route('/days/total', methods=['GET'])
+def get_days_total():
+  t = []
+  n = 0
+  for filename in os.listdir("json/"):
+    n += 1
+  print n
+  return make_response(jsonify(n), 200)
+
 @app.route('/days/hours', methods=['GET'])
 def get_hours_total():
   t = []
@@ -32,8 +41,7 @@ def get_hours_total():
     for key, value in v["info"].items():
       n += value
   print n
-  return make_response(n, 200)
-
+  return make_response(jsonify(n), 200)
 
 @app.route('/days', methods=['GET'])
 def get_all_days():

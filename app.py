@@ -17,16 +17,14 @@ else:
   secrets = json.load(open("secrets.json"))
 
 @app.route('/days', methods=['GET'])
-def get_day(day_id):
-	exists = os.path.isfile('json/'+str(day_id)+".json")
-	if exists:
-	  f = open("json/"+str(day_id)+".json", "r")
+def get_all_days():
+	t = []
+	for filename in os.listdir("json/"):
+	  f = open("json/"+str(day_id), "r")
 	  v = json.load(f)
 	  f.close()
-	  print(v)
-	  return make_response(jsonify(v), 200)
-	else:
-	  return make_response(jsonify({"success":False}), 404)
+	  t.append(v)
+  return make_response(jsonify(t), 200)
 
 @app.route('/days/<string:day_id>', methods=['GET'])
 def get_day(day_id):

@@ -43,6 +43,7 @@ for filename in os.listdir("csv/"):
   if not exists:
     cnt += 1
 
+print(cnt, cnt2)
 c = cnt2-cnt
 cnt = str(cnt)
 cnt2 = str(cnt2)

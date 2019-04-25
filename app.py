@@ -1,12 +1,8 @@
 #!flask/bin/python
 from flask import Flask, jsonify, make_response, request, json
-from datetime import datetime, timedelta
 from flask_httpauth import HTTPBasicAuth
 import json
 import os
-import requests
-import glob
-import csv
 
 app = Flask(__name__)
 auth = HTTPBasicAuth()
@@ -20,10 +16,14 @@ if is_prod:
 else:
   secrets = json.load(open("secrets.json"))
 
-@app.route('/days/<int:day_id>', methods=['GET'])
+@app.route('/days/<string:day_id>', methods=['GET'])
 def get_day(day_id):
-  f = open("json/"+str(day_id)+".json", "r")
-  v = json.load(f)
-  f.close()
-  return v
+	exists = os.path.isfile('json'+str(day_id)+".json")
+	if exists:
+	  f = open("json/"+str(day_id)+".json", "r")
+	  v = json.load(f)
+	  f.close()
+	  return make_response(v, 200)
+	else:
+	  return make_response(jsonify({"success":False}), 404)
 

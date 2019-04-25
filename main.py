@@ -79,8 +79,6 @@ else:
       for commit in commits:
         if commit["action_name"] != "pushed to":
           continue
-        print("----------------")
-        print(json.dumps(commit, indent=2))
         x = {}
         commit_hash = commit["push_data"]["commit_to"][:8]
 

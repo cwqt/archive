@@ -64,9 +64,8 @@ else:
       #instantiate a day data
       day_data = copy.deepcopy(day)
       print(color.BOLD + filename + color.END)
-      print(color.BOLD + str(day_data) + color.END)
 
-      #get the commits from that day via gitlab
+      #get the events from that day via gitlab
       print("\tGetting commits...")
       # $ curl --header "PRIVATE-TOKEN: <token>" -X GET 'https://gitlab.com/api/v4/events?action_type=pushed&after=2019-04-21&before=2019-04-22'
       datetime_object = datetime.strptime(filename, '%Y-%m-%d')
@@ -76,8 +75,12 @@ else:
       headers = {'PRIVATE-TOKEN': secrets["token"]}
       res = requests.get('https://gitlab.com/api/v4/events?action_type=pushed&after='+date_minus1+'&before='+date_plus1, headers=headers)
       commits = res.json()
-      print(json.dumps(commits, indent=2))
+      # print(json.dumps(commits, indent=2))
       for commit in commits:
+        if commit["action_name"] != "pushed to":
+          continue
+        print("----------------")
+        print(json.dumps(commit, indent=2))
         x = {}
         commit_hash = commit["push_data"]["commit_to"][:8]
 
@@ -116,7 +119,7 @@ else:
 
       #add tracking data to day_data
       for key, value in t.items():
-        print("\t"+key, value)
+        # print("\t"+key, value)
         if key in day_data["info"]:
           day_data["info"][key] += value
 

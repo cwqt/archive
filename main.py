@@ -1,12 +1,12 @@
 #!/usr/bin/env python2
 #run once per day when terminal starts
-#json
-#csv
-
+#skip today because TimeSink not finished recording today
 #iterate through csvs
 #create json files (if one exists)
 #add commits
 #add tracking
+#send netlify build req
+#
 
 import os
 import json
@@ -53,6 +53,7 @@ else:
   print("Catching up on "+color.BOLD+str(c)+color.END+" unwritten file(s).")
   for filename in os.listdir("csv/"):
     filename, ext = os.path.splitext(filename)
+    
     if filename == str(datetime.now().strftime('%Y-%m-%d')):
       print("Skipping today: "+color.BOLD+str(filename)+color.END)
       continue
@@ -80,6 +81,7 @@ else:
       res = requests.get('https://gitlab.com/api/v4/events?action_type=pushed&after='+date_minus1+'&before='+date_plus1, headers=headers)
       commits = res.json()
       # print(json.dumps(commits, indent=2))
+      # print("("+len(commits)+")")
       for commit in commits:
         if commit["action_name"] != "pushed to":
           continue
@@ -137,7 +139,6 @@ else:
   os.system('git add .')
   os.system('git commit -am "days::Catch up on '+str(c)+' file(s)."')
   os.system("git push origin master")
-
 
   #netlify build
   print(color.BOLD+"Sending netlify build request..."+color.END)

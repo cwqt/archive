@@ -40,19 +40,17 @@ for filename in os.listdir("csv/"):
   cnt2 += 1 
   f, e = os.path.splitext(filename)
   exists = os.path.isfile('json/'+f+".json")
-  if not exists:
+  if exists:
     cnt += 1
 
-print(cnt, cnt2)
 c = cnt2-cnt
 cnt = str(cnt)
 cnt2 = str(cnt2)
-print c
 
-if c == 0:
+if c <= 0:
   print("All caught up! ("+color.BOLD+cnt+"/"+cnt2+color.END+").")
 else:
-  print("Catching up on "+color.BOLD+cnt+"/"+cnt2+color.END+" unwritten files.")
+  print("Catching up on "+color.BOLD+str(c)+color.END+" unwritten file(s).")
   for filename in os.listdir("csv/"):
     filename, ext = os.path.splitext(filename)
     exists = os.path.isfile('json/'+filename+".json")  
@@ -66,6 +64,7 @@ else:
       #instantiate a day data
       day_data = copy.deepcopy(day)
       print(color.BOLD + filename + color.END)
+      print(color.BOLD + str(day_data) + color.END)
 
       #get the commits from that day via gitlab
       print("\tGetting commits...")
@@ -77,7 +76,7 @@ else:
       headers = {'PRIVATE-TOKEN': secrets["token"]}
       res = requests.get('https://gitlab.com/api/v4/events?action_type=pushed&after='+date_minus1+'&before='+date_plus1, headers=headers)
       commits = res.json()
-      # print(json.dumps(commits, indent=2))
+      print(json.dumps(commits, indent=2))
       for commit in commits:
         x = {}
         commit_hash = commit["push_data"]["commit_to"][:8]
@@ -107,7 +106,6 @@ else:
         starttime = float(row[1].replace(',', ''))
         endtime = float(row[2].replace(',', ''))
         hours = (endtime-starttime)*0.000277778
-        print hours
         if not row[0] in t:
           t[row[0]] = 0
         t[row[0]] += hours
@@ -118,7 +116,7 @@ else:
 
       #add tracking data to day_data
       for key, value in t.items():
-        print(key, value)
+        print("\t"+key, value)
         if key in day_data["info"]:
           day_data["info"][key] += value
 
@@ -133,7 +131,7 @@ else:
   os.system('git pull origin master')
   print(color.BOLD+"Pushing data..."+color.END)
   os.system('git add .')
-  os.system('git commit -am "days::Catch up on '+cnt+'/'+cnt2+' files."')
+  os.system('git commit -am "days::Catch up on '+str(c)+' file(s)."')
   os.system("git push origin master")
 
 

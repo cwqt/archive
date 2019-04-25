@@ -43,12 +43,11 @@ for filename in os.listdir("csv/"):
   if not exists:
     cnt += 1
 
-print(cnt, cnt2)
-
+c = cnt2-cnt
 cnt = str(cnt)
 cnt2 = str(cnt2)
 
-if cnt == cnt2:
+if c == 0:
   print("All caught up! ("+color.BOLD+cnt+"/"+cnt2+color.END+").")
 else:
   print("Catching up on "+color.BOLD+cnt+"/"+cnt2+color.END+" unwritten files.")

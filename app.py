@@ -18,7 +18,7 @@ else:
 
 @app.route('/days/<string:day_id>', methods=['GET'])
 def get_day(day_id):
-	exists = os.path.isfile('json'+str(day_id)+".json")
+	exists = os.path.isfile('json/'+str(day_id)+".json")
 	if exists:
 	  f = open("json/"+str(day_id)+".json", "r")
 	  v = json.load(f)

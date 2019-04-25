@@ -127,3 +127,13 @@ print(color.BOLD+"Pushing data..."+color.END)
 os.system('git add .')
 os.system('git commit -am "days::Catch up on '+cnt+'/'+cnt2+' files."')
 os.system("git push origin master")
+
+
+#netlify build
+print(color.BOLD+"Sending netlify build request..."+color.END)
+# curl -X POST -d {} https://api.netlify.com/build_hooks/5a3127c1a6188f469c8ff73c
+res = requests.post('https://api.netlify.com/build_hooks/5a3127c1a6188f469c8ff73c', data={})
+print("\t"+str(res.json()))
+
+
+print(color.BOLD+"Finished."+color.END)

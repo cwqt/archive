@@ -23,7 +23,8 @@ def get_day(day_id):
 	  f = open("json/"+str(day_id)+".json", "r")
 	  v = json.load(f)
 	  f.close()
-	  return make_response(v, 200)
+	  print(v)
+	  return make_response(jsonify(v), 200)
 	else:
 	  return make_response(jsonify({"success":False}), 404)
 

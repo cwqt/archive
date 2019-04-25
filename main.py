@@ -53,6 +53,10 @@ else:
   print("Catching up on "+color.BOLD+str(c)+color.END+" unwritten file(s).")
   for filename in os.listdir("csv/"):
     filename, ext = os.path.splitext(filename)
+    if filename == str(datetime.now().strftime('%Y-%m-%d')):
+      print("Skipping today: "+color.BOLD+str(filename)+color.END)
+      continue
+
     exists = os.path.isfile('json/'+filename+".json")  
     if not exists:
       #create a json file

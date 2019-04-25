@@ -11,7 +11,11 @@ auth = HTTPBasicAuth()
 is_prod = os.environ.get('IS_HEROKU', None)
 secrets = ""
 if is_prod:
-  secrets = {"username":os.environ.get('SECRETS_USERNAME'), "password":os.environ.get('SECRETS_PASSWORD'), "token":os.environ.get('SECRETS_TOKEN')} 
+  secrets = {
+    "username": os.environ.get('SECRETS_USERNAME'),
+    "password": os.environ.get('SECRETS_PASSWORD'),
+    "token":    os.environ.get('SECRETS_TOKEN')
+  } 
   print(secrets)
 else:
   secrets = json.load(open("secrets.json"))

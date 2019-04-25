@@ -46,6 +46,7 @@ for filename in os.listdir("csv/"):
 c = cnt2-cnt
 cnt = str(cnt)
 cnt2 = str(cnt2)
+print c
 
 if c == 0:
   print("All caught up! ("+color.BOLD+cnt+"/"+cnt2+color.END+").")

@@ -127,21 +127,3 @@ print("Pushing data...")
 os.system('git add .')
 os.system("git commit -am 'days push'")
 os.system("git push origin master")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

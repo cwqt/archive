@@ -32,6 +32,7 @@ day = {
    "audio": 0
   },
   "image": "",
+  "date": ""
 }
 
 cnt = 0   # 
@@ -46,6 +47,7 @@ for filename in os.listdir("csv/"):
 c = cnt2-cnt
 cnt = str(cnt)
 cnt2 = str(cnt2)
+skipAll = False
 
 if c <= 0:
   print("All caught up! ("+color.BOLD+cnt+"/"+cnt2+color.END+").")
@@ -55,6 +57,8 @@ else:
     filename, ext = os.path.splitext(filename)
     
     if filename == str(datetime.now().strftime('%Y-%m-%d')):
+      if c == 1:
+        skipAll = True
       print("Skipping today: "+color.BOLD+str(filename)+color.END)
       continue
 
@@ -69,6 +73,9 @@ else:
       #instantiate a day data
       day_data = copy.deepcopy(day)
       print(color.BOLD + filename + color.END)
+
+      #add the date to the file
+      day_data["date"] = filename
 
       #get the events from that day via gitlab
       print("\tGetting commits...")
@@ -132,17 +139,18 @@ else:
       with open('json/'+filename+".json", 'w') as outfile:
         json.dump(day_data, outfile)
 
-  #execute push
-  print(color.BOLD+"Pulling changes..."+color.END)
-  os.system('git pull origin master')
-  print(color.BOLD+"Pushing data..."+color.END)
-  os.system('git add .')
-  os.system('git commit -am "days::Catch up on '+str(c)+' file(s)."')
-  os.system("git push origin master")
+  if not skipAll:
+    #execute push
+    print(color.BOLD+"Pulling changes..."+color.END)
+    os.system('git pull origin master')
+    print(color.BOLD+"Pushing data..."+color.END)
+    os.system('git add .')
+    os.system('git commit -am "days::Catch up on '+str(c)+' file(s)."')
+    os.system("git push origin master")
 
-  #netlify build
-  print(color.BOLD+"Sending netlify build request..."+color.END)
-  # curl -X POST -d {} https://api.netlify.com/build_hooks/5a3127c1a6188f469c8ff73c
-  res = requests.post('https://api.netlify.com/build_hooks/5a3127c1a6188f469c8ff73c', data={})
+    #netlify build
+    print(color.BOLD+"Sending netlify build request..."+color.END)
+    # curl -X POST -d {} https://api.netlify.com/build_hooks/5a3127c1a6188f469c8ff73c
+    res = requests.post('https://api.netlify.com/build_hooks/5a3127c1a6188f469c8ff73c', data={})
 
   print(color.BOLD+"Finished."+color.END)

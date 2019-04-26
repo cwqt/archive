@@ -9,8 +9,6 @@ app = Flask(__name__)
 auth = HTTPBasicAuth()
 CORS(app)
 
-
-
 #heroku/local checking
 is_prod = os.environ.get('IS_HEROKU', None)
 secrets = ""
@@ -50,7 +48,7 @@ def get_hours_total():
 @app.route('/days', methods=['GET'])
 def get_all_days():
   t = []
-  for filename in os.listdir("json/"):
+  for filename in sorted(os.listdir("json/")):
     f = open("json/"+filename, "r")
     v = json.load(f)
     f.close()

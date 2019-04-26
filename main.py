@@ -6,7 +6,6 @@
 #add commits
 #add tracking
 #send netlify build req
-#
 
 import os
 import json
@@ -24,7 +23,7 @@ secrets = json.load(open("secrets.json"))
 
 day = {
   "commits": [
-    # { "hash": "md5short", "repo": "https://gitlab.com/cass/g"}
+      # { "hash": "md5short", "url": "https://gitlab.com/cass/g", "message":"commit message"}
   ],
   "info": {
    "writing": 0,
@@ -53,11 +52,14 @@ if c <= 0:
   print("All caught up! ("+color.BOLD+cnt+"/"+cnt2+color.END+").")
 else:
   print("Catching up on "+color.BOLD+str(c)+color.END+" unwritten file(s).")
-  for filename in os.listdir("csv/"):
+  lst = os.listdir("csv/")
+  lst = sorted(lst)
+  for filename in lst:
     filename, ext = os.path.splitext(filename)
     
     if filename == str(datetime.now().strftime('%Y-%m-%d')):
       if c == 1:
+        #don't run git push/send build requests.
         skipAll = True
       print("Skipping today: "+color.BOLD+str(filename)+color.END)
       continue
@@ -94,6 +96,7 @@ else:
           continue
         x = {}
         commit_hash = commit["push_data"]["commit_to"][:8]
+        commit_message = commit["push_data"]["commit_title"]
 
         #get commit repo
         #$ curl --header "PRIVATE-TOKEN: <token>" -X GET 'https://gitlab.com/api/v4/projects/11960084'
@@ -101,10 +104,11 @@ else:
         res = requests.get('https://gitlab.com/api/v4/projects/'+project_id, headers=headers)
         
         project_info = res.json()
-        project_repo = project_info["web_url"]
+        project_url = project_info["web_url"]
 
         x["hash"] = commit_hash
-        x["repo"] = project_repo
+        x["url"] = project_url
+        x["message"] = commit_message
 
         day_data["commits"].append(x)
 

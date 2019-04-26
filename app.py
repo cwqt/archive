@@ -3,9 +3,13 @@ from flask import Flask, jsonify, make_response, request, json
 from flask_httpauth import HTTPBasicAuth
 import json
 import os
+from flask_cors import CORS
 
 app = Flask(__name__)
 auth = HTTPBasicAuth()
+CORS(app)
+
+
 
 #heroku/local checking
 is_prod = os.environ.get('IS_HEROKU', None)

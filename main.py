@@ -155,6 +155,6 @@ else:
     #netlify build
     print(color.BOLD+"Sending netlify build request..."+color.END)
     # curl -X POST -d {} https://api.netlify.com/build_hooks/5a3127c1a6188f469c8ff73c
-    res = requests.post('https://api.netlify.com/build_hooks/5a3127c1a6188f469c8ff73c', data={})
+    res = requests.post('https://api.netlify.com/build_hooks/5cc37e1cb9562f12ca6ab325', data={})
 
   print(color.BOLD+"Finished."+color.END)

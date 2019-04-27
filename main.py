@@ -13,6 +13,7 @@ import csv
 import requests
 import gitlab
 import copy
+import time
 from datetime import datetime, timedelta
 
 class color:
@@ -136,6 +137,27 @@ else:
         # print("\t"+key, value)
         if key in day_data["info"]:
           day_data["info"][key] += value
+
+      # #last.fm get listening time from day
+      # last_fm_username = "go2twentytwo"
+
+      # last_fm_start = datetime.strptime(date_minus1, "%Y-%m-%d")
+      # last_fm_start = str(time.mktime(last_fm_start.timetuple()))
+     
+      # last_fm_end = datetime.strptime(date_plus1, "%Y-%m-%d")
+      # last_fm_end = str(time.mktime(last_fm_end.timetuple()))
+
+      # res = requests.get('http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user='+last_fm_username+'&api_key='+secrets["last_fm_key"]+'&format=json&from='+last_fm_start+'&to='+last_fm_end)
+      # last_fm_tracks = json.loads(res.text)
+      # # print(json.dumps(last_fm_tracks["recenttracks"]["track"][0], indent=2))
+      # for track in last_fm_tracks["recenttracks"]["track"]:
+      #   r = 'http://ws.audioscrobbler.com/2.0/?method=track.getInfo&api_key='+secrets["last_fm_key"]+'&artist='+track["artist"]["#text"]+'&track='+track["name"]+'&format=json'
+      #   print(r)
+      #   # t = requests.get()
+      #   # t = json.loads(t.text)
+      #   # print(t)
+      #   # print(t["duration"])
+      #   exit()
 
       #write the day template to it
       print("\tWriting to file "+filename+".json")

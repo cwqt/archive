@@ -56,7 +56,7 @@ else:
   lst = sorted(lst)
   for filename in lst:
     filename, ext = os.path.splitext(filename)
-    
+    print("Creating " + filename)   
     if filename == str(datetime.now().strftime('%Y-%m-%d')):
       if c == 1:
         #don't run git push/send build requests.

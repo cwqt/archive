@@ -5,7 +5,6 @@
 #create json files (if one exists)
 #add commits
 #add tracking
-#send netlify build req
 
 import os
 import json

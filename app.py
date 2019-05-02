@@ -42,7 +42,7 @@ def get_hours_total():
     f.close()
     for key, value in v["info"].items():
       n += value
-  print(n)
+  n = round(n, 2)
   return make_response(jsonify(n), 200)
 
 @app.route('/days', methods=['GET'])

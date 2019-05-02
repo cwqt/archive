@@ -127,17 +127,17 @@ else:
           t[row[0]] = 0
         t[row[0]] += hours
 
-      #round data to 2d.p.
-      for key, value in t.items():
-        t[key] = float(format(value, '.2f'))
-
       #add tracking data to day_data
       for key, value in t.items():
-        # print("\t"+key, value)
+        print("\t"+key, value)
         if key in day_data["info"]:
           day_data["info"][key] += value
+      
+      #round data to 2d.p.
+      for key, value in day_data["info"].items():
+        day_data["info"][key] = float(format(value, '.2f'))
 
-      # #last.fm get listening time from day
+     # #last.fm get listening time from day
       # last_fm_username = "go2twentytwo"
 
       # last_fm_start = datetime.strptime(date_minus1, "%Y-%m-%d")

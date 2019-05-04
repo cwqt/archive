@@ -1,1 +1,0 @@
-{"info": {"visual": 1.31, "audio": 13.18, "writing": 13.18}, "commits": [{"url": "https://gitlab.com/cxss/days", "message": "Move netlify build hook to ci bc Heroku deploy not finished before ...", "hash": "28a5adf6"}, {"url": "https://gitlab.com/cxss/days", "message": "days::Catch up on 2 file(s).", "hash": "313297e6"}], "image": "", "date": "2019-04-28"}

@@ -30,7 +30,7 @@ def get_days_total():
   for filename in os.listdir("json/"):
     n += 1
   print(n)
-  return n
+  return str(n)
   # return make_response(jsonify(n), 200)
 
 @app.route('/days/hours', methods=['GET'])
@@ -44,7 +44,7 @@ def get_hours_total():
     for key, value in v["info"].items():
       n += value
   n = round(n, 2)
-  return n
+  return str(n)
   # return make_response(jsonify(n), 200)
 
 @app.route('/days', methods=['GET'])

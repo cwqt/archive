@@ -96,6 +96,8 @@ else:
         x = {}
         commit_hash = commit["push_data"]["commit_to"][:8]
         commit_message = commit["push_data"]["commit_title"]
+        if "days::" in commit_message:
+          continue
 
         #get commit repo
         #$ curl --header "PRIVATE-TOKEN: <token>" -X GET 'https://gitlab.com/api/v4/projects/11960084'
@@ -103,6 +105,7 @@ else:
         res = requests.get('https://gitlab.com/api/v4/projects/'+project_id, headers=headers)
         
         project_info = res.json()
+        
         project_url = project_info["web_url"]
 
         x["hash"] = commit_hash

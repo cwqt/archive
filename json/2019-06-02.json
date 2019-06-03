@@ -1,0 +1,1 @@
+{"info": {"visual": 0.03, "audio": 0.02, "writing": 1.98}, "commits": [{"url": "https://gitlab.com/cxss/g", "message": "added state machine for game flow", "hash": "68b9c3a1"}, {"url": "https://gitlab.com/cxss/g", "message": "add notification factory, add icons to notifications, custom colour...", "hash": "1842ba93"}], "image": "", "date": "2019-06-02"}

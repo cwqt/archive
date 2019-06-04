@@ -1,0 +1,1 @@
+{"info": {"visual": 0.12, "audio": 0.12, "writing": 1.96}, "commits": [{"url": "https://gitlab.com/cxss/g", "message": "changed Game.state to Game.phase to better reflect actual usage", "hash": "771564a0"}], "image": "", "date": "2019-06-03"}

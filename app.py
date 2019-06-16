@@ -51,7 +51,6 @@ def get_hours_total():
 def get_all_days():
   t = []
   for filename in sorted(os.listdir("json/")):
-    print(filename)
     f = open("json/"+filename, "r")
     v = json.load(f)
     f.close()

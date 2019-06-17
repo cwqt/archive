@@ -132,7 +132,7 @@ else:
 
       #add tracking data to day_data
       for key, value in t.items():
-        print("\t"+key, value)
+        print("\t" + key + ": " + value)
         if key in day_data["info"]:
           day_data["info"][key] += value
       

@@ -4,6 +4,9 @@ from flask_httpauth import HTTPBasicAuth
 import json
 import os
 from flask_cors import CORS
+import csv
+import operator
+
 
 app = Flask(__name__)
 auth = HTTPBasicAuth()
@@ -22,8 +25,8 @@ if is_prod:
 else:
   secrets = json.load(open("secrets.json"))
 
-def getHoursFromDay(filename):
-  filename, ext = os.path.splitext(filename)
+def getHoursFromDay(file):
+  filename, ext = os.path.splitext(file)
   #get tracking info from csv
   t = {}
   csv_file = open("csv/"+ filename +".csv")

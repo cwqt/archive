@@ -82,9 +82,11 @@ def get_hours_total():
 
 @app.route('/days/longest', methods=['GET'])
 def get_longest_day():
-  x = getLongestDay()
+  lst = os.listdir("csv/")
+  lst = sorted(lst)
+  x = getLongestDay(lst)
   y = getSumOfHours(x)
-  return y
+  return str(y)
 
 @app.route('/days', methods=['GET'])
 def get_all_days():

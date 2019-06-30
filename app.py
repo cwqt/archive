@@ -25,8 +25,8 @@ if is_prod:
 else:
   secrets = json.load(open("secrets.json"))
 
-def getHoursFromDay(file):
-  filename, ext = os.path.splitext(file)
+def getHoursFromDay(filename):
+  filename, ext = os.path.splitext(filename)
   #get tracking info from csv
   t = {}
   csv_file = open("csv/"+ filename +".csv")
@@ -44,6 +44,7 @@ def getHoursFromDay(file):
   return t
 
 def getSumOfHours(filename):
+  filename, ext = os.path.splitext(filename)
   s = 0
   stats = getHoursFromDay(filename)
   for key, value in stats.items():

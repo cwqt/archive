@@ -57,7 +57,8 @@ def getLongestDay(lst):
     totalHours = getSumOfHours(filename)
     c[filename] = totalHours
 
-  x = max(c.iteritems(), key=operator.itemgetter(1))[0]
+  print(c)
+  x = max(c.items(), key=operator.itemgetter(1))[0]
   return x
 
 @app.route('/days/total', methods=['GET'])

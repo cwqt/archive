@@ -9,106 +9,132 @@
       overflow: hidden;
     }
     body {
-      background-image: url(tile.png);
+      background-image: url(https://i.imgur.com/PEZHhBR.png);
       display: flex;
       flex-direction: column;
       align-items: center;
+      /*margin: 20px 0;*/
       justify-content: center;
     }
     h1 { color: #fff; }
     .container {
-      height: 60vh;
-      width: 50vw;
+      height: 90vh;
+      width: 60vw;
       overflow: scroll;
       background-color: #161616;
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
+      font-family: "Helvetica";
       border-radius: 4px;
-      box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+      /*box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);*/
+      animation: fadein 0.2s;
+      padding-bottom: 10px;
+    }
+    .banner {
+      background-image: url(bg.jpg);
+      width: 100%;
+      padding: 6vh 2vw;
+      border-bottom: 4px solid #7b6f9d;
+      font-size: 300%;
+      background-size: cover;
+    }
+    .banner h1 {
+      text-shadow: 3px 5px 0px #7b6f9d;   
+      margin-bottom: 0;   
+    }
+    .banner p {
+      margin-left: 3px;
+      margin-top: 0px;
+      font-size: 50%;
+      color: white;
+    }
+    .container div:not(.banner) {
+      flex: 1;
     }
     .container a {
-      flex: 1;
-      min-width: 33.3333333%;
+      display: block;
       margin: 0;
-      padding: 20px;
+      padding: 10px 30px;
+      height: auto;
       color: #777;
       text-decoration: none;
       transition: 0.2s;
-      text-align: center;
-      font-size: 110%;
+      /*text-align: center;*/
+      font-size: 120%;
+      border-left: 2px solid transparent;
     }
     .container a:hover {
       position: relative;
       z-index: 999;
       color: white;
       background-color: #222; 
+      border-left: 2px solid #7b6f9d;
     }
     .container a:not(:hover) {
 
     }
     .container h3 {
       margin: 0;
+      margin-bottom: 10px;
       min-width: 100%;
       display: block;
       color: #ddd;
       background-color: #111;
       letter-spacing: 2px;
       padding: 20px;
+      font-size: 120%;
     }
     ::-webkit-scrollbar { 
         display: none; 
     }
     @-webkit-keyframes fadein {
-        from { transform: translateY(-100%); }
-        to   { transform: translateY(0%); }
+        from { opacity: 0; }
+        to   { opacity: 1; }
     }
   </style>
 </head>
 <body>
-  <h1>こんにちは仕 (✿◠‿◠)</h1>
+  <!-- <h1>こんにちは仕 (✿◠‿◠)</h1> -->
   <div class="container">
+    <div class="banner">
+      <h1>こんにちは仕</h1>
+      <!-- <p>○ droplet.cass.si</p> -->
+    </div>
+    <div>
     <h3>General</h3>
-    <a href="https://www.youtube.com">YouTube</a>
-    <a href="https://google.co.uk">Google</a>
-    <a href="https://mixtape.moe">mixtape.moe</a>
-    <a href="https://4chan.org/">4chan</a>
-    <a href="https://www.amazon.co.uk/">Amazon</a>
-    <a href="https://github.com">Github</a>
-    <a href="https://app.netlify.com/">Netlify</a>
-    <a href="https://moonscript.org/reference/">MoonScript</a>
-    <a href="https://love2d.org/wiki/love.physics">love.physics()</a>
+      <a href="https://www.youtube.com">YouTube</a>
+      <a href="https://4chan.org/">4chan</a>
+      <a href="https://www.amazon.co.uk/">Amazon</a>
+      <a href="https://github.com">GitHub</a>
+      <a href="https://gitlab.com">GitLab</a>
+      <a href="https://app.netlify.com/">Netlify</a>
+      <a href="https://moonscript.org/reference/">MoonScript</a>
+      <a href="https://cass.si/">cass.si</a>
+      <a href="https://cloud.digitalocean.com/projects/">Droplets</a>
+      <a href="https://id.heroku.com/login">Heroku</a>
+    </div>
+    <!-- <a href=""></a> -->
 
+    <div>
     <h3>Social</h3>
-    <a href="https://store.steampowered.com/login/">Steam</a>
-    <a href="https://discordapp.com/login">Discord</a>
-    <a href="https://mail.protonmail.com/login">Protonmail</a>
-    <a href="https://inbox.google.com/">Inbox</a>
-    <a href="https://app.tutanota.de/#login">Tutanota</a>
-    <a href="https://web.skype.com/en/">Skype</a>
+      <a href="https://app.tutanota.de/#login">Tutanota</a>
+      <a href="https://store.steampowered.com/login/">Steam</a>
+      <a href="https://discordapp.com/login">Discord</a>
+      <a href="https://mail.protonmail.com/login">Protonmail</a>
+      <a href="https://inbox.google.com/">Inbox</a>
+    </div>
 
-    <h3>College</h3>
-    <a href="http://jlcproportal.leggott.ac.uk/">ProPortal</a>
-    <a href="https://login.microsoftonline.com/">Webmail</a>
-    <a href="http://gv.leggott.ac.uk/">Grapevine</a>
-    <a href="https://vle.leggott.ac.uk/">Moodle</a>
-    <a href="http://www.thestudentroom.co.uk/">TSR</a>
-    <a href="https://drive.google.com/drive/u/0/my-drive">Drive</a>
-    <a href="https://en.wikipedia.org/">Wikipedia</a>
-    <a href="https://www.cymath.com/">cymath</a>
-    <a href="https://www.mymaths.co.uk/">MyMaths</a>
-
+    <div>
     <h3>Code</h3>
-    <a href="https://github.com">Github</a>
-    <a href="http://127.0.0.1:4000">127.0.0.1:4000</a>
-    <a href="http://127.0.0.1:8000">127.0.0.1:8000</a>
-    <a href="https://my.freenom.com/clientarea.php?action=domains">freenom.com</a>
-    <a href="https://app.netlify.com/">Netlify</a>
-    <a href="https://travis-ci.org/">Travis CI</a>
-    <a href="https://love2d.org/">L&#214;VE2D</a>
-    <a href="https://console.developers.google.com/">Google API</a>
-    <a href="https://analytics.google.com/">Google Analytics</a>
-    <a href="https://repl.it/languages/lua">Lua compiler</a>
+      <a href="http://127.0.0.1:3000">:3000</a>
+      <a href="https://my.freenom.com/clientarea.php?action=domains">freenom.com</a>
+      <a href="https://app.netlify.com/">Netlify</a>
+      <a href="https://love2d.org/">L&#214;VE2D</a>
+      <a href="https://console.developers.google.com/">Google API</a>
+      <a href="https://analytics.google.com/">Google Analytics</a>
+      <a href="https://repl.it/languages/lua">Lua compiler</a>  
+    </div>  
   </div>
 </body>
 </html>

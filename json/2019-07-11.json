@@ -1,1 +1,81 @@
-{"info": {"visual": 0.01, "audio": 0.01, "writing": 1.68}, "commits": [{"url": "https://gitlab.com/cxss/blog", "message": "remove bg", "hash": "2b420ed5"}, {"url": "https://gitlab.com/cxss/site", "message": "remove bg", "hash": "6c72793b"}, {"url": "https://gitlab.com/cxss/blog", "message": "new key", "hash": "00b1912e"}, {"url": "https://gitlab.com/cxss/blog", "message": "new key", "hash": "08d4b413"}, {"url": "https://gitlab.com/cxss/blog", "message": "new key", "hash": "1f51baaa"}, {"url": "https://gitlab.com/cxss/blog", "message": "working", "hash": "94a51fb4"}, {"url": "https://gitlab.com/cxss/blog", "message": "working", "hash": "9025a09d"}, {"url": "https://gitlab.com/cxss/blog", "message": "' error", "hash": "9ff4b1c8"}, {"url": "https://gitlab.com/cxss/blog", "message": "' error", "hash": "3e165596"}, {"url": "https://gitlab.com/cxss/blog", "message": "prevent netlify console from shitting out", "hash": "6502d50c"}, {"url": "https://gitlab.com/cxss/blog", "message": "new cipher", "hash": "6f626391"}, {"url": "https://gitlab.com/cxss/blog", "message": "ensure ciphered created", "hash": "145ffe2d"}, {"url": "https://gitlab.com/cxss/blog", "message": "initial commit", "hash": "92a8db36"}], "image": "", "date": "2019-07-11"}
+{
+    "commits": [
+        {
+            "hash": "f6f800e2", 
+            "message": "fix project id in latest commit", 
+            "url": "https://gitlab.com/cxss/site"
+        }, 
+        {
+            "hash": "2b420ed5", 
+            "message": "remove bg", 
+            "url": "https://gitlab.com/cxss/blog"
+        }, 
+        {
+            "hash": "6c72793b", 
+            "message": "remove bg", 
+            "url": "https://gitlab.com/cxss/site"
+        }, 
+        {
+            "hash": "00b1912e", 
+            "message": "new key", 
+            "url": "https://gitlab.com/cxss/blog"
+        }, 
+        {
+            "hash": "08d4b413", 
+            "message": "new key", 
+            "url": "https://gitlab.com/cxss/blog"
+        }, 
+        {
+            "hash": "1f51baaa", 
+            "message": "new key", 
+            "url": "https://gitlab.com/cxss/blog"
+        }, 
+        {
+            "hash": "94a51fb4", 
+            "message": "working", 
+            "url": "https://gitlab.com/cxss/blog"
+        }, 
+        {
+            "hash": "9025a09d", 
+            "message": "working", 
+            "url": "https://gitlab.com/cxss/blog"
+        }, 
+        {
+            "hash": "9ff4b1c8", 
+            "message": "' error", 
+            "url": "https://gitlab.com/cxss/blog"
+        }, 
+        {
+            "hash": "3e165596", 
+            "message": "' error", 
+            "url": "https://gitlab.com/cxss/blog"
+        }, 
+        {
+            "hash": "6502d50c", 
+            "message": "prevent netlify console from shitting out", 
+            "url": "https://gitlab.com/cxss/blog"
+        }, 
+        {
+            "hash": "6f626391", 
+            "message": "new cipher", 
+            "url": "https://gitlab.com/cxss/blog"
+        }, 
+        {
+            "hash": "145ffe2d", 
+            "message": "ensure ciphered created", 
+            "url": "https://gitlab.com/cxss/blog"
+        }, 
+        {
+            "hash": "92a8db36", 
+            "message": "initial commit", 
+            "url": "https://gitlab.com/cxss/blog"
+        }
+    ], 
+    "date": "2019-07-11", 
+    "image": "", 
+    "info": {
+        "audio": 0.01, 
+        "visual": 0.01, 
+        "writing": 1.68
+    }
+}

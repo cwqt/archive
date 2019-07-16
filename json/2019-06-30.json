@@ -1,1 +1,41 @@
-{"info": {"visual": 0.01, "audio": 0.01, "writing": 2.34}, "commits": [{"url": "https://gitlab.com/cxss/site", "message": "drafts", "hash": "44189549"}, {"url": "https://gitlab.com/cxss/site", "message": "min bar height", "hash": "14d2a643"}, {"url": "https://gitlab.com/cxss/site", "message": "parseFloat", "hash": "f8c3389b"}, {"url": "https://gitlab.com/cxss/site", "message": "isNaN checking", "hash": "01ef316b"}, {"url": "https://gitlab.com/cxss/site", "message": "add style for weighted days", "hash": "7ac15728"}, {"url": "https://gitlab.com/cxss/days", "message": "remove absurdly long day", "hash": "b728080e"}, {"url": "https://gitlab.com/cxss/days", "message": "heroku uses py3 lol", "hash": "550f5bfd"}, {"url": "https://gitlab.com/cxss/days", "message": "fix: split ext", "hash": "1314177f"}, {"url": "https://gitlab.com/cxss/site", "message": "fix: type conversion", "hash": "6255942b"}, {"url": "https://gitlab.com/cxss/days", "message": "import csv & operator", "hash": "07b28649"}, {"url": "https://gitlab.com/cxss/days", "message": "fix: supply list to func", "hash": "01fc5687"}, {"url": "https://gitlab.com/cxss/days", "message": "ad weighted day lengths for variable bar height", "hash": "22b1eb2a"}], "image": "", "date": "2019-06-30"}
+{
+    "commits": [
+        {
+            "hash": "b728080e", 
+            "message": "remove absurdly long day", 
+            "url": "https://gitlab.com/cxss/days"
+        }, 
+        {
+            "hash": "550f5bfd", 
+            "message": "heroku uses py3 lol", 
+            "url": "https://gitlab.com/cxss/days"
+        }, 
+        {
+            "hash": "1314177f", 
+            "message": "fix: split ext", 
+            "url": "https://gitlab.com/cxss/days"
+        }, 
+        {
+            "hash": "07b28649", 
+            "message": "import csv & operator", 
+            "url": "https://gitlab.com/cxss/days"
+        }, 
+        {
+            "hash": "01fc5687", 
+            "message": "fix: supply list to func", 
+            "url": "https://gitlab.com/cxss/days"
+        }, 
+        {
+            "hash": "22b1eb2a", 
+            "message": "ad weighted day lengths for variable bar height", 
+            "url": "https://gitlab.com/cxss/days"
+        }
+    ], 
+    "date": "2019-06-30", 
+    "image": "", 
+    "info": {
+        "audio": 0.01, 
+        "visual": 0.01, 
+        "writing": 2.34
+    }
+}

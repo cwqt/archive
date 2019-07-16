@@ -1,1 +1,10 @@
-{"info": {"visual": 0.01, "audio": 0.0, "writing": 0.08}, "commits": [], "image": "", "date": "2019-06-05"}
+{
+    "commits": [], 
+    "date": "2019-06-05", 
+    "image": "", 
+    "info": {
+        "audio": 0.0, 
+        "visual": 0.01, 
+        "writing": 0.08
+    }
+}

@@ -1,1 +1,31 @@
-{"info": {"visual": 0.19, "audio": 0.07, "writing": 1.11}, "commits": [{"url": "https://gitlab.com/cxss/site", "message": "rename", "hash": "68aebad2"}, {"url": "https://gitlab.com/cxss/site", "message": "Upload New File", "hash": "8c7b6160"}, {"url": "https://gitlab.com/cxss/portfolio", "message": "Upload New File", "hash": "4428f052"}, {"url": "https://gitlab.com/cxss/portfolio", "message": "Add new directory", "hash": "5a0753aa"}, {"url": "https://gitlab.com/cxss/portfolio", "message": "resolve merge", "hash": "58489f88"}, {"url": "https://gitlab.com/cxss/portfolio", "message": "rm old", "hash": "afe92aaf"}], "image": "", "date": "2019-06-15"}
+{
+    "commits": [
+        {
+            "hash": "4428f052", 
+            "message": "Upload New File", 
+            "url": "https://gitlab.com/cxss/portfolio"
+        }, 
+        {
+            "hash": "5a0753aa", 
+            "message": "Add new directory", 
+            "url": "https://gitlab.com/cxss/portfolio"
+        }, 
+        {
+            "hash": "58489f88", 
+            "message": "resolve merge", 
+            "url": "https://gitlab.com/cxss/portfolio"
+        }, 
+        {
+            "hash": "afe92aaf", 
+            "message": "rm old", 
+            "url": "https://gitlab.com/cxss/portfolio"
+        }
+    ], 
+    "date": "2019-06-15", 
+    "image": "", 
+    "info": {
+        "audio": 0.07, 
+        "visual": 0.19, 
+        "writing": 1.11
+    }
+}

@@ -1,1 +1,31 @@
-{"info": {"visual": 0.02, "audio": 0.03, "writing": 0.9}, "commits": [{"url": "https://gitlab.com/cxss/days", "message": "resolve bug: empty file because im stupid and cancelled the build s...", "hash": "28306f30"}, {"url": "https://gitlab.com/cxss/days", "message": "debug script", "hash": "31a780ff"}, {"url": "https://gitlab.com/cxss/portfolio", "message": "fix bugs and add alt props + loop vid", "hash": "a618cf32"}, {"url": "https://gitlab.com/cxss/portfolio", "message": "add video play to portfolio component", "hash": "b64ec7f7"}], "image": "", "date": "2019-06-16"}
+{
+    "commits": [
+        {
+            "hash": "28306f30", 
+            "message": "resolve bug: empty file because im stupid and cancelled the build s...", 
+            "url": "https://gitlab.com/cxss/days"
+        }, 
+        {
+            "hash": "31a780ff", 
+            "message": "debug script", 
+            "url": "https://gitlab.com/cxss/days"
+        }, 
+        {
+            "hash": "a618cf32", 
+            "message": "fix bugs and add alt props + loop vid", 
+            "url": "https://gitlab.com/cxss/portfolio"
+        }, 
+        {
+            "hash": "b64ec7f7", 
+            "message": "add video play to portfolio component", 
+            "url": "https://gitlab.com/cxss/portfolio"
+        }
+    ], 
+    "date": "2019-06-16", 
+    "image": "", 
+    "info": {
+        "audio": 0.03, 
+        "visual": 0.02, 
+        "writing": 0.9
+    }
+}

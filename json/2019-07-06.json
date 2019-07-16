@@ -1,1 +1,10 @@
-{"info": {"visual": 0.01, "audio": 0.07, "writing": 0.71}, "commits": [{"url": "https://gitlab.com/cxss/site", "message": "add: nav separators", "hash": "79453095"}, {"url": "https://gitlab.com/cxss/site", "message": "add: different colours", "hash": "8b224d48"}], "image": "", "date": "2019-07-06"}
+{
+    "commits": [], 
+    "date": "2019-07-06", 
+    "image": "", 
+    "info": {
+        "audio": 0.07, 
+        "visual": 0.01, 
+        "writing": 0.71
+    }
+}

@@ -1,1 +1,26 @@
-{"info": {"visual": 0.0, "audio": 0.0, "writing": 0.77}, "commits": [{"url": "https://gitlab.com/cxss/site", "message": "Update about.pug", "hash": "cb773d4a"}, {"url": "https://gitlab.com/cxss/portfolio", "message": "gpu acceleration", "hash": "249bba73"}, {"url": "https://gitlab.com/cxss/portfolio", "message": "remove webm preview in place of speed", "hash": "3c4a3a72"}, {"url": "https://gitlab.com/cxss/portfolio", "message": "improve support for 4k res", "hash": "39bd3da0"}], "image": "", "date": "2019-06-28"}
+{
+    "commits": [
+        {
+            "hash": "249bba73", 
+            "message": "gpu acceleration", 
+            "url": "https://gitlab.com/cxss/portfolio"
+        }, 
+        {
+            "hash": "3c4a3a72", 
+            "message": "remove webm preview in place of speed", 
+            "url": "https://gitlab.com/cxss/portfolio"
+        }, 
+        {
+            "hash": "39bd3da0", 
+            "message": "improve support for 4k res", 
+            "url": "https://gitlab.com/cxss/portfolio"
+        }
+    ], 
+    "date": "2019-06-28", 
+    "image": "", 
+    "info": {
+        "audio": 0.0, 
+        "visual": 0.0, 
+        "writing": 0.77
+    }
+}

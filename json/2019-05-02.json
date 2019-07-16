@@ -1,1 +1,10 @@
-{"info": {"visual": 0.0, "audio": 0.0, "writing": 0.65}, "commits": [{"url": "https://gitlab.com/cxss/site", "message": "(fix): round hours to 2dp", "hash": "f026eda5"}], "image": "", "date": "2019-05-02"}
+{
+    "commits": [], 
+    "date": "2019-05-02", 
+    "image": "", 
+    "info": {
+        "audio": 0.0, 
+        "visual": 0.0, 
+        "writing": 0.65
+    }
+}

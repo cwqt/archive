@@ -1,1 +1,16 @@
-{"info": {"visual": 0.0, "audio": 0.0, "writing": 1.26}, "commits": [{"url": "https://gitlab.com/cxss/g", "message": "added Field view and Notification class", "hash": "b47772c7"}, {"url": "https://gitlab.com/cxss/site", "message": "new post: waiting", "hash": "7972b3d6"}, {"url": "https://gitlab.com/cxss/site", "message": "FTP::Upload =QzMxUzN5k", "hash": "3be61de1"}], "image": "", "date": "2019-06-01"}
+{
+    "commits": [
+        {
+            "hash": "b47772c7", 
+            "message": "added Field view and Notification class", 
+            "url": "https://gitlab.com/cxss/g"
+        }
+    ], 
+    "date": "2019-06-01", 
+    "image": "", 
+    "info": {
+        "audio": 0.0, 
+        "visual": 0.0, 
+        "writing": 1.26
+    }
+}

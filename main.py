@@ -164,7 +164,7 @@ else:
       #write the day template to it
       print("\tWriting to file "+filename+".json")
       with open('json/'+filename+".json", 'w') as outfile:
-        json.dump(day_data, outfile)
+        json.dump(day_data, outfile, indent=4, sort_keys=True)
 
   if not skipAll:
     #execute push

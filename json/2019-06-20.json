@@ -1,1 +1,26 @@
-{"info": {"visual": 0.0, "audio": 0.01, "writing": 1.0}, "commits": [{"url": "https://gitlab.com/cxss/site", "message": "FTP::Upload ==gMwADMwA", "hash": "35fc7778"}, {"url": "https://gitlab.com/cxss/site", "message": "FTP::Upload zQDO5kTO5k", "hash": "2225235b"}, {"url": "https://gitlab.com/cxss/site", "message": "add reference to portfolio.now.sh site in portfolio", "hash": "01ccf651"}, {"url": "https://gitlab.com/cxss/portfolio", "message": "add webp alternatives", "hash": "346da5f8"}, {"url": "https://gitlab.com/cxss/site", "message": "add webp alternatives", "hash": "1165c931"}, {"url": "https://gitlab.com/cxss/portfolio", "message": "change favicon", "hash": "0f2c762b"}, {"url": "https://gitlab.com/cxss/portfolio", "message": "add video preview w/ progress bar, implement project filters, now.j...", "hash": "aa0b9c89"}], "image": "", "date": "2019-06-20"}
+{
+    "commits": [
+        {
+            "hash": "346da5f8", 
+            "message": "add webp alternatives", 
+            "url": "https://gitlab.com/cxss/portfolio"
+        }, 
+        {
+            "hash": "0f2c762b", 
+            "message": "change favicon", 
+            "url": "https://gitlab.com/cxss/portfolio"
+        }, 
+        {
+            "hash": "aa0b9c89", 
+            "message": "add video preview w/ progress bar, implement project filters, now.j...", 
+            "url": "https://gitlab.com/cxss/portfolio"
+        }
+    ], 
+    "date": "2019-06-20", 
+    "image": "", 
+    "info": {
+        "audio": 0.01, 
+        "visual": 0.0, 
+        "writing": 1.0
+    }
+}

@@ -1,1 +1,16 @@
-{"info": {"visual": 0.02, "audio": 0.02, "writing": 0.09}, "commits": [{"url": "https://gitlab.com/cxss/site", "message": "sign and 404 page", "hash": "e1a2f83b"}, {"url": "https://gitlab.com/cxss/tclone", "message": "move to kitura swift", "hash": "62c0c791"}], "image": "", "date": "2019-07-05"}
+{
+    "commits": [
+        {
+            "hash": "62c0c791", 
+            "message": "move to kitura swift", 
+            "url": "https://gitlab.com/cxss/tclone"
+        }
+    ], 
+    "date": "2019-07-05", 
+    "image": "", 
+    "info": {
+        "audio": 0.02, 
+        "visual": 0.02, 
+        "writing": 0.09
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "commits": [
+        {
+            "hash": "0efc8076", 
+            "message": "Delete .DS_Store", 
+            "url": "https://gitlab.com/cxss/site"
+        }
+    ], 
+    "date": "2019-07-19", 
+    "image": "", 
+    "info": {
+        "audio": 0.0, 
+        "visual": 0.0, 
+        "writing": 0.52
+    }
+}

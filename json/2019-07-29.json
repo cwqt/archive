@@ -1,0 +1,111 @@
+{
+    "commits": [
+        {
+            "hash": "97480afa", 
+            "message": "Update build.sh", 
+            "url": "https://gitlab.com/cxss/site"
+        }, 
+        {
+            "hash": "a60b23bd", 
+            "message": "remove visible access token, save in netlify env variables instead", 
+            "url": "https://gitlab.com/cxss/site"
+        }, 
+        {
+            "hash": "b74572e7", 
+            "message": "heroku buildpack proxy api calls in development and production", 
+            "url": "https://gitlab.com/cxss/moisture.track"
+        }, 
+        {
+            "hash": "0f6e306c", 
+            "message": "deploy", 
+            "url": "https://gitlab.com/cxss/moisture.track"
+        }, 
+        {
+            "hash": "776e635b", 
+            "message": "un-needed dep", 
+            "url": "https://gitlab.com/cxss/moisture.track"
+        }, 
+        {
+            "hash": "a7d29c73", 
+            "message": "oops", 
+            "url": "https://gitlab.com/cxss/moisture.track"
+        }, 
+        {
+            "hash": "5c004cd9", 
+            "message": "strip all special characters from incoming tokens", 
+            "url": "https://gitlab.com/cxss/moisture.track"
+        }, 
+        {
+            "hash": "23e8604f", 
+            "message": "Fix frontend to work with fixed API", 
+            "url": "https://gitlab.com/cxss/moisture.track"
+        }, 
+        {
+            "hash": "b8a7efaa", 
+            "message": "Add token auth", 
+            "url": "https://gitlab.com/cxss/moisture.track"
+        }, 
+        {
+            "hash": "a2165806", 
+            "message": "Add token auth", 
+            "url": "https://gitlab.com/cxss/moisture.track"
+        }, 
+        {
+            "hash": "8145826c", 
+            "message": "post ui changes", 
+            "url": "https://gitlab.com/cxss/site"
+        }, 
+        {
+            "hash": "b6ceff47", 
+            "message": "something is seriously wrong with this stupid time tracking softwar...", 
+            "url": "https://gitlab.com/cxss/days"
+        }, 
+        {
+            "hash": "7bc9f8ce", 
+            "message": ":leaves:", 
+            "url": "https://gitlab.com/cxss/site"
+        }, 
+        {
+            "hash": "861f78fb", 
+            "message": "New post, on plants! :leaves:", 
+            "url": "https://gitlab.com/cxss/site"
+        }, 
+        {
+            "hash": "f657d1b5", 
+            "message": "Merge branch 'master' of https://gitlab.com/cxss/site", 
+            "url": "https://gitlab.com/cxss/site"
+        }, 
+        {
+            "hash": "123692e2", 
+            "message": "FTP::Upload ==AO0kTO5k", 
+            "url": "https://gitlab.com/cxss/site"
+        }, 
+        {
+            "hash": "284b3b40", 
+            "message": "FTP::Upload =YzM2EDMwA", 
+            "url": "https://gitlab.com/cxss/site"
+        }, 
+        {
+            "hash": "354cf45a", 
+            "message": "FTP::Upload 2QjNxADMwA", 
+            "url": "https://gitlab.com/cxss/site"
+        }, 
+        {
+            "hash": "c663d2b6", 
+            "message": "FTP::Upload ==wM0IzN5k", 
+            "url": "https://gitlab.com/cxss/site"
+        }, 
+        {
+            "hash": "7fbeb651", 
+            "message": "FTP::Upload 1YjM4kTO5k", 
+            "url": "https://gitlab.com/cxss/site"
+        }
+    ], 
+    "date": "2019-07-29", 
+    "image": "", 
+    "info": {
+        "audio": 0.1, 
+        "visual": 0.14, 
+        "writing": 3.43
+    }
+}

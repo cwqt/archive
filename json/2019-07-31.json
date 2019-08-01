@@ -1,0 +1,51 @@
+{
+    "commits": [
+        {
+            "hash": "e7a1d211", 
+            "message": "FTP::Upload ==QN2ATO5k", 
+            "url": "https://gitlab.com/cxss/site"
+        }, 
+        {
+            "hash": "5091c6c6", 
+            "message": "Merge branch 'master' of https://gitlab.com/cxss/moisture.track", 
+            "url": "https://gitlab.com/cxss/moisture.track"
+        }, 
+        {
+            "hash": "b9309de1", 
+            "message": "Improve hardware script with secrets and token headers", 
+            "url": "https://gitlab.com/cxss/moisture.track"
+        }, 
+        {
+            "hash": "15e1c2bc", 
+            "message": "key", 
+            "url": "https://gitlab.com/cxss/moisture.track"
+        }, 
+        {
+            "hash": "15e8f3c0", 
+            "message": "list not object", 
+            "url": "https://gitlab.com/cxss/moisture.track"
+        }, 
+        {
+            "hash": "a46bbb5f", 
+            "message": "typo, ignore hardware/secrets.josn", 
+            "url": "https://gitlab.com/cxss/moisture.track"
+        }, 
+        {
+            "hash": "adf7ae78", 
+            "message": "add support for temperature also", 
+            "url": "https://gitlab.com/cxss/moisture.track"
+        }, 
+        {
+            "hash": "aa4d6871", 
+            "message": "indentation error", 
+            "url": "https://gitlab.com/cxss/moisture.track"
+        }
+    ], 
+    "date": "2019-07-31", 
+    "image": "", 
+    "info": {
+        "audio": 0.02, 
+        "visual": 0.03, 
+        "writing": 0.04
+    }
+}

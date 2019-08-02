@@ -1,0 +1,21 @@
+{
+    "commits": [
+        {
+            "hash": "37e1b380", 
+            "message": "Update .gitlab-ci.yml", 
+            "url": "https://gitlab.com/cxss/days"
+        }, 
+        {
+            "hash": "8cfaa171", 
+            "message": "prod auth check", 
+            "url": "https://gitlab.com/cxss/moisture.track"
+        }
+    ], 
+    "date": "2019-08-02", 
+    "image": "", 
+    "info": {
+        "audio": 0.02, 
+        "visual": 0.0, 
+        "writing": 2.72
+    }
+}

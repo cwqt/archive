@@ -1,0 +1,56 @@
+{
+    "commits": [
+        {
+            "hash": "26081554", 
+            "message": "max moisture value = 1024", 
+            "url": "https://gitlab.com/cxss/moisture.track"
+        }, 
+        {
+            "hash": "914095b6", 
+            "message": "Merge branch 'master' of https://gitlab.com/cxss/site", 
+            "url": "https://gitlab.com/cxss/site"
+        }, 
+        {
+            "hash": "2c903566", 
+            "message": "Merge branch 'master' of https://gitlab.com/cxss/moisture.track", 
+            "url": "https://gitlab.com/cxss/moisture.track"
+        }, 
+        {
+            "hash": "801e5aa9", 
+            "message": "Update README.md", 
+            "url": "https://gitlab.com/cxss/moisture.track"
+        }, 
+        {
+            "hash": "0c9c6132", 
+            "message": "finish modals for creation and deletion of plants", 
+            "url": "https://gitlab.com/cxss/moisture.track"
+        }, 
+        {
+            "hash": "a86d64bd", 
+            "message": "sc path", 
+            "url": "https://gitlab.com/cxss/moisture.track"
+        }, 
+        {
+            "hash": "5153b807", 
+            "message": "Update README.md", 
+            "url": "https://gitlab.com/cxss/moisture.track"
+        }, 
+        {
+            "hash": "c240f989", 
+            "message": "time", 
+            "url": "https://gitlab.com/cxss/days"
+        }, 
+        {
+            "hash": "cbaf8c74", 
+            "message": "ModalConductor, reducer & actions, auth form and other modals", 
+            "url": "https://gitlab.com/cxss/moisture.track"
+        }
+    ], 
+    "date": "2019-08-01", 
+    "image": "", 
+    "info": {
+        "audio": 0.01, 
+        "visual": 0.0, 
+        "writing": 2.68
+    }
+}

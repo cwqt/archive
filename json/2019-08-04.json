@@ -1,0 +1,71 @@
+{
+    "commits": [
+        {
+            "hash": "7efa6652", 
+            "message": "change header", 
+            "url": "https://gitlab.com/cxss/qrtknee"
+        }, 
+        {
+            "hash": "183ac76c", 
+            "message": "responsive", 
+            "url": "https://gitlab.com/cxss/qrtknee"
+        }, 
+        {
+            "hash": "ea7385d6", 
+            "message": "add qa", 
+            "url": "https://gitlab.com/cxss/qrtknee"
+        }, 
+        {
+            "hash": "60cf35b8", 
+            "message": "finished", 
+            "url": "https://gitlab.com/cxss/qrtknee"
+        }, 
+        {
+            "hash": "79aca286", 
+            "message": "Qrtknee::Upload", 
+            "url": "https://gitlab.com/cxss/qrtknee"
+        }, 
+        {
+            "hash": "86875256", 
+            "message": "Qrtknee::Upload", 
+            "url": "https://gitlab.com/cxss/qrtknee"
+        }, 
+        {
+            "hash": "50a5b054", 
+            "message": "Qrtknee::Upload", 
+            "url": "https://gitlab.com/cxss/qrtknee"
+        }, 
+        {
+            "hash": "904a7e98", 
+            "message": "Qrtknee::Upload", 
+            "url": "https://gitlab.com/cxss/qrtknee"
+        }, 
+        {
+            "hash": "ec7198c3", 
+            "message": "Qrtknee::Upload", 
+            "url": "https://gitlab.com/cxss/qrtknee"
+        }, 
+        {
+            "hash": "04347a8f", 
+            "message": "Qrtknee::Upload", 
+            "url": "https://gitlab.com/cxss/qrtknee"
+        }, 
+        {
+            "hash": "2947e2ca", 
+            "message": "Qrtknee::Upload", 
+            "url": "https://gitlab.com/cxss/qrtknee"
+        }, 
+        {
+            "hash": "f40bf11b", 
+            "message": "Qrtknee::Upload", 
+            "url": "https://gitlab.com/cxss/qrtknee"
+        }
+    ], 
+    "date": "2019-08-04", 
+    "image": "", 
+    "info": {
+        "audio": 0.0, 
+        "visual": 0.1, 
+        "writing": 0.05
+    }
+}

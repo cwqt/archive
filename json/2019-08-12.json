@@ -1,0 +1,26 @@
+{
+    "commits": [
+        {
+            "hash": "0f99353c", 
+            "message": "local implementation works", 
+            "url": "https://gitlab.com/cxss/g"
+        }, 
+        {
+            "hash": "70fd38be", 
+            "message": "rm forestry", 
+            "url": "https://gitlab.com/cxss/site"
+        }, 
+        {
+            "hash": "091bb495", 
+            "message": "rtonde", 
+            "url": "https://gitlab.com/cxss/site"
+        }
+    ], 
+    "date": "2019-08-12", 
+    "image": "", 
+    "info": {
+        "audio": 0.02, 
+        "visual": 0.0, 
+        "writing": 2.44
+    }
+}

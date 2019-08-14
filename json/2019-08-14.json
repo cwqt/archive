@@ -1,0 +1,16 @@
+{
+    "commits": [
+        {
+            "hash": "676cc480", 
+            "message": "rewrite functions for command execution", 
+            "url": "https://gitlab.com/cxss/g"
+        }
+    ], 
+    "date": "2019-08-14", 
+    "image": "", 
+    "info": {
+        "audio": 0.03, 
+        "visual": 0.01, 
+        "writing": 1.16
+    }
+}

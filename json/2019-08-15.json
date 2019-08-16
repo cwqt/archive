@@ -1,0 +1,56 @@
+{
+    "commits": [
+        {
+            "hash": "f87b96ec", 
+            "message": "FTP::Upload =gTOxADMwA", 
+            "url": "https://gitlab.com/cxss/site"
+        }, 
+        {
+            "hash": "2bd129db", 
+            "message": "FTP::Upload ==gNykTMwA", 
+            "url": "https://gitlab.com/cxss/site"
+        }, 
+        {
+            "hash": "f716c865", 
+            "message": "FTP::Upload =IDMzMjMwA", 
+            "url": "https://gitlab.com/cxss/site"
+        }, 
+        {
+            "hash": "61cefc50", 
+            "message": "FTP::Upload =gDMycDMwA", 
+            "url": "https://gitlab.com/cxss/site"
+        }, 
+        {
+            "hash": "0b38612a", 
+            "message": "FTP::Upload =cDM5kTO5k", 
+            "url": "https://gitlab.com/cxss/site"
+        }, 
+        {
+            "hash": "30c17617", 
+            "message": "FTP::Upload =kTM5cTMwA", 
+            "url": "https://gitlab.com/cxss/site"
+        }, 
+        {
+            "hash": "e968cee3", 
+            "message": "FTP::Upload ==ANygjMwA", 
+            "url": "https://gitlab.com/cxss/site"
+        }, 
+        {
+            "hash": "e4734bbe", 
+            "message": "FTP::Upload =QjNwQDMwA", 
+            "url": "https://gitlab.com/cxss/site"
+        }, 
+        {
+            "hash": "07e33320", 
+            "message": "implement makrov chain for cassposting", 
+            "url": "https://gitlab.com/cxss/shortbread"
+        }
+    ], 
+    "date": "2019-08-15", 
+    "image": "", 
+    "info": {
+        "audio": 0.0, 
+        "visual": 0.0, 
+        "writing": 0.67
+    }
+}

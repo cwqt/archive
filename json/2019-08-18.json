@@ -1,0 +1,26 @@
+{
+    "commits": [
+        {
+            "hash": "2311a334", 
+            "message": "use heroku scheduler instead of timer.sleep", 
+            "url": "https://gitlab.com/cxss/utf8garden"
+        }, 
+        {
+            "hash": "aa8ba181", 
+            "message": "change procfile type to clock process", 
+            "url": "https://gitlab.com/cxss/utf8garden"
+        }, 
+        {
+            "hash": "80ac2c0b", 
+            "message": "increase date range", 
+            "url": "https://gitlab.com/cxss/moisture.track"
+        }
+    ], 
+    "date": "2019-08-18", 
+    "image": "", 
+    "info": {
+        "audio": 0.14, 
+        "visual": 0.0, 
+        "writing": 0.42
+    }
+}

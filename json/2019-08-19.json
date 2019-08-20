@@ -1,0 +1,16 @@
+{
+    "commits": [
+        {
+            "hash": "99413bc2", 
+            "message": "make 16x16 gardens", 
+            "url": "https://gitlab.com/cxss/utf8garden"
+        }
+    ], 
+    "date": "2019-08-19", 
+    "image": "", 
+    "info": {
+        "audio": 0.0, 
+        "visual": 0.0, 
+        "writing": 0.8
+    }
+}

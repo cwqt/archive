@@ -1,0 +1,21 @@
+{
+    "commits": [
+        {
+            "hash": "618b090e", 
+            "message": "clean up files", 
+            "url": "https://gitlab.com/cxss/g"
+        }, 
+        {
+            "hash": "99efa488", 
+            "message": "add phase manager, change GAME -> G, RECEIVE_PEER_COMMANDS get stat...", 
+            "url": "https://gitlab.com/cxss/g"
+        }
+    ], 
+    "date": "2019-08-23", 
+    "image": "", 
+    "info": {
+        "audio": 0.03, 
+        "visual": 0.0, 
+        "writing": 0.34
+    }
+}

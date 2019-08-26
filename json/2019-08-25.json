@@ -1,0 +1,26 @@
+{
+    "commits": [
+        {
+            "hash": "ed4a16ee", 
+            "message": "Update README.md", 
+            "url": "https://gitlab.com/cxss/shortbread"
+        }, 
+        {
+            "hash": "003f52cb", 
+            "message": "add command ui wheel", 
+            "url": "https://gitlab.com/cxss/g"
+        }, 
+        {
+            "hash": "a328f096", 
+            "message": "separate map ui from planning controls", 
+            "url": "https://gitlab.com/cxss/g"
+        }
+    ], 
+    "date": "2019-08-25", 
+    "image": "", 
+    "info": {
+        "audio": 0.08, 
+        "visual": 0.0, 
+        "writing": 1.72
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "commits": [
+        {
+            "hash": "0230c52f", 
+            "message": "explain degree offset", 
+            "url": "https://gitlab.com/cxss/g"
+        }, 
+        {
+            "hash": "573fdc8d", 
+            "message": "command ui segment mouse hover detection", 
+            "url": "https://gitlab.com/cxss/g"
+        }
+    ], 
+    "date": "2019-08-26", 
+    "image": "", 
+    "info": {
+        "audio": 0.04, 
+        "visual": 0.03, 
+        "writing": 2.9
+    }
+}

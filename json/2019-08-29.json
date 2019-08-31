@@ -1,0 +1,21 @@
+{
+    "commits": [
+        {
+            "hash": "7b09ac78", 
+            "message": "fix json", 
+            "url": "https://gitlab.com/cxss/days"
+        }, 
+        {
+            "hash": "89ed8a7e", 
+            "message": "convert behaviour to object - add generic", 
+            "url": "https://gitlab.com/cxss/g"
+        }
+    ], 
+    "date": "2019-08-29", 
+    "image": "", 
+    "info": {
+        "audio": 0.07, 
+        "visual": 0.0, 
+        "writing": 1.38
+    }
+}

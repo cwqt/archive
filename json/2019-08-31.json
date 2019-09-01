@@ -1,0 +1,31 @@
+{
+    "commits": [
+        {
+            "hash": "bdd85350", 
+            "message": "flood fill grid square color fixing", 
+            "url": "https://gitlab.com/cxss/g"
+        }, 
+        {
+            "hash": "f25623cd", 
+            "message": "add probably slowest flood fill ever & interface for GS colour stack", 
+            "url": "https://gitlab.com/cxss/g"
+        }, 
+        {
+            "hash": "5c1125f7", 
+            "message": "move command working in action phase", 
+            "url": "https://gitlab.com/cxss/g"
+        }, 
+        {
+            "hash": "6bfe3e68", 
+            "message": "fix map.moveobject to send references around rather than copying ta...", 
+            "url": "https://gitlab.com/cxss/g"
+        }
+    ], 
+    "date": "2019-08-31", 
+    "image": "", 
+    "info": {
+        "audio": 0.03, 
+        "visual": 0.0, 
+        "writing": 1.48
+    }
+}

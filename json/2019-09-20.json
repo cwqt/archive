@@ -1,0 +1,16 @@
+{
+    "commits": [
+        {
+            "hash": "a5c67116", 
+            "message": "map parser, heightmaps, terrain types & all unit stats added (notwo...", 
+            "url": "https://gitlab.com/cxss/g"
+        }
+    ], 
+    "date": "2019-09-20", 
+    "image": "", 
+    "info": {
+        "audio": 0.05, 
+        "visual": 0.0, 
+        "writing": 0.61
+    }
+}

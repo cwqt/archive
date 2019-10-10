@@ -1,0 +1,111 @@
+{
+    "commits": [
+        {
+            "hash": "4289411a", 
+            "message": "update", 
+            "url": "https://gitlab.com/cxss/site"
+        }, 
+        {
+            "hash": "dd49b9e2", 
+            "message": "FTP::Upload ==AN3YTMwA", 
+            "url": "https://gitlab.com/cxss/site"
+        }, 
+        {
+            "hash": "b4ca1108", 
+            "message": "FTP::Upload 4ADOyADMwA", 
+            "url": "https://gitlab.com/cxss/site"
+        }, 
+        {
+            "hash": "233cd2f2", 
+            "message": "FTP::Upload ==wMyAjMwA", 
+            "url": "https://gitlab.com/cxss/site"
+        }, 
+        {
+            "hash": "3c3b9af0", 
+            "message": "Merge branch 'master' of https://gitlab.com/cxss/site", 
+            "url": "https://gitlab.com/cxss/site"
+        }, 
+        {
+            "hash": "0e86e40b", 
+            "message": "FTP::Upload ==gM3MTO5k", 
+            "url": "https://gitlab.com/cxss/site"
+        }, 
+        {
+            "hash": "f7c1a163", 
+            "message": "FTP::Upload 0gDMyADMwA", 
+            "url": "https://gitlab.com/cxss/site"
+        }, 
+        {
+            "hash": "f7edd255", 
+            "message": "FTP::Upload xQDO5kTO5k", 
+            "url": "https://gitlab.com/cxss/site"
+        }, 
+        {
+            "hash": "fbd01d11", 
+            "message": "FTP::Upload ==QN2czMwA", 
+            "url": "https://gitlab.com/cxss/site"
+        }, 
+        {
+            "hash": "bfe39955", 
+            "message": "FTP::Upload ==wM1IzMwA", 
+            "url": "https://gitlab.com/cxss/site"
+        }, 
+        {
+            "hash": "96d71514", 
+            "message": "FTP::Upload ==QNwADO5k", 
+            "url": "https://gitlab.com/cxss/site"
+        }, 
+        {
+            "hash": "1df36ba0", 
+            "message": "FTP::Upload ==wMzADNwA", 
+            "url": "https://gitlab.com/cxss/site"
+        }, 
+        {
+            "hash": "d1297437", 
+            "message": "FTP::Upload 5gjM2kTO5k", 
+            "url": "https://gitlab.com/cxss/site"
+        }, 
+        {
+            "hash": "74ea9e75", 
+            "message": "FTP::Upload xYjM4kTO5k", 
+            "url": "https://gitlab.com/cxss/site"
+        }, 
+        {
+            "hash": "714cdbfe", 
+            "message": "FTP::Upload ==AO5YjN5k", 
+            "url": "https://gitlab.com/cxss/site"
+        }, 
+        {
+            "hash": "87af78d6", 
+            "message": "FTP::Upload ==wNwEDMwA", 
+            "url": "https://gitlab.com/cxss/site"
+        }, 
+        {
+            "hash": "3759df21", 
+            "message": "FTP::Upload ==wNwQDO5k", 
+            "url": "https://gitlab.com/cxss/site"
+        }, 
+        {
+            "hash": "ac21358d", 
+            "message": "FTP::Upload ==gN0QzN5k", 
+            "url": "https://gitlab.com/cxss/site"
+        }, 
+        {
+            "hash": "a9c66277", 
+            "message": "FTP::Upload 3QTN0ADMwA", 
+            "url": "https://gitlab.com/cxss/site"
+        }, 
+        {
+            "hash": "88bbac50", 
+            "message": "FTP::Upload ==wMyADMwA", 
+            "url": "https://gitlab.com/cxss/site"
+        }
+    ], 
+    "date": "2019-10-09", 
+    "image": "", 
+    "info": {
+        "audio": 0.23, 
+        "visual": 0.05, 
+        "writing": 0.11
+    }
+}

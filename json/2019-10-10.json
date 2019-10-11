@@ -1,0 +1,41 @@
+{
+    "commits": [
+        {
+            "hash": "8cfb6809", 
+            "message": "?", 
+            "url": "https://gitlab.com/cxss/site"
+        }, 
+        {
+            "hash": "7b78869a", 
+            "message": "add link + image", 
+            "url": "https://gitlab.com/cxss/site"
+        }, 
+        {
+            "hash": "26fcdb1e", 
+            "message": "FTP::Upload 0MDMwADMwA", 
+            "url": "https://gitlab.com/cxss/site"
+        }, 
+        {
+            "hash": "0c85781e", 
+            "message": "fix typos/spelling", 
+            "url": "https://gitlab.com/cxss/site"
+        }, 
+        {
+            "hash": "706d1de6", 
+            "message": "complete shitposting discord bot post", 
+            "url": "https://gitlab.com/cxss/site"
+        }, 
+        {
+            "hash": "47cc3502", 
+            "message": "resolve merge", 
+            "url": "https://gitlab.com/cxss/site"
+        }
+    ], 
+    "date": "2019-10-10", 
+    "image": "", 
+    "info": {
+        "audio": 0.03, 
+        "visual": 0.0, 
+        "writing": 1.79
+    }
+}

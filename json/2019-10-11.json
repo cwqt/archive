@@ -1,0 +1,16 @@
+{
+    "commits": [
+        {
+            "hash": "342a60fc", 
+            "message": "rename post", 
+            "url": "https://gitlab.com/cxss/site"
+        }
+    ], 
+    "date": "2019-10-11", 
+    "image": "", 
+    "info": {
+        "audio": 0.02, 
+        "visual": 0.0, 
+        "writing": 2.39
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "commits": [
+        {
+            "hash": "e959d1cf", 
+            "message": "rewrite a bunch of infobar stuff, field rewrite to use camera, unit...", 
+            "url": "https://gitlab.com/cxss/g"
+        }
+    ], 
+    "date": "2019-10-17", 
+    "image": "", 
+    "info": {
+        "audio": 0.0, 
+        "visual": 0.0, 
+        "writing": 0.07
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "commits": [
+        {
+            "hash": "0b65b714", 
+            "message": "cipher each post differently", 
+            "url": "https://gitlab.com/cxss/blog"
+        }
+    ], 
+    "date": "2019-10-26", 
+    "image": "", 
+    "info": {
+        "audio": 0.06, 
+        "visual": 0.0, 
+        "writing": 0.05
+    }
+}

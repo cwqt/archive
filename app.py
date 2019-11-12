@@ -90,7 +90,7 @@ def get_hours_total():
 def get_longest_day():
   lst = os.listdir("csv/")
   lst = sorted(lst)
-  duration = request.args.get("duration") or lst.len
+  duration = request.args.get("duration") or len(lst)
   x = getLongestDay(lst, duration)
   y = getSumOfHours(x)
   return str(y)

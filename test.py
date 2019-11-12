@@ -27,7 +27,11 @@ def getSumOfHours(filename):
 		s += value
 	return s
 
-def getLongestDay(lst):
+def getLongestDay(lst, duration):
+	print(len(lst)-duration)
+	print(len(lst))
+	lst = lst[ len(lst)-duration : len(lst) ]
+	print(len(lst))
 	c = {}
 	for filename in lst:
 		totalHours = getSumOfHours(filename)
@@ -38,4 +42,4 @@ def getLongestDay(lst):
 
 lst = os.listdir("csv/")
 lst = sorted(lst)
-getLongestDay(lst)
+print(getLongestDay(lst, 182))

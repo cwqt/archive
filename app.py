@@ -53,7 +53,7 @@ def getSumOfHours(filename):
 
 def getLongestDay(lst, duration):
   duration = int(duration)
-  lst = lst[ len(lst)-duration : len(lst) ]
+  lst = lst[-duration:]
   c = {}
   for filename in lst:
     totalHours = getSumOfHours(filename)

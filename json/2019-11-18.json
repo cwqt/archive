@@ -1,0 +1,16 @@
+{
+    "commits": [
+        {
+            "hash": "388ac71a", 
+            "message": "add correct values & add control interface", 
+            "url": "https://gitlab.com/cxss/heart"
+        }
+    ], 
+    "date": "2019-11-18", 
+    "image": "", 
+    "info": {
+        "audio": 0.03, 
+        "visual": 0.0, 
+        "writing": 0.33
+    }
+}

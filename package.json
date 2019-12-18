@@ -2,9 +2,20 @@
   "name": "daughter.systems",
   "version": "0.1.0",
   "private": true,
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
   "dependencies": {
+    "@zeit/next-sass": "^1.0.1",
+    "next": "^9.1.5",
+    "node-sass": "^4.13.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-scripts": "3.3.0"
+    "react-html-parser": "^2.0.2",
+    "react-image-lightbox": "^5.1.1",
+    "react-scripts": "3.3.0",
+    "react-slick": "^0.25.2"
   }
 }

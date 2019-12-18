@@ -16,8 +16,8 @@ import time
 from datetime import datetime, timedelta
 
 class color:
-   BOLD = '\033[1m'
-   END = '\033[0m'
+  BOLD = '\033[1m'
+  END = '\033[0m'
 
 secrets = json.load(open("secrets.json"))
 

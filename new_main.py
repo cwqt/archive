@@ -152,6 +152,6 @@ for date in unwrittenDays:
   break
 
 os.system('git pull origin master')
-os.system('git add .')
-os.system('git commit --author --author="cxss-bot <misc@cass.si>" -am "days::Catch up on '+str(len(unwrittenDays))+' file(s)."')
+os.system('git add . > /dev/null')
+os.system("git -c user.email=misc@cass.si -c user.name='cxss-bot' commit -am 'days::Catch up on "+str(len(unwrittenDays))+" file(s).'")
 os.system("git push origin master")

@@ -6,9 +6,9 @@ export default function Header() {
 			<img src="/static/daughtersystems.png" />
 			<h1>ds</h1>
 			<div className="left">
-				<Link href="/">store</Link>
-				<Link href="/about">about</Link>
-				<Link href="/contact">contact</Link>
+				<Link href="/"><a>store</a></Link>
+				<Link href="/about"><a>about</a></Link>
+				<Link href="/contact"><a>contact</a></Link>
 			</div>
 		</header>
 	)

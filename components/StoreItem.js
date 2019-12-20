@@ -23,14 +23,18 @@ export default function StoreItem(props) {
 
 			<div className="info">
 				<h1>{props.title}</h1>
+
 				{ReactHtmlParser(props.desc)}
 
-				<p className="stock"><b>{props.stock}</b> in stock</p>
+				<div className="store-item-bottom">
+					<p className="stock"><b>{props.stock}</b> in stock</p>
+					<a href={props.source_url}><img src="/static/source.png"/></a>
+					<a href={props.tindie_url} className="purchase-link">
+						<span>{props.price}</span>
+						<p>Buy on <b>Tindie</b> →</p>
+					</a>
+				</div>
 
-				<a href="" className="purchase-link">
-					<span>{props.price}</span>
-					<p>Buy on <b>Tindie</b> →</p>
-				</a>
 			</div>
 		</div>
 	)

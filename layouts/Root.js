@@ -1,7 +1,6 @@
 import "../scss/main.scss";
 import Head from 'next/head'
 
-
 export default function Root(props) {
 	return (
 		<div>

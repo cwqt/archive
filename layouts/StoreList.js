@@ -14,12 +14,14 @@ export default function StoreList() {
 			`,
 			price: "£14.99",
 			tindie_url: "",
+			source_url: "https://gitlab.com/daughtersystems/powerboost",
 			stock: 5,
 			images: [
 				"https://i.imgur.com/alx0cPi.png",
 				"https://i.imgur.com/mUukzNN.png",
 			],
 		},
+
 		{
 			title: "micro:bit breakout",
 			desc: `SMT straight-edge-connector to DIL-40 breakout
@@ -29,10 +31,11 @@ export default function StoreList() {
 			`,
 			price: "£5.99",
 			tindie_url: "",
+			source_url: "https://gitlab.com/daughtersystems/microbit_breakout",
 			stock: 10,
 			images: [
-				"https://i.imgur.com/f5ko8uc.png",
-				"https://i.imgur.com/ahuGqF2.png",
+				"https://i.imgur.com/RWw6rVu.jpg",
+				"https://i.imgur.com/MifzNns.jpg",
 			],
 		},
 	]
@@ -44,6 +47,8 @@ export default function StoreList() {
 			price={item.price}
 			stock={item.stock}
 			desc={item.desc}
+			tindie_url={item.tindie_url}
+			source_url={item.source_url}
 			key={index}/> 
 	})
 

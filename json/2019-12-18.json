@@ -1,0 +1,34 @@
+{
+    "commits": [
+        {
+            "message": "days::Catch up on 14 file(s).",
+            "sha": "9540ed8e",
+            "url": "https://gitlab.com/cxss/days"
+        },
+        {
+            "message": "days::Catch up on 16 file(s).",
+            "sha": "cf0c8eef",
+            "url": "https://gitlab.com/cxss/days"
+        },
+        {
+            "message": "make netlify actually install compiler",
+            "sha": "12782931",
+            "url": "https://gitlab.com/cxss/site"
+        },
+        {
+            "message": "about & project link fixes",
+            "sha": "d30a64bf",
+            "url": "https://gitlab.com/cxss/site"
+        },
+        {
+            "message": "open",
+            "sha": "4b911c4b",
+            "url": "https://gitlab.com/daughtersystems/site"
+        }
+    ],
+    "date": "2019-12-18",
+    "info": {
+        "audio": 0.02,
+        "writing": 0.89
+    }
+}

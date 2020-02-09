@@ -1,0 +1,30 @@
+{
+    "commits": [
+        {
+            "message": "finish py code for prototype",
+            "sha": "5896f30c",
+            "url": "https://gitlab.com/cxss/hydroponics"
+        },
+        {
+            "message": "spaces",
+            "sha": "e4eee3a3",
+            "url": "https://gitlab.com/cxss/hydroponics"
+        },
+        {
+            "message": "finish py code for prototype",
+            "sha": "af5a50a8",
+            "url": "https://gitlab.com/cxss/hydroponics"
+        },
+        {
+            "message": "api keys working",
+            "sha": "d584a61e",
+            "url": "https://gitlab.com/cxss/hydroponics"
+        }
+    ],
+    "date": "2020-01-28",
+    "info": {
+        "audio": 0.04,
+        "visual": 0.04,
+        "writing": 1.39
+    }
+}

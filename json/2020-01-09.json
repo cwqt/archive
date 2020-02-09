@@ -1,0 +1,35 @@
+{
+    "commits": [
+        {
+            "message": "Delete .DS_Store",
+            "sha": "d1b41ac3",
+            "url": "https://gitlab.com/cxss/site"
+        },
+        {
+            "message": "Delete b64toYaml.js",
+            "sha": "1d6dfbb9",
+            "url": "https://gitlab.com/cxss/site"
+        },
+        {
+            "message": "fix tilt direction to go in negative x/y also, fix icon paths",
+            "sha": "dbbac844",
+            "url": "https://gitlab.com/cxss/portfolio"
+        },
+        {
+            "message": "Upload New File",
+            "sha": "9941b5dc",
+            "url": "https://gitlab.com/cxss/site"
+        },
+        {
+            "message": "replace image",
+            "sha": "adbe98d7",
+            "url": "https://gitlab.com/cxss/site"
+        }
+    ],
+    "date": "2020-01-09",
+    "info": {
+        "audio": 0.07,
+        "visual": 0.05,
+        "writing": 0.38
+    }
+}

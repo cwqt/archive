@@ -1,0 +1,34 @@
+{
+    "commits": [
+        {
+            "message": "Update README.md",
+            "sha": "57bd0c92",
+            "url": "https://gitlab.com/cxss/hydroponics"
+        },
+        {
+            "message": "bugfix",
+            "sha": "2366966a",
+            "url": "https://gitlab.com/cxss/hydroponics"
+        },
+        {
+            "message": "get last n measurements",
+            "sha": "082572a5",
+            "url": "https://gitlab.com/cxss/hydroponics"
+        },
+        {
+            "message": "adding measurements to gardens/plants",
+            "sha": "a45d3329",
+            "url": "https://gitlab.com/cxss/hydroponics"
+        },
+        {
+            "message": "delete gardens & subchildren",
+            "sha": "107c0151",
+            "url": "https://gitlab.com/cxss/hydroponics"
+        }
+    ],
+    "date": "2020-01-15",
+    "info": {
+        "audio": 0.0,
+        "writing": 3.75
+    }
+}

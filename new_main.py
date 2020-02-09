@@ -149,7 +149,6 @@ for date in unwrittenDays:
   f.close()
   with open('json/'+date+".json", 'w') as outfile:
     json.dump(today.__dict__, outfile, indent=4, sort_keys=True)
-  break
 
 os.system('git pull origin master')
 os.system('git add . > /dev/null')

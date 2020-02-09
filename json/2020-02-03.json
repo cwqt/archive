@@ -1,0 +1,19 @@
+{
+    "commits": [
+        {
+            "message": "refactor some parts of esp32 code",
+            "sha": "f2261686",
+            "url": "https://gitlab.com/cxss/hydroponics"
+        },
+        {
+            "message": "finish esp32 garden code",
+            "sha": "8926733b",
+            "url": "https://gitlab.com/cxss/hydroponics"
+        }
+    ],
+    "date": "2020-02-03",
+    "info": {
+        "visual": 0.28,
+        "writing": 5.9
+    }
+}

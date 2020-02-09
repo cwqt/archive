@@ -1,0 +1,14 @@
+{
+    "commits": [
+        {
+            "message": "use shared db instance across serverless functions & re-write a bun...",
+            "sha": "f5bd7776",
+            "url": "https://gitlab.com/cxss/portfolio"
+        }
+    ],
+    "date": "2020-01-08",
+    "info": {
+        "audio": 0.0,
+        "writing": 1.85
+    }
+}

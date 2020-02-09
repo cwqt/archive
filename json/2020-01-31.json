@@ -1,0 +1,64 @@
+{
+    "commits": [
+        {
+            "message": "verifying extracted code from ndviMachine works (it does)",
+            "sha": "0669cd93",
+            "url": "https://gitlab.com/cxss/hydroponics"
+        },
+        {
+            "message": "add preview image",
+            "sha": "7d363673",
+            "url": "https://gitlab.com/cxss/hydroponics"
+        },
+        {
+            "message": "FTP :: Uploading 1 file(s)",
+            "sha": "62390fb8",
+            "url": "https://gitlab.com/cxss/site"
+        },
+        {
+            "message": "Update README.md",
+            "sha": "23a55442",
+            "url": "https://gitlab.com/cxss/g"
+        },
+        {
+            "message": "wrote py code for ndvi-camera using ndviMachine",
+            "sha": "2874b034",
+            "url": "https://gitlab.com/cxss/hydroponics"
+        },
+        {
+            "message": "more bs",
+            "sha": "d8ef4d35",
+            "url": "https://gitlab.com/cxss/hydroponics"
+        },
+        {
+            "message": "more bs",
+            "sha": "abd246dc",
+            "url": "https://gitlab.com/cxss/hydroponics"
+        },
+        {
+            "message": "validate json",
+            "sha": "485d2dc0",
+            "url": "https://gitlab.com/cxss/hydroponics"
+        },
+        {
+            "message": "https://github.com/zeit/now/issues/622 now.sh routeing with subdir",
+            "sha": "f55f62e8",
+            "url": "https://gitlab.com/cxss/hydroponics"
+        },
+        {
+            "message": "now.json dist dir",
+            "sha": "e85db6f5",
+            "url": "https://gitlab.com/cxss/hydroponics"
+        },
+        {
+            "message": "now.json dist dir",
+            "sha": "826e5f55",
+            "url": "https://gitlab.com/cxss/hydroponics"
+        }
+    ],
+    "date": "2020-01-31",
+    "info": {
+        "audio": 0.04,
+        "writing": 1.17
+    }
+}

@@ -1,0 +1,34 @@
+{
+    "commits": [
+        {
+            "message": "add features",
+            "sha": "8ffdef31",
+            "url": "https://gitlab.com/cxss/hydroponics"
+        },
+        {
+            "message": "add features",
+            "sha": "5f90704a",
+            "url": "https://gitlab.com/cxss/hydroponics"
+        },
+        {
+            "message": "start implementing an event system, e.g. for watering of plant",
+            "sha": "ea7d6039",
+            "url": "https://gitlab.com/cxss/hydroponics"
+        },
+        {
+            "message": "recordable page, modals for adding gardens/plants works",
+            "sha": "9b217ed1",
+            "url": "https://gitlab.com/cxss/hydroponics"
+        },
+        {
+            "message": "modals",
+            "sha": "407f705b",
+            "url": "https://gitlab.com/cxss/hydroponics"
+        }
+    ],
+    "date": "2020-01-23",
+    "info": {
+        "audio": 0.19,
+        "writing": 1.83
+    }
+}

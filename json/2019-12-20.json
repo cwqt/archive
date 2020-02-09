@@ -1,0 +1,15 @@
+{
+    "commits": [
+        {
+            "message": "store update",
+            "sha": "86f14252",
+            "url": "https://gitlab.com/daughtersystems/site"
+        }
+    ],
+    "date": "2019-12-20",
+    "info": {
+        "audio": 0.01,
+        "visual": 0.2,
+        "writing": 0.36
+    }
+}

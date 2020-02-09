@@ -1,0 +1,15 @@
+{
+    "commits": [
+        {
+            "message": "frontend redesign, add chartjs charts and a bunch of other stuff",
+            "sha": "0a1d1564",
+            "url": "https://gitlab.com/cxss/hydroponics"
+        }
+    ],
+    "date": "2020-01-22",
+    "info": {
+        "audio": 0.07,
+        "visual": 0.14,
+        "writing": 1.28
+    }
+}

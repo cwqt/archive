@@ -1,0 +1,30 @@
+{
+    "commits": [
+        {
+            "message": "add pullup resistors to i2c lines :grimacing:",
+            "sha": "ed3be5d9",
+            "url": "https://gitlab.com/cxss/hydroponics"
+        },
+        {
+            "message": "add datasheets & pinout",
+            "sha": "3ff505dd",
+            "url": "https://gitlab.com/cxss/hydroponics"
+        },
+        {
+            "message": "add schematic & gerber for single plant monitor pcb for wemos d1 mini",
+            "sha": "b16ac7e1",
+            "url": "https://gitlab.com/cxss/hydroponics"
+        },
+        {
+            "message": "FTP :: Uploading 1 file(s)",
+            "sha": "15e598f1",
+            "url": "https://gitlab.com/cxss/site"
+        }
+    ],
+    "date": "2020-01-19",
+    "info": {
+        "audio": 0.04,
+        "visual": 0.96,
+        "writing": 1.03
+    }
+}

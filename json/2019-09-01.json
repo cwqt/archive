@@ -1,0 +1,21 @@
+{
+    "commits": [
+        {
+            "hash": "c119cdbf", 
+            "message": "add infobar, move icon drawing into generic function, highdpi mode(...", 
+            "url": "https://gitlab.com/cxss/g"
+        }, 
+        {
+            "hash": "9b7411b1", 
+            "message": "prettify map ui, push colours to gs stack during planning for range...", 
+            "url": "https://gitlab.com/cxss/g"
+        }
+    ], 
+    "date": "2019-09-01", 
+    "image": "", 
+    "info": {
+        "audio": 0.02, 
+        "visual": 0.0, 
+        "writing": 1.66
+    }
+}

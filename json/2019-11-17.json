@@ -1,0 +1,21 @@
+{
+    "commits": [
+        {
+            "hash": "95df0963", 
+            "message": "close comments for a bit", 
+            "url": "https://gitlab.com/cxss/site"
+        }, 
+        {
+            "hash": "2fc31b2c", 
+            "message": "upgrade to v3 captcha", 
+            "url": "https://gitlab.com/cxss/site"
+        }
+    ], 
+    "date": "2019-11-17", 
+    "image": "", 
+    "info": {
+        "audio": 0.02, 
+        "visual": 0.0, 
+        "writing": 0.68
+    }
+}

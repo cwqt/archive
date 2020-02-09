@@ -1,0 +1,26 @@
+{
+    "commits": [
+        {
+            "hash": "65e82493", 
+            "message": "Update week.js", 
+            "url": "https://gitlab.com/cxss/site"
+        }, 
+        {
+            "hash": "87c7e525", 
+            "message": "Update week.js", 
+            "url": "https://gitlab.com/cxss/site"
+        }, 
+        {
+            "hash": "baa6d8d2", 
+            "message": "Update calender.js", 
+            "url": "https://gitlab.com/cxss/site"
+        }
+    ], 
+    "date": "2019-08-05", 
+    "image": "", 
+    "info": {
+        "audio": 0.25, 
+        "visual": 0.01, 
+        "writing": 1.46
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "commits": [
+        {
+            "hash": "d822ac3b", 
+            "message": "move profiler to debugger", 
+            "url": "https://gitlab.com/cxss/g"
+        }, 
+        {
+            "hash": "1cf51458", 
+            "message": "fix bug in ui draw", 
+            "url": "https://gitlab.com/cxss/g"
+        }, 
+        {
+            "hash": "74347d2f", 
+            "message": "add supp for user inputs during command stage via behaviour objects...", 
+            "url": "https://gitlab.com/cxss/g"
+        }
+    ], 
+    "date": "2019-08-28", 
+    "image": "", 
+    "info": {
+        "audio": 0.11, 
+        "visual": 0.0, 
+        "writing": 3.02
+    }
+}

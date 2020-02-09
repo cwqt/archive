@@ -1,0 +1,16 @@
+{
+    "commits": [
+        {
+            "hash": "54ea9b8c", 
+            "message": "rm larp", 
+            "url": "https://gitlab.com/cxss/site"
+        }
+    ], 
+    "date": "2019-10-20", 
+    "image": "", 
+    "info": {
+        "audio": 0.02, 
+        "visual": 0.0, 
+        "writing": 0.14
+    }
+}

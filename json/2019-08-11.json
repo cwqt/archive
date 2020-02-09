@@ -1,0 +1,16 @@
+{
+    "commits": [
+        {
+            "hash": "fc04c987", 
+            "message": "get further into writing game loop w/ networking", 
+            "url": "https://gitlab.com/cxss/g"
+        }
+    ], 
+    "date": "2019-08-11", 
+    "image": "", 
+    "info": {
+        "audio": 0.05, 
+        "visual": 0.06, 
+        "writing": 3.25
+    }
+}

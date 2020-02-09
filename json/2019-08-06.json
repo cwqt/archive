@@ -1,0 +1,31 @@
+{
+    "commits": [
+        {
+            "hash": "0ee9b8ab", 
+            "message": "missing curly boi", 
+            "url": "https://gitlab.com/cxss/sm"
+        }, 
+        {
+            "hash": "34d4b537", 
+            "message": "add comments directory", 
+            "url": "https://gitlab.com/cxss/site"
+        }, 
+        {
+            "hash": "1b5f8b39", 
+            "message": "Fix auth error in sm", 
+            "url": "https://gitlab.com/cxss/sm"
+        }, 
+        {
+            "hash": "7437dd42", 
+            "message": "fix the week.js file", 
+            "url": "https://gitlab.com/cxss/site"
+        }
+    ], 
+    "date": "2019-08-06", 
+    "image": "", 
+    "info": {
+        "audio": 0.39, 
+        "visual": 0.0, 
+        "writing": 0.08
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "commits": [
+        {
+            "hash": "a2387111", 
+            "message": "multiplayer implementation working, set distinct sides for player1/...", 
+            "url": "https://gitlab.com/cxss/g"
+        }
+    ], 
+    "date": "2019-08-13", 
+    "image": "", 
+    "info": {
+        "audio": 0.2, 
+        "visual": 0.0, 
+        "writing": 1.75
+    }
+}

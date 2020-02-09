@@ -1,0 +1,21 @@
+{
+    "commits": [
+        {
+            "hash": "68b9c3a1", 
+            "message": "added state machine for game flow", 
+            "url": "https://gitlab.com/cxss/g"
+        }, 
+        {
+            "hash": "1842ba93", 
+            "message": "add notification factory, add icons to notifications, custom colour...", 
+            "url": "https://gitlab.com/cxss/g"
+        }
+    ], 
+    "date": "2019-06-02", 
+    "image": "", 
+    "info": {
+        "audio": 0.02, 
+        "visual": 0.03, 
+        "writing": 1.98
+    }
+}

@@ -1,0 +1,36 @@
+{
+    "commits": [
+        {
+            "hash": "016b4960", 
+            "message": "compress bg image", 
+            "url": "https://gitlab.com/cxss/portfolio"
+        }, 
+        {
+            "hash": "007e8845", 
+            "message": "Add preview button for projects", 
+            "url": "https://gitlab.com/cxss/portfolio"
+        }, 
+        {
+            "hash": "c6e0e781", 
+            "message": "Larger image preview on click", 
+            "url": "https://gitlab.com/cxss/portfolio"
+        }, 
+        {
+            "hash": "82038bc9", 
+            "message": "Netlify tag, resolve updateProgress bug where infinite loop occured", 
+            "url": "https://gitlab.com/cxss/portfolio"
+        }, 
+        {
+            "hash": "69f42844", 
+            "message": "add support for js tag", 
+            "url": "https://gitlab.com/cxss/portfolio"
+        }
+    ], 
+    "date": "2019-06-26", 
+    "image": "", 
+    "info": {
+        "audio": 0.0, 
+        "visual": 0.06, 
+        "writing": 0.01
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "commits": [
+        {
+            "hash": "8def581a", 
+            "message": "work around planning placement", 
+            "url": "https://gitlab.com/cxss/g"
+        }, 
+        {
+            "hash": "9754a862", 
+            "message": "fix stack overflow in command execution queue", 
+            "url": "https://gitlab.com/cxss/g"
+        }
+    ], 
+    "date": "2019-08-30", 
+    "image": "", 
+    "info": {
+        "audio": 0.01, 
+        "visual": 0.0, 
+        "writing": 0.48
+    }
+}

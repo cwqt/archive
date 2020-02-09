@@ -1,0 +1,111 @@
+{
+    "commits": [
+        {
+            "hash": "18927993", 
+            "message": "add procfile for heroku deploy", 
+            "url": "https://gitlab.com/cxss/moisture.track"
+        }, 
+        {
+            "hash": "373f513b", 
+            "message": "heroku deploy flask api", 
+            "url": "https://gitlab.com/cxss/moisture.track"
+        }, 
+        {
+            "hash": "f1c83038", 
+            "message": "heroku deploy flask api", 
+            "url": "https://gitlab.com/cxss/moisture.track"
+        }, 
+        {
+            "hash": "1187d963", 
+            "message": "hardware code done", 
+            "url": "https://gitlab.com/cxss/moisture.track"
+        }, 
+        {
+            "hash": "327fd35c", 
+            "message": "Merge branch 'master' of https://gitlab.com/cxss/moisture.track", 
+            "url": "https://gitlab.com/cxss/moisture.track"
+        }, 
+        {
+            "hash": "489d8856", 
+            "message": "Delete leaf 2.png", 
+            "url": "https://gitlab.com/cxss/moisture.track"
+        }, 
+        {
+            "hash": "e6bd0d5a", 
+            "message": "Delete screenshot.png", 
+            "url": "https://gitlab.com/cxss/moisture.track"
+        }, 
+        {
+            "hash": "5ee53299", 
+            "message": "Delete screenshot2.png", 
+            "url": "https://gitlab.com/cxss/moisture.track"
+        }, 
+        {
+            "hash": "81540e65", 
+            "message": "Add LICENSE", 
+            "url": "https://gitlab.com/cxss/moisture.track"
+        }, 
+        {
+            "hash": "d2e037d1", 
+            "message": "Update README.md", 
+            "url": "https://gitlab.com/cxss/moisture.track"
+        }, 
+        {
+            "hash": "5785a971", 
+            "message": "merge", 
+            "url": "https://gitlab.com/cxss/moisture.track"
+        }, 
+        {
+            "hash": "b860006c", 
+            "message": "Update README.md", 
+            "url": "https://gitlab.com/cxss/moisture.track"
+        }, 
+        {
+            "hash": "a8c7f4a6", 
+            "message": "Delete .DS_Store", 
+            "url": "https://gitlab.com/cxss/moisture.track"
+        }, 
+        {
+            "hash": "227d992c", 
+            "message": "Add image_url to api & improve docs", 
+            "url": "https://gitlab.com/cxss/moisture.track"
+        }, 
+        {
+            "hash": "dfbff083", 
+            "message": "DELETE_PLANT added", 
+            "url": "https://gitlab.com/cxss/moisture.track"
+        }, 
+        {
+            "hash": "e38b58d4", 
+            "message": "NEW_PLANT auto update plants list", 
+            "url": "https://gitlab.com/cxss/moisture.track"
+        }, 
+        {
+            "hash": "39e19906", 
+            "message": "Implement redux, add plants action, reducer and enhancers", 
+            "url": "https://gitlab.com/cxss/moisture.track"
+        }, 
+        {
+            "hash": "f7c3369a", 
+            "message": "Allow creation of new plants via react", 
+            "url": "https://gitlab.com/cxss/moisture.track"
+        }, 
+        {
+            "hash": "dfd5b0ab", 
+            "message": "Update README", 
+            "url": "https://gitlab.com/cxss/moisture.track"
+        }, 
+        {
+            "hash": "b1ff90c9", 
+            "message": "Pipfile & arg parsing", 
+            "url": "https://gitlab.com/cxss/moisture.track"
+        }
+    ], 
+    "date": "2019-07-28", 
+    "image": "", 
+    "info": {
+        "audio": 0.06, 
+        "visual": 0.02, 
+        "writing": 3.04
+    }
+}

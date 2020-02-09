@@ -1,0 +1,29 @@
+{
+    "commits": [
+        {
+            "message": "recaptcha back",
+            "sha": "74b28866",
+            "url": "https://gitlab.com/cxss/site"
+        },
+        {
+            "message": "add sqreen",
+            "sha": "49c2a4cc",
+            "url": "https://gitlab.com/cxss/sm"
+        },
+        {
+            "message": "remove callbacks to async/await on some routes",
+            "sha": "1425392f",
+            "url": "https://gitlab.com/cxss/g"
+        },
+        {
+            "message": "days::Catch up on 2 file(s).",
+            "sha": "f5de0f0c",
+            "url": "https://gitlab.com/cxss/days"
+        }
+    ],
+    "date": "2019-12-01",
+    "info": {
+        "audio": 0.01,
+        "writing": 2.17
+    }
+}

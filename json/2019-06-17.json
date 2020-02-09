@@ -1,0 +1,21 @@
+{
+    "commits": [
+        {
+            "hash": "162936ec", 
+            "message": "a space.", 
+            "url": "https://gitlab.com/cxss/days"
+        }, 
+        {
+            "hash": "b6af5b56", 
+            "message": "bug fix again", 
+            "url": "https://gitlab.com/cxss/days"
+        }
+    ], 
+    "date": "2019-06-17", 
+    "image": "", 
+    "info": {
+        "audio": 0.11, 
+        "visual": 0.0, 
+        "writing": 0.68
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "commits": [
+        {
+            "hash": "c34fe3fa", 
+            "message": "terrain icons, move command checkischarging+attack enemies, fix del...", 
+            "url": "https://gitlab.com/cxss/g"
+        }
+    ], 
+    "date": "2019-09-24", 
+    "image": "", 
+    "info": {
+        "audio": 0.0, 
+        "visual": 0.0, 
+        "writing": 0.4
+    }
+}

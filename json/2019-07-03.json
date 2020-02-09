@@ -1,0 +1,76 @@
+{
+    "commits": [
+        {
+            "hash": "e76572b4", 
+            "message": "correct false data", 
+            "url": "https://gitlab.com/cxss/days"
+        }, 
+        {
+            "hash": "a89f10dc", 
+            "message": "Update index.pug", 
+            "url": "https://gitlab.com/cxss/elkCSS"
+        }, 
+        {
+            "hash": "07b3440f", 
+            "message": "rm empty url", 
+            "url": "https://gitlab.com/cxss/elkCSS"
+        }, 
+        {
+            "hash": "0c2a3b88", 
+            "message": "rm package lock", 
+            "url": "https://gitlab.com/cxss/elkCSS"
+        }, 
+        {
+            "hash": "87963b52", 
+            "message": "update readme & add minified elk.css", 
+            "url": "https://gitlab.com/cxss/elkCSS"
+        }, 
+        {
+            "hash": "a59ba198", 
+            "message": "more ui tweaks", 
+            "url": "https://gitlab.com/cxss/elkCSS"
+        }, 
+        {
+            "hash": "c9c3782b", 
+            "message": "more ui tweaks", 
+            "url": "https://gitlab.com/cxss/elkCSS"
+        }, 
+        {
+            "hash": "187abf47", 
+            "message": "wrap in p tags", 
+            "url": "https://gitlab.com/cxss/elkCSS"
+        }, 
+        {
+            "hash": "f9586d8c", 
+            "message": "rm underline on elk_download button", 
+            "url": "https://gitlab.com/cxss/elkCSS"
+        }, 
+        {
+            "hash": "bc83e902", 
+            "message": "more ui tweaks", 
+            "url": "https://gitlab.com/cxss/elkCSS"
+        }, 
+        {
+            "hash": "a8ab74a4", 
+            "message": "add 404 page", 
+            "url": "https://gitlab.com/cxss/elkCSS"
+        }, 
+        {
+            "hash": "4ba2732d", 
+            "message": "update to 1.2.0", 
+            "url": "https://gitlab.com/cxss/elkCSS"
+        }, 
+        {
+            "hash": "88d89cc4", 
+            "message": "update to use npm", 
+            "url": "https://gitlab.com/cxss/elkCSS"
+        }
+    ], 
+    "date": "2019-07-03", 
+    "image": "", 
+    "info": {
+        "audio": 0.0, 
+        "visual": 0.0, 
+        "writing": 0.0
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "commits": [
+        {
+            "hash": "cfc23c69", 
+            "message": "Delete README.md", 
+            "url": "https://gitlab.com/cxss/portfolio"
+        }
+    ], 
+    "date": "2019-06-29", 
+    "image": "", 
+    "info": {
+        "audio": 0.02, 
+        "visual": 0.01, 
+        "writing": 0.79
+    }
+}

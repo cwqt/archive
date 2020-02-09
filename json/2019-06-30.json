@@ -1,0 +1,41 @@
+{
+    "commits": [
+        {
+            "hash": "b728080e", 
+            "message": "remove absurdly long day", 
+            "url": "https://gitlab.com/cxss/days"
+        }, 
+        {
+            "hash": "550f5bfd", 
+            "message": "heroku uses py3 lol", 
+            "url": "https://gitlab.com/cxss/days"
+        }, 
+        {
+            "hash": "1314177f", 
+            "message": "fix: split ext", 
+            "url": "https://gitlab.com/cxss/days"
+        }, 
+        {
+            "hash": "07b28649", 
+            "message": "import csv & operator", 
+            "url": "https://gitlab.com/cxss/days"
+        }, 
+        {
+            "hash": "01fc5687", 
+            "message": "fix: supply list to func", 
+            "url": "https://gitlab.com/cxss/days"
+        }, 
+        {
+            "hash": "22b1eb2a", 
+            "message": "ad weighted day lengths for variable bar height", 
+            "url": "https://gitlab.com/cxss/days"
+        }
+    ], 
+    "date": "2019-06-30", 
+    "image": "", 
+    "info": {
+        "audio": 0.01, 
+        "visual": 0.01, 
+        "writing": 2.34
+    }
+}

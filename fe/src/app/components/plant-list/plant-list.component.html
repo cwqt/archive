@@ -1,0 +1,18 @@
+<div class="header">
+    <h1>Plants ({{plants?.length}})</h1>
+    <div class="row">
+        <hr class="eight columns" />
+        <button class="two columns" (click)="toggleAddPlantForm()">Add plant</button>
+        <button class="two columns" (click)="toggleApiKeysForm()">API keys</button>
+    </div>
+
+    <app-add-plant (newPlantEvent)="receiveNewPlant($event)" *ngIf="showAddPlant" ></app-add-plant>
+    <app-api-keys *ngIf="showApiKeys"></app-api-keys>
+
+    <p *ngIf="loading">Getting data...</p>
+    <p *ngIf="!loading && !success">{{err_message}}</p>
+
+    <div *ngFor="let plant of plants | sort:'created_at' | reverse">
+        <app-plant-item [plant]="plant"></app-plant-item>
+    </div>
+</div>

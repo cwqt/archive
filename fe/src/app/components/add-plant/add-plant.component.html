@@ -1,0 +1,23 @@
+<form [formGroup]="plantForm" [hidden]="success" (ngSubmit)="submitHandler()">
+    {{ plantForm.value | json }}
+    {{image.invalid}},     {{image.touched}}
+
+
+    <div class="row">
+        <div class="three columns">
+            <label for="plant_name">Plant name:</label>
+            <input class="u-full-width" type="text" formControlName="name" id="plant_name">    
+            <span *ngIf="name.invalid && name.touched">Name is required</span>
+        </div>
+    
+        <div class="three columns">
+            <label for="plant_image">Image URL:</label>
+            <input placeholder="jpg, gif or png" class="u-full-width" type="text" formControlName="image" id="plant_image">    
+            <span *ngIf="image.invalid && image.touched">Not a valid URL</span>
+        </div>    
+    </div>
+    <button [disabled]="plantForm.invalid" type="submit">Submit</button>
+</form>
+
+<p *ngIf="success">Data sent!</p>
+<hr />

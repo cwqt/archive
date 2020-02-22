@@ -67,10 +67,10 @@ export class PlantListComponent implements OnInit {
 
   sortPlantsByParameter(filter_type:number) {
     switch(filter_type) {
-      case Sorts.creation_newest:
+      case Sorts.creation_oldest:
         this.plants = this.plants.sort((a,b) => a.created_at - b.created_at)
         break;
-      case Sorts.creation_oldest:
+      case Sorts.creation_newest:
         this.plants = this.plants.sort((a,b) => b.created_at - a.created_at)
         break;
     }

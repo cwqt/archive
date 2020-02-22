@@ -23,7 +23,6 @@ export class PlantFilterComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.useFilter(Sorts.creation_newest)
   }
 
   toggleOpen() {

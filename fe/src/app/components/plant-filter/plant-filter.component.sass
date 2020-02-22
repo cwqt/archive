@@ -1,0 +1,42 @@
+button
+    display: flex
+    flex-flow: row
+    align-items: center
+    text-align: left
+    padding-left: 10px
+    width: 100%
+    position: relative
+
+.dropdown_container
+    position: absolute
+    top: 45px
+    left: 0
+    background: white
+    height: 200px
+    display: flex
+    flex-flow: column
+    align-items: center
+
+.dd_arrow
+    margin-top: -5px
+    width: 0 
+    height: 0 
+    border-left: 5px solid transparent
+    border-right: 5px solid transparent
+    border-bottom: 5px solid black
+
+.dd_content
+    border-radius: 5px
+    border: 1px solid #555
+    overflow: hidden
+    button 
+        border: 0
+        margin: 0
+        border-radius: 0
+        &:hover 
+            background: #33C3F0
+            color: white
+
+.button-primary.selected 
+    border-radius: 5px
+    border: 2px solid white !important

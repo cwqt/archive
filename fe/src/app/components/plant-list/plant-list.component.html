@@ -1,5 +1,5 @@
 <div class="header">
-    <h1>Plants ({{plants?.length}})</h1>
+    <h1>Plants ({{total_doc_count || plants?.length}})</h1>
     <div class="row">
         <hr class="eight columns" />
         <button class="two columns" (click)="toggleAddPlantForm()">Add plant</button>
@@ -20,19 +20,30 @@
             {{i+1}}
         </button>
 
-        <app-plant-search
-            (getPlantsFromSearch)="recieveGetPlantsFromSearch($event)"
-            class="five columns u-pull-right u-full-width">
-        </app-plant-search>
+        <div class="u-pull-right u-full-width row six columns">
+            <app-plant-filter
+                (sorter)="sortPlantsByParameter($event)"
+                class="four columns">
+            </app-plant-filter>
+
+            <app-plant-search
+                (getPlantsFromSearch)="recieveGetPlantsFromSearch($event)"
+                class="eight columns ">
+            </app-plant-search>
+        </div>
     </div>
 
     <p *ngIf="loading">Getting data...</p>
     <p *ngIf="!loading && !success">{{err_message}}</p>
 
-    <div class="row" *ngIf="plants?.length > 0">
-    </div>
+    <!-- <div class="row" *ngIf="plants?.length > 0">
+    </div> -->
 
-    <div *ngFor="let plant of plants | sort:'created_at' | reverse">
-        <app-plant-item [plant]="plant"></app-plant-item>
+    <div *ngFor="let plant of plants">
+        <!-- | sort:'created_at' | reverse -->
+        <app-plant-item 
+            (deletePlant)="removePlant($event)"
+            [plant]="plant">
+        </app-plant-item>
     </div>
 </div>

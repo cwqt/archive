@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { Plant } from "../../models/Plant";
 import { PlantService } from "../../services/plant.service"
+import { Sorts } from "../../models/Sorts";
 
 @Component({
   selector: 'app-plant-list',
@@ -14,12 +15,14 @@ export class PlantListComponent implements OnInit {
   loading:boolean = false;
   success:boolean;
 
+  total_doc_count:number;
   current_page:number;
   page_count:number;
   name_filter:string;
 
   showAddPlant:boolean = false;
   showApiKeys:boolean = false;
+  Sorts = Sorts;
 
   constructor(
     private plantService: PlantService
@@ -29,6 +32,22 @@ export class PlantListComponent implements OnInit {
     this.getPlantPage(1);
   }
   
+  removePlant(_id:string) {
+    this.plantService.deletePlant(_id).subscribe(
+      res => {
+        console.log(this.plants)
+        console.log(_id)
+        this.plants = this.plants.filter(plant => plant._id !== _id);
+        console.log(this.plants)
+        this.total_doc_count -= 1;
+      },
+      err => {
+        this.err_message = "Couldn't remove plant"
+      },
+      () => {}
+    )
+  }
+
   getPlantPage(page:number, name?:string):void {
     this.loading = true;
     this.plantService.getPlants(page, name || this.name_filter).subscribe(
@@ -37,6 +56,7 @@ export class PlantListComponent implements OnInit {
         this.success = true;
         this.current_page = page;
         this.page_count = res["page_count"];
+        this.total_doc_count = res["total_docs"]
       },
       err => {
         this.success = false;
@@ -45,10 +65,23 @@ export class PlantListComponent implements OnInit {
     )
   }
 
+  sortPlantsByParameter(filter_type:number) {
+    switch(filter_type) {
+      case Sorts.creation_newest:
+        this.plants = this.plants.sort((a,b) => a.created_at - b.created_at)
+        break;
+      case Sorts.creation_oldest:
+        this.plants = this.plants.sort((a,b) => b.created_at - a.created_at)
+        break;
+    }
+    console.log(this.plants)
+  }
+
   toggleAddPlantForm() {
     this.showAddPlant = !this.showAddPlant;
     this.showApiKeys = false;
   }
+
   toggleApiKeysForm() {
     this.showApiKeys = !this.showApiKeys;
     this.showAddPlant = false;
@@ -56,10 +89,12 @@ export class PlantListComponent implements OnInit {
   
   receiveNewPlant($event) {
     this.plants = [...this.plants, $event ]
+    this.total_doc_count += 1;
   }
 
   recieveGetPlantsFromSearch($event) {
-    this.name_filter = $event
+    this.name_filter = $event;
     this.getPlantPage(1, $event)
   }
+
 }

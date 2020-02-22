@@ -5,6 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule } from "@angular/forms";
+import { ClickOutsideModule } from 'ng-click-outside';
+
 
 import { AppComponent } from './app.component';
 import { PlantListComponent } from './components/plant-list/plant-list.component';
@@ -15,6 +17,7 @@ import { ApiKeysComponent } from './components/api-keys/api-keys.component';
 import { ArraySortPipe } from './pipes/sort.pipe';
 import { ReversePipeSort } from './pipes/reverse-sort.pipe';
 import { PlantSearchComponent } from './components/plant-search/plant-search.component';
+import { PlantFilterComponent } from './components/plant-filter/plant-filter.component';
 
 @NgModule({
   declarations: [
@@ -26,14 +29,16 @@ import { PlantSearchComponent } from './components/plant-search/plant-search.com
     ApiKeysComponent,
     ArraySortPipe,
     ReversePipeSort,
-    PlantSearchComponent
+    PlantSearchComponent,
+    PlantFilterComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ClickOutsideModule
   ],
   providers: [],
   bootstrap: [AppComponent]

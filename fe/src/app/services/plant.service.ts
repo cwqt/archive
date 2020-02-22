@@ -18,21 +18,21 @@ export class PlantService {
 
   createPlant = (body):Observable<Plant> => {
     console.log(body)
-    return this.http.post<Plant>("http://localhost:3000/plants", body, this.httpOptions)
+    return this.http.post<Plant>("/api/plants", body, this.httpOptions)
   }
 
   deletePlant = (_id:string):Observable<any> => {
-    return this.http.delete(`http://localhost:3000/plants/${_id}`);
+    return this.http.delete(`/api/plants/${_id}`);
   }
 
   getPlants = (page=1, name?:string):Observable<any> => {
     var endpoint = `?page=${page}&per_page=5`
     if (name) { endpoint += `&name=${name}` }
 
-    return this.http.get(`http://localhost:3000/plants${endpoint}`);
+    return this.http.get(`/api/plants${endpoint}`);
   }
 
   getPlant = (_id:string):Observable<Plant> => {
-    return this.http.get<Plant>(`http://localhost:3000/plants/${_id}`);
+    return this.http.get<Plant>(`/api/plants/${_id}`);
   }
 }

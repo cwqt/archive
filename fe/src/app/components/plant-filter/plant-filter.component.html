@@ -1,0 +1,16 @@
+<button (click)="toggleOpen()" (clickOutside)="closeMenu()">
+    <i class="material-icons">{{!open ? 'arrow_drop_down' : 'arrow_drop_up'}}</i> filter
+    <span *ngIf="filter_parameter">{{filter_parameter}}</span>
+    <div class="dropdown_container" *ngIf="open">
+        <div class="dd_arrow"></div>
+        <div class="dd_content">
+            <button
+                *ngFor="let button of sorts"
+                [ngClass]="{'button-primary selected':current_sort==button[1]}"
+                (click)="useFilter(button[1])">
+                {{button[0]}}
+            </button>
+        </div>    
+    </div>
+
+</button>

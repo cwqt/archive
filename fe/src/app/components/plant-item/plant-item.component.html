@@ -1,12 +1,19 @@
-<div>
+<div class="plant-item">
     <div class="row">
         <img class="four columns" [src]="plant.image" /> 
         <div class="eight columns">
             <div class="row">
                 <h4 class="columns nine">{{ plant.name }}</h4>
-                <button class="columns three">Delete</button>
+                <button (click)="deleteSelf()" class="columns three">Delete</button>
             </div>
-            <h6><b>{{plant._id}}</b></h6>
+
+            <ul>
+                <li><b>_id: </b>{{plant._id}}</li>
+                <li><b>created: </b>{{plant.created_at}}</li>
+                <li><b>recording: </b>{{plant.recording}}</li>
+                <li><b>watering period:</b> every {{plant.watering_period}} day(s)</li>
+            </ul>
+
 
             <button class="button-primary u-pull-right">Inspect</button>
         </div>

@@ -17,20 +17,18 @@ router.get('/',  (req, res) => {
   _db.collection("plants").countDocuments(query, (err, count) => {
     if (err) { return res.status(400) }
 
-    console.log(count)
-
     _db.collection("plants")
       .find(query)
       .skip((page-1) * per_page)
       .limit(per_page)
       .toArray(function(err, result) {
         if (err) { return res.status(400) }
-        console.log(result)
         var _data = {
           data: result,
           first: req.baseUrl + `?page=1&per_page=${per_page}`,
           last: req.baseUrl + `?page=${Math.ceil(count/per_page)}&per_page=${per_page}`,
-          page_count: Math.ceil(count/per_page)
+          page_count: Math.ceil(count/per_page),
+          total_docs: count
         }
         if ((page-1)*per_page > 0) {
           _data["prev"] = req.baseUrl + `?page=${page-1}&per_page=${per_page}`

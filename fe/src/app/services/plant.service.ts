@@ -25,8 +25,11 @@ export class PlantService {
     return this.http.delete(`http://localhost:3000/plants/${_id}`);
   }
 
-  getPlants = ():Observable<Plant[]> => {
-    return this.http.get<Plant[]>("http://localhost:3000/plants");
+  getPlants = (page=1, name?:string):Observable<any> => {
+    var endpoint = `?page=${page}&per_page=5`
+    if (name) { endpoint += `&name=${name}` }
+
+    return this.http.get(`http://localhost:3000/plants${endpoint}`);
   }
 
   getPlant = (_id:string):Observable<Plant> => {

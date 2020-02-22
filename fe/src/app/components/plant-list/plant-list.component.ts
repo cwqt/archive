@@ -14,7 +14,11 @@ export class PlantListComponent implements OnInit {
   loading:boolean = false;
   success:boolean;
 
-  showAddPlant:boolean = true;
+  current_page:number;
+  page_count:number;
+  name_filter:string;
+
+  showAddPlant:boolean = false;
   showApiKeys:boolean = false;
 
   constructor(
@@ -22,27 +26,40 @@ export class PlantListComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    this.getPlantPage(1);
+  }
+  
+  getPlantPage(page:number, name?:string):void {
     this.loading = true;
-    this.plantService.getPlants()
-      .subscribe(
-        res => {
-          this.plants = res;
-          this.success = true;
-          this.loading = false;
-          this.err_message = "";
-        },
-        err => {
-          this.loading = false;
-          this.success = false;
-          this.err_message = err.statusText;
-        }
-      );
+    this.plantService.getPlants(page, name || this.name_filter).subscribe(
+      res => {
+        this.plants = res["data"];
+        this.success = true;
+        this.current_page = page;
+        this.page_count = res["page_count"];
+      },
+      err => {
+        this.success = false;
+      },
+      () => { this.loading = false } 
+    )
   }
 
-  toggleAddPlantForm() { this.showAddPlant = !this.showAddPlant; }
-  toggleApiKeysForm() { this.showApiKeys = !this.showApiKeys; }
+  toggleAddPlantForm() {
+    this.showAddPlant = !this.showAddPlant;
+    this.showApiKeys = false;
+  }
+  toggleApiKeysForm() {
+    this.showApiKeys = !this.showApiKeys;
+    this.showAddPlant = false;
+  }
   
   receiveNewPlant($event) {
     this.plants = [...this.plants, $event ]
+  }
+
+  recieveGetPlantsFromSearch($event) {
+    this.name_filter = $event
+    this.getPlantPage(1, $event)
   }
 }

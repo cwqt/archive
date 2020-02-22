@@ -14,6 +14,7 @@ import { AddPlantComponent } from './components/add-plant/add-plant.component';
 import { ApiKeysComponent } from './components/api-keys/api-keys.component';
 import { ArraySortPipe } from './pipes/sort.pipe';
 import { ReversePipeSort } from './pipes/reverse-sort.pipe';
+import { PlantSearchComponent } from './components/plant-search/plant-search.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ReversePipeSort } from './pipes/reverse-sort.pipe';
     AddPlantComponent,
     ApiKeysComponent,
     ArraySortPipe,
-    ReversePipeSort
+    ReversePipeSort,
+    PlantSearchComponent
   ],
   imports: [
     BrowserModule,

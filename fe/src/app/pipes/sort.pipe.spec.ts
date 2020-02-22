@@ -1,8 +1,8 @@
-import { SortPipe } from './sort.pipe';
+import { ArraySortPipe } from './sort.pipe';
 
 describe('SortPipe', () => {
   it('create an instance', () => {
-    const pipe = new SortPipe();
+    const pipe = new ArraySortPipe();
     expect(pipe).toBeTruthy();
   });
 });

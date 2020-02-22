@@ -6,11 +6,31 @@
         <button class="two columns" (click)="toggleApiKeysForm()">API keys</button>
     </div>
 
-    <app-add-plant (newPlantEvent)="receiveNewPlant($event)" *ngIf="showAddPlant" ></app-add-plant>
+    <app-add-plant
+        (newPlantEvent)="receiveNewPlant($event)"
+        *ngIf="showAddPlant" >
+    </app-add-plant>
     <app-api-keys *ngIf="showApiKeys"></app-api-keys>
+
+    <div class="row pagination">
+        <button 
+            [ngClass]="{'button-primary':i+1==current_page}"
+            *ngFor="let item of [].constructor(page_count); let i = index"
+            (click)="getPlantPage(i+1)">
+            {{i+1}}
+        </button>
+
+        <app-plant-search
+            (getPlantsFromSearch)="recieveGetPlantsFromSearch($event)"
+            class="five columns u-pull-right u-full-width">
+        </app-plant-search>
+    </div>
 
     <p *ngIf="loading">Getting data...</p>
     <p *ngIf="!loading && !success">{{err_message}}</p>
+
+    <div class="row" *ngIf="plants?.length > 0">
+    </div>
 
     <div *ngFor="let plant of plants | sort:'created_at' | reverse">
         <app-plant-item [plant]="plant"></app-plant-item>

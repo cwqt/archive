@@ -1,0 +1,13 @@
+<form [formGroup]="searchForm" [hidden]="success" (ngSubmit)="submitHandler()">
+    <div class="row">
+        <input
+            formControlName="name"
+            class="eight columns"
+            type="text"
+            placeholder="Search by name...">
+        <button
+            class="four columns"
+            [disabled]="searchForm.invalid"
+            type="submit">Submit</button>
+    </div>
+</form>

@@ -8,29 +8,30 @@ import { Sorts } from "../../models/Sorts";
   styleUrls: ['./plant-filter.component.sass']
 })
 export class PlantFilterComponent implements OnInit {
-  filter_parameter:string;
-  open = false;
-  Sorts = Sorts;
-  current_sort:number;
-
+  @Input() plants: Plant[];
+  @Output() sorter = new EventEmitter<number>();
+  
+  menuIsOpen = false;
+  current_sort = Sorts.creation_newest;
   sorts = [
     ["Creation date (newest)", Sorts.creation_newest],
     ["Creation date (oldest)", Sorts.creation_oldest]
   ]
-
-  @Output() sorter = new EventEmitter<number>();
-
+  
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
+
+  ngOnChanges(changes):void {
+    this.useFilter(this.current_sort);
   }
 
   toggleOpen() {
-    this.open = !this.open
+    this.menuIsOpen = !this.menuIsOpen
   }
 
   closeMenu() {
-    if (this.open) { this.open = false }
+    if (this.menuIsOpen) { this.menuIsOpen = false }
   }
 
   useFilter(filter_type:number) {

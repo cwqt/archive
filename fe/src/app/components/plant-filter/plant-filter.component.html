@@ -1,7 +1,6 @@
 <button (click)="toggleOpen()" (clickOutside)="closeMenu()">
-    <i class="material-icons">{{!open ? 'arrow_drop_down' : 'arrow_drop_up'}}</i> filter
-    <span *ngIf="filter_parameter">{{filter_parameter}}</span>
-    <div class="dropdown_container" *ngIf="open">
+    <i class="material-icons">{{!menuIsOpen ? 'arrow_drop_down' : 'arrow_drop_up'}}</i> filter
+    <div class="dropdown_container" *ngIf="menuIsOpen">
         <div class="dd_arrow"></div>
         <div class="dd_content">
             <button
@@ -12,5 +11,4 @@
             </button>
         </div>    
     </div>
-
 </button>

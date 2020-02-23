@@ -22,7 +22,6 @@ export class PlantListComponent implements OnInit {
 
   showAddPlant:boolean = false;
   showApiKeys:boolean = false;
-  Sorts = Sorts;
 
   constructor(
     private plantService: PlantService
@@ -35,10 +34,7 @@ export class PlantListComponent implements OnInit {
   removePlant(_id:string) {
     this.plantService.deletePlant(_id).subscribe(
       res => {
-        console.log(this.plants)
-        console.log(_id)
         this.plants = this.plants.filter(plant => plant._id !== _id);
-        console.log(this.plants)
         this.total_doc_count -= 1;
       },
       err => {
@@ -66,6 +62,7 @@ export class PlantListComponent implements OnInit {
   }
 
   sortPlantsByParameter(filter_type:number) {
+    console.log("sorting...")
     switch(filter_type) {
       case Sorts.creation_oldest:
         this.plants = this.plants.sort((a,b) => a.created_at - b.created_at)
@@ -74,7 +71,6 @@ export class PlantListComponent implements OnInit {
         this.plants = this.plants.sort((a,b) => b.created_at - a.created_at)
         break;
     }
-    console.log(this.plants)
   }
 
   toggleAddPlantForm() {
@@ -96,5 +92,4 @@ export class PlantListComponent implements OnInit {
     this.name_filter = $event;
     this.getPlantPage(1, $event)
   }
-
 }

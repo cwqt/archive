@@ -22,6 +22,7 @@
 
         <div class="u-pull-right u-full-width row six columns">
             <app-plant-filter
+                [plants]="plants"
                 (sorter)="sortPlantsByParameter($event)"
                 class="four columns">
             </app-plant-filter>

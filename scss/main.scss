@@ -42,12 +42,17 @@ h5 {
     flex-flow: column;
     margin: 10vh 0;
 
-    @media #{$breakpoint} {
-        width: 70vw;
+}
+
+@media #{$breakpoint-desktop} {
+    .container {
+        width: 60vw;
         margin: 3vh 0;
     }
+}
 
-    @media #{$breakpoint-mobile} {
+@media #{$breakpoint-mobile} {
+    .container {
         width: 96vw;
         margin: 3vh 0;
     }
@@ -62,6 +67,15 @@ h5 {
     font-size: 48px;
     display: flex;
     align-items: center;
+
+    img {
+        transition: .2s;
+
+        &:hover {
+            transform: rotate(10deg);
+        }
+    }
+
 
     h1 {
         line-height: 1;
@@ -79,16 +93,26 @@ h5 {
 }
 
 hr {
-    width: 100%;
     margin: 50px 60px;
     opacity: .2;
 }
 
 .landing-body {
     font-size: 40px;
+
+    .smaller {
+        margin-top: 24px;
+        font-size: 24px;
+        color: #828282;
+        line-height: 1.5;
+    }
 }
 
 @media only screen and (max-width : 720px) {
+
+    hr {
+        margin: 50px 10px;
+    }
 
     .landing-head,
     .landing-body {

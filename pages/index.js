@@ -1,5 +1,4 @@
 import Page from "../layouts/Page";
-import StoreList from "../layouts/StoreList";
 
 const Index = () => (
   <Page>
@@ -20,7 +19,14 @@ const Index = () => (
         and affordable electronics.
         <br />
         <br />
-        designed and manufactured in cardiff, wales.
+        designed and manufactured in cardiff, wales by{" "}
+        <a href="https://gitlab.com/cxss">cass</a>.
+      </p>
+
+      <p className="smaller">
+        currently creating hats to interface with the vertical farming system;{" "}
+        <a href="https://gitlab.com/cxss/mcn">mcn</a>, for the wemos d1 mini,
+        esp32 & esp8266. 🌱
       </p>
     </div>
   </Page>

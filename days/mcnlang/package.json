@@ -1,0 +1,20 @@
+{
+  "name": "mcnlang",
+  "version": "1.0.0",
+  "description": "a dead-simple domain specific language for writing tasks on mcn",
+  "main": "main.js",
+  "scripts": {
+    "start": "env NODE_ENV=development nodemon",
+    "dev": "tsc && env NODE_ENV=development nodemon --inspect build/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.2",
+    "ts-node": "^8.6.2",
+    "tsc-watch": "^4.2.3",
+    "tslint": "^6.0.0",
+    "typescript": "^3.8.3"
+  }
+}

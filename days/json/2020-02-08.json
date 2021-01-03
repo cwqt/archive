@@ -1,0 +1,14 @@
+{
+    "commits": [
+        {
+            "message": "remove valve & edit grow light func",
+            "sha": "25cec11d",
+            "url": "https://gitlab.com/cxss/hydroponics"
+        }
+    ],
+    "date": "2020-02-08",
+    "info": {
+        "visual": 0.19,
+        "writing": 2.22
+    }
+}

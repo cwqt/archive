@@ -1,0 +1,16 @@
+{
+    "commits": [
+        {
+            "hash": "62c0c791", 
+            "message": "move to kitura swift", 
+            "url": "https://gitlab.com/cxss/tclone"
+        }
+    ], 
+    "date": "2019-07-05", 
+    "image": "", 
+    "info": {
+        "audio": 0.02, 
+        "visual": 0.02, 
+        "writing": 0.09
+    }
+}

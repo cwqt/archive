@@ -1,0 +1,14 @@
+{
+    "commits": [
+        {
+            "message": "new hardware code for esp32 w/ epaper display",
+            "sha": "a6fddc90",
+            "url": "https://gitlab.com/cxss/hydroponics"
+        }
+    ],
+    "date": "2019-12-29",
+    "info": {
+        "audio": 1.57,
+        "writing": 0.88
+    }
+}

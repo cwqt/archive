@@ -1,0 +1,15 @@
+{
+    "commits": [
+        {
+            "message": "add bitmap rendering & plant ui drawing",
+            "sha": "dfdeed49",
+            "url": "https://gitlab.com/cxss/hydroponics"
+        }
+    ],
+    "date": "2020-01-03",
+    "info": {
+        "audio": 0.02,
+        "visual": 0.02,
+        "writing": 0.6
+    }
+}

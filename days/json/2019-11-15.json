@@ -1,0 +1,26 @@
+{
+    "commits": [
+        {
+            "hash": "145f0ef4", 
+            "message": "add search via lunr.js", 
+            "url": "https://gitlab.com/cxss/site"
+        }, 
+        {
+            "hash": "b0413894", 
+            "message": "add akismet & increase recaptcha security", 
+            "url": "https://gitlab.com/cxss/site"
+        }, 
+        {
+            "hash": "0616cbbe", 
+            "message": "add akismet", 
+            "url": "https://gitlab.com/cxss/sm"
+        }
+    ], 
+    "date": "2019-11-15", 
+    "image": "", 
+    "info": {
+        "audio": 0.02, 
+        "visual": 0.0, 
+        "writing": 0.2
+    }
+}

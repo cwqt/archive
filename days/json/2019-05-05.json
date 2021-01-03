@@ -1,0 +1,26 @@
+{
+    "commits": [
+        {
+            "hash": "b22ac866", 
+            "message": "(fix): fucking ds_store", 
+            "url": "https://gitlab.com/cxss/days"
+        }, 
+        {
+            "hash": "4416c870", 
+            "message": "(fix): flask only allows str/etc but not int to be returned", 
+            "url": "https://gitlab.com/cxss/days"
+        }, 
+        {
+            "hash": "04bd57f2", 
+            "message": "return value only, no json", 
+            "url": "https://gitlab.com/cxss/days"
+        }
+    ], 
+    "date": "2019-05-05", 
+    "image": "", 
+    "info": {
+        "audio": 0.02, 
+        "visual": 0.03, 
+        "writing": 1.2
+    }
+}

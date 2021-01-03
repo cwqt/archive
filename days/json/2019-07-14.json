@@ -1,0 +1,26 @@
+{
+    "commits": [
+        {
+            "hash": "84aa42d3", 
+            "message": "Only show last 62 days of activity", 
+            "url": "https://gitlab.com/cxss/site"
+        }, 
+        {
+            "hash": "3b05d735", 
+            "message": "Only show last 31 days of activity", 
+            "url": "https://gitlab.com/cxss/site"
+        }, 
+        {
+            "hash": "0edabb99", 
+            "message": "Only show last 31 days of activity", 
+            "url": "https://gitlab.com/cxss/site"
+        }
+    ], 
+    "date": "2019-07-14", 
+    "image": "", 
+    "info": {
+        "audio": 0.02, 
+        "visual": 0.0, 
+        "writing": 0.07
+    }
+}

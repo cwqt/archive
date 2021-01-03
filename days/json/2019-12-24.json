@@ -1,0 +1,29 @@
+{
+    "commits": [
+        {
+            "message": "event listeners with input & remove listeners",
+            "sha": "efffd402",
+            "url": "https://gitlab.com/cxss/cui"
+        },
+        {
+            "message": "bit of docs",
+            "sha": "042e2202",
+            "url": "https://gitlab.com/cxss/cui"
+        },
+        {
+            "message": "callback drilling (mousepress/move/keypress/release)",
+            "sha": "93aba0ce",
+            "url": "https://gitlab.com/cxss/cui"
+        },
+        {
+            "message": "add column,row,container,child & make positioning / state drilling ...",
+            "sha": "065613cd",
+            "url": "https://gitlab.com/cxss/cui"
+        }
+    ],
+    "date": "2019-12-24",
+    "info": {
+        "audio": 0.23,
+        "writing": 2.1
+    }
+}

@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 node_modules
 .vscode
 .DS_Store
 .env
 .next
 
+=======
+secrets*
+*pyc
+.DS_Store
+>>>>>>> days/master

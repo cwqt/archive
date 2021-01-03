@@ -1,0 +1,56 @@
+{
+    "commits": [
+        {
+            "hash": "5ae6e872", 
+            "message": "convert to spaces", 
+            "url": "https://gitlab.com/cxss/moisture.track"
+        }, 
+        {
+            "hash": "35e3260d", 
+            "message": "Add api endpoints docs", 
+            "url": "https://gitlab.com/cxss/moisture.track"
+        }, 
+        {
+            "hash": "43ff5861", 
+            "message": "Complete backend REST api", 
+            "url": "https://gitlab.com/cxss/moisture.track"
+        }, 
+        {
+            "hash": "f6260dfe", 
+            "message": "add backend api design", 
+            "url": "https://gitlab.com/cxss/moisture.track"
+        }, 
+        {
+            "hash": "03cc29ff", 
+            "message": "markdown", 
+            "url": "https://gitlab.com/cxss/moisture.track"
+        }, 
+        {
+            "hash": "93c2be74", 
+            "message": "markdown", 
+            "url": "https://gitlab.com/cxss/moisture.track"
+        }, 
+        {
+            "hash": "f6f1b1a9", 
+            "message": "resolve merge", 
+            "url": "https://gitlab.com/cxss/moisture.track"
+        }, 
+        {
+            "hash": "6e65d966", 
+            "message": "sort liquid table by post key", 
+            "url": "https://gitlab.com/cxss/blog"
+        }, 
+        {
+            "hash": "79431d69", 
+            "message": "new post", 
+            "url": "https://gitlab.com/cxss/blog"
+        }
+    ], 
+    "date": "2019-07-27", 
+    "image": "", 
+    "info": {
+        "audio": 0.6, 
+        "visual": 0.0, 
+        "writing": 1.74
+    }
+}

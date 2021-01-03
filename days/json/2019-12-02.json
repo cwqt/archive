@@ -1,0 +1,19 @@
+{
+    "commits": [
+        {
+            "message": "begin adding http requests to client",
+            "sha": "f183bf00",
+            "url": "https://gitlab.com/cxss/g"
+        },
+        {
+            "message": "add auth & rate limiting middleware, decallbackify routes",
+            "sha": "e5f4ee6b",
+            "url": "https://gitlab.com/cxss/g"
+        }
+    ],
+    "date": "2019-12-02",
+    "info": {
+        "audio": 0.19,
+        "writing": 0.98
+    }
+}

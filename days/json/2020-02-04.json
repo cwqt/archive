@@ -1,0 +1,20 @@
+{
+    "commits": [
+        {
+            "message": "FTP :: Uploading 1 file(s)",
+            "sha": "8ade7c52",
+            "url": "https://gitlab.com/cxss/site"
+        },
+        {
+            "message": "change measurement types to floats, add pydrive to ndvi-cam to uplo...",
+            "sha": "ea6d9292",
+            "url": "https://gitlab.com/cxss/hydroponics"
+        }
+    ],
+    "date": "2020-02-04",
+    "info": {
+        "audio": 0.03,
+        "visual": 0.14,
+        "writing": 2.93
+    }
+}

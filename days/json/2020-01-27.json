@@ -1,0 +1,24 @@
+{
+    "commits": [
+        {
+            "message": "add pi py file",
+            "sha": "95715f72",
+            "url": "https://gitlab.com/cxss/hydroponics"
+        },
+        {
+            "message": "rm ci",
+            "sha": "27052c80",
+            "url": "https://gitlab.com/cxss/hydroponics"
+        },
+        {
+            "message": "add api keys for devices, pi hardware prototype & document some more",
+            "sha": "5dd57471",
+            "url": "https://gitlab.com/cxss/hydroponics"
+        }
+    ],
+    "date": "2020-01-27",
+    "info": {
+        "audio": 0.0,
+        "writing": 0.67
+    }
+}

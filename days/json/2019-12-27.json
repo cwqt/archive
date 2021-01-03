@@ -1,0 +1,19 @@
+{
+    "commits": [
+        {
+            "message": "add images, css-like object fit & object position + text parsing co...",
+            "sha": "825a89ad",
+            "url": "https://gitlab.com/cxss/cui"
+        },
+        {
+            "message": "FTP :: Uploading 1 file(s)",
+            "sha": "f4e5aee2",
+            "url": "https://gitlab.com/cxss/site"
+        }
+    ],
+    "date": "2019-12-27",
+    "info": {
+        "audio": 0.18,
+        "writing": 1.31
+    }
+}

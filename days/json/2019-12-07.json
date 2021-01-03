@@ -1,0 +1,59 @@
+{
+    "commits": [
+        {
+            "message": "Merge branch 'ftp' of https://gitlab.com/cxss/site into ftp",
+            "sha": "a35f1dfb",
+            "url": "https://gitlab.com/cxss/site"
+        },
+        {
+            "message": "FTP :: Removing 13 file(s)",
+            "sha": "12d52ec0",
+            "url": "https://gitlab.com/cxss/site"
+        },
+        {
+            "message": "Merge branch 'ftp' of https://gitlab.com/cxss/site into ftp",
+            "sha": "a8fc651c",
+            "url": "https://gitlab.com/cxss/site"
+        },
+        {
+            "message": "FTP :: Removing 17 file(s)",
+            "sha": "59544e0f",
+            "url": "https://gitlab.com/cxss/site"
+        },
+        {
+            "message": "FTP :: Uploading 1 file(s)",
+            "sha": "ee6acc68",
+            "url": "https://gitlab.com/cxss/site"
+        },
+        {
+            "message": "actually call the upload function :unamused:",
+            "sha": "b49d39c4",
+            "url": "https://gitlab.com/cxss/site"
+        },
+        {
+            "message": "add file management + thumbnails",
+            "sha": "9845bd4a",
+            "url": "https://gitlab.com/cxss/site"
+        },
+        {
+            "message": "fix compile script",
+            "sha": "7575ca68",
+            "url": "https://gitlab.com/cxss/site"
+        },
+        {
+            "message": "fix compile script",
+            "sha": "3d2fcfff",
+            "url": "https://gitlab.com/cxss/site"
+        },
+        {
+            "message": "Merge branch 'ftp' of https://gitlab.com/cxss/site into ftp",
+            "sha": "72a66751",
+            "url": "https://gitlab.com/cxss/site"
+        }
+    ],
+    "date": "2019-12-07",
+    "info": {
+        "audio": 0.01,
+        "writing": 3.48
+    }
+}

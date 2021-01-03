@@ -1,0 +1,16 @@
+{
+    "commits": [
+        {
+            "hash": "b3fcc587", 
+            "message": "more infobar ui additions, command/action loop working fully, unitc...", 
+            "url": "https://gitlab.com/cxss/g"
+        }
+    ], 
+    "date": "2019-09-19", 
+    "image": "", 
+    "info": {
+        "audio": 0.01, 
+        "visual": 0.0, 
+        "writing": 0.85
+    }
+}

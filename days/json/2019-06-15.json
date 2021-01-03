@@ -1,0 +1,31 @@
+{
+    "commits": [
+        {
+            "hash": "4428f052", 
+            "message": "Upload New File", 
+            "url": "https://gitlab.com/cxss/portfolio"
+        }, 
+        {
+            "hash": "5a0753aa", 
+            "message": "Add new directory", 
+            "url": "https://gitlab.com/cxss/portfolio"
+        }, 
+        {
+            "hash": "58489f88", 
+            "message": "resolve merge", 
+            "url": "https://gitlab.com/cxss/portfolio"
+        }, 
+        {
+            "hash": "afe92aaf", 
+            "message": "rm old", 
+            "url": "https://gitlab.com/cxss/portfolio"
+        }
+    ], 
+    "date": "2019-06-15", 
+    "image": "", 
+    "info": {
+        "audio": 0.07, 
+        "visual": 0.19, 
+        "writing": 1.11
+    }
+}

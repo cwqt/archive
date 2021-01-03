@@ -1,0 +1,21 @@
+{
+    "commits": [
+        {
+            "hash": "5f412e5c", 
+            "message": "add: terrible feature that furthers my descent into callback hell", 
+            "url": "https://gitlab.com/cxss/portfolio"
+        }, 
+        {
+            "hash": "99b33c9c", 
+            "message": "Merge branch 'master' of https://gitlab.com/cxss/portfolio", 
+            "url": "https://gitlab.com/cxss/portfolio"
+        }
+    ], 
+    "date": "2019-07-22", 
+    "image": "", 
+    "info": {
+        "audio": 0.02, 
+        "visual": 0.0, 
+        "writing": 1.78
+    }
+}

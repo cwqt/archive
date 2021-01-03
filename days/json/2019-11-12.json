@@ -1,0 +1,36 @@
+{
+    "commits": [
+        {
+            "hash": "4ada70d2", 
+            "message": "slicing", 
+            "url": "https://gitlab.com/cxss/days"
+        }, 
+        {
+            "hash": "3d22661e", 
+            "message": "type check", 
+            "url": "https://gitlab.com/cxss/days"
+        }, 
+        {
+            "hash": "1e5eb73c", 
+            "message": "fix lst.len to len()", 
+            "url": "https://gitlab.com/cxss/days"
+        }, 
+        {
+            "hash": "a3a629e7", 
+            "message": "get longest day from within range", 
+            "url": "https://gitlab.com/cxss/days"
+        }, 
+        {
+            "hash": "bc2afc50", 
+            "message": "Delete .DS_Store", 
+            "url": "https://gitlab.com/cxss/site"
+        }
+    ], 
+    "date": "2019-11-12", 
+    "image": "", 
+    "info": {
+        "audio": 0.06, 
+        "visual": 0.0, 
+        "writing": 1.49
+    }
+}

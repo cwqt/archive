@@ -1,0 +1,25 @@
+{
+    "commits": [
+        {
+            "message": "Update README.md",
+            "sha": "264049f4",
+            "url": "https://gitlab.com/daughtersystems/powerboost"
+        },
+        {
+            "message": "FTP :: Uploading 2 file(s)",
+            "sha": "8125e3d6",
+            "url": "https://gitlab.com/cxss/site"
+        },
+        {
+            "message": "add templating",
+            "sha": "71965850",
+            "url": "https://gitlab.com/cxss/hydroponics"
+        }
+    ],
+    "date": "2019-12-30",
+    "info": {
+        "audio": 0.14,
+        "visual": 0.0,
+        "writing": 3.55
+    }
+}

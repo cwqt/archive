@@ -1,0 +1,19 @@
+{
+    "commits": [
+        {
+            "message": "create/delete items",
+            "sha": "13386848",
+            "url": "https://gitlab.com/cxss/hydroponics"
+        },
+        {
+            "message": "get connected-react-router working with thunk",
+            "sha": "3f0743b8",
+            "url": "https://gitlab.com/cxss/hydroponics"
+        }
+    ],
+    "date": "2020-01-25",
+    "info": {
+        "audio": 0.0,
+        "writing": 0.1
+    }
+}

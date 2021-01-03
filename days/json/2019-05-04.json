@@ -1,0 +1,16 @@
+{
+    "commits": [
+        {
+            "hash": "73f55ae7", 
+            "message": "Remove days with incorrect timestamps causes by TimeSink csvs holdi...", 
+            "url": "https://gitlab.com/cxss/days"
+        }
+    ], 
+    "date": "2019-05-04", 
+    "image": "", 
+    "info": {
+        "audio": 0.0, 
+        "visual": 0.0, 
+        "writing": 0.01
+    }
+}

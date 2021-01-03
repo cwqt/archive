@@ -1,0 +1,81 @@
+{
+    "commits": [
+        {
+            "hash": "6cd7a3b7", 
+            "message": "improve error codes", 
+            "url": "https://gitlab.com/cxss/site"
+        }, 
+        {
+            "hash": "d5b83c05", 
+            "message": "sm sitekey mismatch", 
+            "url": "https://gitlab.com/cxss/site"
+        }, 
+        {
+            "hash": "89fef499", 
+            "message": "staticman.yml indentation :anger:", 
+            "url": "https://gitlab.com/cxss/site"
+        }, 
+        {
+            "hash": "df7580bb", 
+            "message": "staticman.yml indentation :anger:", 
+            "url": "https://gitlab.com/cxss/site"
+        }, 
+        {
+            "hash": "27bb7c76", 
+            "message": "fix build script + fix calender/week to scroll dates since over 182...", 
+            "url": "https://gitlab.com/cxss/site"
+        }, 
+        {
+            "hash": "22dca1c3", 
+            "message": "Merge branch 'master' of https://gitlab.com/cxss/site", 
+            "url": "https://gitlab.com/cxss/site"
+        }, 
+        {
+            "hash": "2f4e7ae3", 
+            "message": "FTP::Upload ==QN0ITO1k", 
+            "url": "https://gitlab.com/cxss/site"
+        }, 
+        {
+            "hash": "bfccbfdf", 
+            "message": "FTP::Upload zQjM1YTO5k", 
+            "url": "https://gitlab.com/cxss/site"
+        }, 
+        {
+            "hash": "d00c6ad9", 
+            "message": "FTP::Upload 1QzM3UTO5k", 
+            "url": "https://gitlab.com/cxss/site"
+        }, 
+        {
+            "hash": "fedb8c73", 
+            "message": "FTP::Upload ==wMzkTN0A", 
+            "url": "https://gitlab.com/cxss/site"
+        }, 
+        {
+            "hash": "ebafd939", 
+            "message": "FTP::Upload 5IDM1ADMwA", 
+            "url": "https://gitlab.com/cxss/site"
+        }, 
+        {
+            "hash": "b057f9a2", 
+            "message": "FTP::Upload 1cTO0ADM5k", 
+            "url": "https://gitlab.com/cxss/site"
+        }, 
+        {
+            "hash": "41a76bde", 
+            "message": "FTP::Upload yYjNzcTO5k", 
+            "url": "https://gitlab.com/cxss/site"
+        }, 
+        {
+            "hash": "a99bdf2f", 
+            "message": "FTP::Upload 0QDM1ADMwA", 
+            "url": "https://gitlab.com/cxss/site"
+        }
+    ], 
+    "date": "2019-11-13", 
+    "image": "", 
+    "info": {
+        "audio": 0.09, 
+        "visual": 0.0, 
+        "writing": 1.37
+    }
+}

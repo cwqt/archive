@@ -1,0 +1,19 @@
+{
+    "commits": [
+        {
+            "message": "more mobile optimisations",
+            "sha": "725d5367",
+            "url": "https://gitlab.com/daughtersystems/site"
+        },
+        {
+            "message": "mobile optimisations",
+            "sha": "7f33f08c",
+            "url": "https://gitlab.com/daughtersystems/site"
+        }
+    ],
+    "date": "2019-12-19",
+    "info": {
+        "audio": 0.01,
+        "writing": 2.58
+    }
+}

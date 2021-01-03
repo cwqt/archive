@@ -1,0 +1,16 @@
+{
+    "commits": [
+        {
+            "hash": "6c88a456", 
+            "message": "improve M.deepClone to support objects with table values and metata...", 
+            "url": "https://gitlab.com/cxss/g"
+        }
+    ], 
+    "date": "2019-06-06", 
+    "image": "", 
+    "info": {
+        "audio": 0.0, 
+        "visual": 0.0, 
+        "writing": 0.0
+    }
+}

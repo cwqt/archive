@@ -1,0 +1,68 @@
+{
+    "commits": [
+        {
+            "message": "Update README.md",
+            "sha": "ebcf1a5d",
+            "url": "https://gitlab.com/cxss/hydroponics"
+        },
+        {
+            "message": "deploy frontend on now",
+            "sha": "28ea2e6f",
+            "url": "https://gitlab.com/cxss/hydroponics"
+        },
+        {
+            "message": "validate yaml",
+            "sha": "a2245ef9",
+            "url": "https://gitlab.com/cxss/hydroponics"
+        },
+        {
+            "message": "deploy frontend on now",
+            "sha": "46356153",
+            "url": "https://gitlab.com/cxss/hydroponics"
+        },
+        {
+            "message": "add letsencrypt route",
+            "sha": "dd5248a7",
+            "url": "https://gitlab.com/cxss/hydroponics"
+        },
+        {
+            "message": "lets encrypt cert",
+            "sha": "950e32bc",
+            "url": "https://gitlab.com/cxss/hydroponics"
+        },
+        {
+            "message": "add endpoints to readme now api is live",
+            "sha": "a6e897a3",
+            "url": "https://gitlab.com/cxss/hydroponics"
+        },
+        {
+            "message": "start deploying api to heroku",
+            "sha": "cc85bcc0",
+            "url": "https://gitlab.com/cxss/hydroponics"
+        },
+        {
+            "message": "start deploying api to heroku",
+            "sha": "5276457f",
+            "url": "https://gitlab.com/cxss/hydroponics"
+        },
+        {
+            "message": "start deploying api to heroku",
+            "sha": "12f3c873",
+            "url": "https://gitlab.com/cxss/hydroponics"
+        },
+        {
+            "message": "i2c adc slave working, transmitting 3 byte array from arduino to rpi",
+            "sha": "4491755b",
+            "url": "https://gitlab.com/cxss/hydroponics"
+        },
+        {
+            "message": "setup nano as i2c adc slave",
+            "sha": "60b4ce9e",
+            "url": "https://gitlab.com/cxss/hydroponics"
+        }
+    ],
+    "date": "2020-01-30",
+    "info": {
+        "writing": 0.03
+    }
+}

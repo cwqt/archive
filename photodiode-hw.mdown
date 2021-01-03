@@ -1,0 +1,56 @@
+
+## Photodiode homework
+
+* What happens to the output from the sensor? (explain in terms of photons and electron and V=IR)?
+* Which is bigger, V+ or V- on the comparator?
+* Is the comparator output high or low? (explain why)
+* Include your code and explain what the code is doing and how it does it
+
+When the obstacle is close to the sensor, more photons will arrive at the photodiode sensor from the IR emitter, therefore more electrons will conduct, thus more current is flowing. This can be explained with Ohms law, where $$P_c$$ is the (Photon count) amount of photons hitting sensor.
+
+$$\begin{align}
+V &= IR \\
+I &= P_c \\ \\
+
+if P_c = 1 then \\
+V &= 1 \times R \\ \\
+
+if P_c = 10E^9 then \\
+V = 10E^9
+\end{align}$$
+
+Logic 1 is defined as $$\frac{+V_s}{2}$$, and logic 0 defined as $$\frac{-V_s}{2}$$.
+In order for the comparator ouput to be high, +Vs must be greater than -Vs since, $$V_{out} = +V_s when +V > -V$$.
+
+{% highlight asm %}
+;======= PHOTODIODE CODE =====;
+; Gets input (0/1) from a
+; photodiode, makes all lights
+; high if +V > -V from a 331.
+;========      END       =====;
+
+MOVW 0X01            ;set 0x01 pin as input
+MOVWR TRISC          ;make PORTC inputs
+
+INIT:
+    MOVRW PORTC      ;move contents of PORTC to W
+    ANDW 0X01        ;AND contents of W
+    JPZ LEDOFF       ;if 0 then, go to LEDOFF
+    JMP LEDON        ;if 1 then, go to LEDON
+
+LEDON:
+    MOVW 0XFF        ;move 0xff into W
+    MOVWR PORTA      ;move contents of W to PORTA
+    JMP INIT         ;loop back to INIT
+
+LEDOFF:
+    MOVW 0X00        ;move 0x00 into W
+    MOVWR PORTA      ;move contents of W to PORTA
+    JMP INIT         ;loop back to INIT
+{% endhighlight %}
+
+The code starts off by setting `0x01` as an input on `PORTC`, this will be where the output of the 331 comparitor goes in. `INIT` checks the status of `PORTC`, if the output from the 331 is high, the code jumps to the `LEDON` label, which turns all LED's on `PORTA` on and then loops back to `INIT` to check the output again, if the output from the 331 is low, the code jumps to the `LEDOFF` label, which turns all LED's off and then loops back to INIT to poll inputs again.
+
+
+
+

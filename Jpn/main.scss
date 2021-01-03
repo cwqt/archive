@@ -1,0 +1,99 @@
+@import "elk";
+
+* { box-sizing: border-box; }
+html, body { height: 100% }
+
+body {
+  background-color: lighten(black, 5%);
+}
+
+.container {
+  padding: 0;
+  background-color: lighten(black, 5%);
+  width: 55vw;
+  @extend .l_shadow;
+  @extend .l_round;
+}
+
+#main {
+  min-height: 70vh;
+}
+
+.line {
+  @extend .l_shadow;
+  transform: translateZ(0);
+  background-color: white;
+  min-height: 100%;
+  background-position: center center;
+  background-size: 70vh;
+  transition: 0.2s;
+  overflow: hidden;
+  position: relative;
+  min-height: 70vh;
+  max-height: 70vh;
+  flex-flow: row wrap;
+  img {
+    // @extend .l_p;
+    position: absolute;
+    top: 0; bottom: 0;
+    left: 0; right: 0;
+    max-width: none;
+    height: 100%;
+    transform: scale(1.2);
+    filter: brightness(0.5);
+    transition: 0.2s;
+  }
+  &:not(:hover) {
+    .content {
+      visibility: hidden;
+    }
+  }
+  &:hover {
+    width: 100% !important;
+    cursor: pointer;
+    a {
+      opacity: 1;
+      visibility: visible;
+    }
+    img {
+      filter: brightness(1);
+    }
+  }
+  .content {
+    transform: translateZ(0);
+    position: absolute;
+    visibility: visible !important;
+    z-index: 2;
+    color: white;
+    font-weight: bolder;
+    h2 {
+      max-width: 40px;
+      text-align: center;
+    }
+
+  }
+  a {
+    transform: translateZ(0);
+    z-index: 2;
+    position: relative;
+    opacity: 0;
+    visibility: hidden;
+    @extend .m_p;
+    @extend .s_hs;
+    @extend .s_vs;
+    @extend .m_round;
+    padding-bottom: 7px;
+    width: 33%;
+    flex-grow: 1;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    background-color: lighten(black, 7%);
+    border-bottom: thick solid transparent;
+    &:hover {
+      @extend .l_shadow;
+      background-color: lighten(black, 10%);
+      border-bottom-color: white;
+    }
+  }
+}
